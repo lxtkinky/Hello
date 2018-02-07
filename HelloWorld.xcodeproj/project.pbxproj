@@ -130,6 +130,11 @@
 		52FD9CCE200619B30046193D /* CustomButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FD9CCC200619B30046193D /* CustomButtonController.m */; };
 		52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FD9CCD200619B30046193D /* CustomButtonController.xib */; };
 		78F527FE8EB0D26578857BF2 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */; };
+		DF69B184202855200027E591 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF69B182202855200027E591 /* GoogleMobileAds.framework */; };
+		DF69B185202855200027E591 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DF69B183202855200027E591 /* README.txt */; };
+		DF69B188202855750027E591 /* TXGoogleAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69B187202855750027E591 /* TXGoogleAdController.m */; };
+		DF69B18B202855B70027E591 /* TXGoogleAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69B18A202855B70027E591 /* TXGoogleAdManager.m */; };
+		DF7EC5072029823A0055B907 /* TTDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7EC5062029823A0055B907 /* TTDetailContainerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -401,6 +406,14 @@
 		70D1B6F8907DD619DABEEDBA /* Pods-HelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
 		BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCA444BC4CA6080EDB6315F /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
+		DF69B182202855200027E591 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		DF69B183202855200027E591 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		DF69B186202855750027E591 /* TXGoogleAdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGoogleAdController.h; sourceTree = "<group>"; };
+		DF69B187202855750027E591 /* TXGoogleAdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXGoogleAdController.m; sourceTree = "<group>"; };
+		DF69B189202855B70027E591 /* TXGoogleAdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGoogleAdManager.h; sourceTree = "<group>"; };
+		DF69B18A202855B70027E591 /* TXGoogleAdManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXGoogleAdManager.m; sourceTree = "<group>"; };
+		DF7EC5052029823A0055B907 /* TTDetailContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTDetailContainerViewController.h; sourceTree = "<group>"; };
+		DF7EC5062029823A0055B907 /* TTDetailContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTDetailContainerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,6 +433,7 @@
 				5224BC3F2003095A00534BB0 /* libz.tbd in Frameworks */,
 				5224BC3D2003093F00534BB0 /* libstdc++.6.tbd in Frameworks */,
 				78F527FE8EB0D26578857BF2 /* Pods_HelloWorld.framework in Frameworks */,
+				DF69B184202855200027E591 /* GoogleMobileAds.framework in Frameworks */,
 				5224BC3B2003092900534BB0 /* AlipaySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +575,10 @@
 				52208587200C7896000AE575 /* CalendarController.m */,
 				52033E09200EEB0B009DF7F8 /* LXTCalendarController.h */,
 				52033E0A200EEB0B009DF7F8 /* LXTCalendarController.m */,
+				DF69B186202855750027E591 /* TXGoogleAdController.h */,
+				DF69B187202855750027E591 /* TXGoogleAdController.m */,
+				DF7EC5052029823A0055B907 /* TTDetailContainerViewController.h */,
+				DF7EC5062029823A0055B907 /* TTDetailContainerViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -570,6 +588,8 @@
 			children = (
 				5204E0D42010372900500771 /* LxtCalendarViewModel.h */,
 				5204E0D52010372900500771 /* LxtCalendarViewModel.m */,
+				DF69B189202855B70027E591 /* TXGoogleAdManager.h */,
+				DF69B18A202855B70027E591 /* TXGoogleAdManager.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -820,6 +840,7 @@
 		52508C461FF0DAC600E0115B /* thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				DF69B181202855200027E591 /* GoogleMobileAdsSdk */,
 				52208554200C77BB000AE575 /* JTCalendar */,
 				52EE56262008876000C8F035 /* fmdb */,
 				5224BC372003092900534BB0 /* AplipaySDK */,
@@ -1034,6 +1055,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DF69B181202855200027E591 /* GoogleMobileAdsSdk */ = {
+			isa = PBXGroup;
+			children = (
+				DF69B182202855200027E591 /* GoogleMobileAds.framework */,
+				DF69B183202855200027E591 /* README.txt */,
+			);
+			path = GoogleMobileAdsSdk;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1156,6 +1186,7 @@
 				52E70A191FE7657F0061213C /* Assets.xcassets in Resources */,
 				52208579200C77BB000AE575 /* Info.plist in Resources */,
 				52EE56382008876000C8F035 /* Info.plist in Resources */,
+				DF69B185202855200027E591 /* README.txt in Resources */,
 				52E70A171FE7657F0061213C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1254,6 +1285,8 @@
 				52208582200C77BB000AE575 /* JTCalendarWeekDayView.m in Sources */,
 				52EE56332008876000C8F035 /* FMDatabase.m in Sources */,
 				52A9FB391FEA0A4400366036 /* AFNViewController.m in Sources */,
+				DF69B188202855750027E591 /* TXGoogleAdController.m in Sources */,
+				DF69B18B202855B70027E591 /* TXGoogleAdManager.m in Sources */,
 				5204E0D62010372900500771 /* LxtCalendarViewModel.m in Sources */,
 				5211659A20075B7200F00019 /* GCDViewController.m in Sources */,
 				5220858B200C964B000AE575 /* LXTCalenderView.m in Sources */,
@@ -1314,6 +1347,7 @@
 				5220857A200C77BB000AE575 /* JTCalendarManager.m in Sources */,
 				52EE56472008990600C8F035 /* CoreDataController.m in Sources */,
 				52D05F171FE79F2D001D7226 /* ViewModel.m in Sources */,
+				DF7EC5072029823A0055B907 /* TTDetailContainerViewController.m in Sources */,
 				5213DE351FF4E2BA00D14432 /* MJRefreshAutoStateFooter.m in Sources */,
 				5220857D200C77BB000AE575 /* JTCalendarDelegateManager.m in Sources */,
 				52208584200C77BB000AE575 /* JTHorizontalCalendarView.m in Sources */,
@@ -1474,9 +1508,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 34Y7VA8GFC;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HelloWorld/thirdparty/AplipaySDK",
+					"$(PROJECT_DIR)/HelloWorld/thirdparty/GoogleMobileAdsSdk",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/test/Documents/lixt/MyCode/HelloWorld/HelloWorld/HelloWorld/HelloWorld-prefix.pch";
@@ -1498,9 +1534,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 34Y7VA8GFC;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HelloWorld/thirdparty/AplipaySDK",
+					"$(PROJECT_DIR)/HelloWorld/thirdparty/GoogleMobileAdsSdk",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/test/Documents/lixt/MyCode/HelloWorld/HelloWorld/HelloWorld/HelloWorld-prefix.pch";

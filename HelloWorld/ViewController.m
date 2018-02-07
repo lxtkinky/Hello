@@ -46,7 +46,7 @@
                     @"NotificationViewController", @"ArchieveViewController",
                     @"CustomButtonController", @"GCDViewController",
                     @"FMDBController", @"CalendarController",
-                    @"LXTCalendarController"];
+                    @"LXTCalendarController", @"TXGoogleAdController"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
