@@ -7,6 +7,8 @@
 //
 
 #import "KVOViewController.h"
+#import "Person.h"
+#import "NSObject+Runtime.h"
 
 
 static NSString *keyPath = @"name";
@@ -15,6 +17,8 @@ static NSString *keyPath = @"name";
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) Person *person;
+@property (nonatomic) NSInteger age;
 
 @end
 
@@ -32,15 +36,37 @@ static NSString *keyPath = @"name";
         make.size.mas_equalTo(CGSizeMake(200, 60));
     }];
     
+    NSLog(@"%p", @"11");
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i = 0; i < 10; i++) {
+        [array addObject:@"11"];
+    }
+    NSLog(@"==========");
+    
+    [self observePerson];
 
-    [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+//    [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
 
 }
 
+- (void)observePerson{
+    Person *person = [[Person alloc] init];
+    _person = person;
+//    [person addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    [person tx_addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    [person tx_addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    if ([object isEqual:self]) {
-        NSLog(@"name changed %@-->%@", [change objectForKey:NSKeyValueChangeOldKey], [change objectForKey:NSKeyValueChangeNewKey]);
-    }
+    NSLog(@"%@-->%@", [change objectForKey:NSKeyValueChangeOldKey], [change objectForKey:NSKeyValueChangeNewKey] );
+//    if ([object isEqual:self]) {
+//        NSLog(@"name changed %@-->%@", [change objectForKey:NSKeyValueChangeOldKey], [change objectForKey:NSKeyValueChangeNewKey]);
+//    }
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    self.person.age = ++_age;
+    self.person.name = [NSString stringWithFormat:@"lxt%ld", _age];
 }
 
 - (void)didReceiveMemoryWarning {

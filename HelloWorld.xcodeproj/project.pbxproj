@@ -130,6 +130,8 @@
 		52FD9CCE200619B30046193D /* CustomButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FD9CCC200619B30046193D /* CustomButtonController.m */; };
 		52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FD9CCD200619B30046193D /* CustomButtonController.xib */; };
 		78F527FE8EB0D26578857BF2 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */; };
+		BE52CDF12045511B006B01AC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF02045511B006B01AC /* Person.m */; };
+		BE52CDF4204551B0006B01AC /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF3204551B0006B01AC /* Dog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -400,6 +402,10 @@
 		52FD9CCD200619B30046193D /* CustomButtonController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonController.xib; sourceTree = "<group>"; };
 		70D1B6F8907DD619DABEEDBA /* Pods-HelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
 		BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE52CDEF2045511B006B01AC /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		BE52CDF02045511B006B01AC /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		BE52CDF2204551B0006B01AC /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		BE52CDF3204551B0006B01AC /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		DDCA444BC4CA6080EDB6315F /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -943,6 +949,10 @@
 				527809371FFB8EFE001E783F /* ProgressViewController.m */,
 				52E589E91FFDF82A001F66F5 /* KVOViewController.h */,
 				52E589EA1FFDF82A001F66F5 /* KVOViewController.m */,
+				BE52CDEF2045511B006B01AC /* Person.h */,
+				BE52CDF02045511B006B01AC /* Person.m */,
+				BE52CDF2204551B0006B01AC /* Dog.h */,
+				BE52CDF3204551B0006B01AC /* Dog.m */,
 				5224BC5F20031AEE00534BB0 /* NotificationViewController.h */,
 				5224BC6020031AEE00534BB0 /* NotificationViewController.m */,
 				52D05F151FE79F2D001D7226 /* ViewModel.h */,
@@ -1229,6 +1239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE52CDF4204551B0006B01AC /* Dog.m in Sources */,
 				52D05F0C1FE79AFD001D7226 /* MASConstraintMaker.m in Sources */,
 				5224BC6B200354D200534BB0 /* ArchieveViewController.m in Sources */,
 				5213DE361FF4E2BA00D14432 /* MJRefreshBackGifFooter.m in Sources */,
@@ -1301,6 +1312,7 @@
 				5213DE311FF4E2BA00D14432 /* MJRefreshFooter.m in Sources */,
 				5257DEF11FE90E8B0094C259 /* SDWebImageController.m in Sources */,
 				5220857F200C77BB000AE575 /* JTCalendarDayView.m in Sources */,
+				BE52CDF12045511B006B01AC /* Person.m in Sources */,
 				5213DE3E1FF4E2BA00D14432 /* NSBundle+MJRefresh.m in Sources */,
 				5257DEEE1FE8FABC0094C259 /* ThirdViewController.m in Sources */,
 				520ED5E11FF630FF000D97A7 /* UIAlertController+Custom.m in Sources */,
@@ -1474,12 +1486,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 34Y7VA8GFC;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HelloWorld/thirdparty/AplipaySDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/test/Documents/lixt/MyCode/HelloWorld/HelloWorld/HelloWorld/HelloWorld-prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/yangyouming/Documents/lixt/Hello/HelloWorld/HelloWorld-prefix.pch";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1498,12 +1511,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 34Y7VA8GFC;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HelloWorld/thirdparty/AplipaySDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/test/Documents/lixt/MyCode/HelloWorld/HelloWorld/HelloWorld/HelloWorld-prefix.pch";
+				GCC_PREFIX_HEADER = "/Users/yangyouming/Documents/lixt/Hello/HelloWorld/HelloWorld-prefix.pch";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

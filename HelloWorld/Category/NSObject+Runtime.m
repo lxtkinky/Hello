@@ -68,8 +68,6 @@
 }
 
 
-
-
 /*
 - (void)lxt_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context{
     ObserverModel *model = [ObserverModel observerModeWithSource:self observer:observer keyPath:keyPath];
@@ -103,6 +101,46 @@
 }
  */
 
+#pragma mark - //手动实现KVO
+/**
+ 1、添加一个子类
+ 2、给子类添加一个setter方法
+ 3、绑定observer 再setter方法中调用observer方法
+ */
+
+- (void)tx_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context{
+    Class superClass = [self class];
+    NSString *className = [NSString stringWithFormat:@"KVONotifying_%s", class_getName(superClass)];
+    Class myClass = objc_allocateClassPair(superClass, [className UTF8String], 0);
+    objc_registerClassPair(myClass);      //注册类  否则无法使用
+    object_setClass(self, myClass);     //修改调用者类型
+    
+    //绑定observer
+    objc_setAssociatedObject(self, "observer", observer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    //这里的方法名应该是拿到keypath然后首字母大写再加上set
+    NSString *firstUpStr = [[keyPath substringWithRange:NSMakeRange(0, 1)] uppercaseString];
+    NSString *methodName = [NSString stringWithFormat:@"set%@%@:", firstUpStr, [keyPath substringWithRange:NSMakeRange(1, keyPath.length - 1)]];
+    class_addMethod(myClass, NSSelectorFromString(methodName), (IMP)hello, "");
+    
+}
+
+//这里传递的的参数如何做到 可以接受任何类型????
+void hello(id self, SEL _cmd,int age){
+    NSString *methodName = NSStringFromSelector(_cmd);
+    NSString *keypath = [[methodName substringWithRange:NSMakeRange(3, methodName.length - 4)] lowercaseString];
+    NSObject *observer = objc_getAssociatedObject(self, "observer");
+    NSObject *oldValue = [self valueForKey:keypath];
+    if (oldValue == nil) {
+        oldValue = [NSNull null];
+    }
+    [self setValue:@(age) forKey:keypath];
+    NSObject *newValue = [self valueForKey:keypath];
+    if (newValue == nil) {
+        newValue = [NSNull null];
+    }
+    [observer observeValueForKeyPath:keypath ofObject:self change:@{NSKeyValueChangeNewKey : newValue, NSKeyValueChangeOldKey : oldValue} context:nil];
+}
 
 
 
