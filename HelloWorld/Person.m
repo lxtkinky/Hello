@@ -28,4 +28,11 @@
 //    return set;
 //}
 
+- (NSMutableArray *)array{
+    if (!_array) {
+        _array = [NSMutableArray array];
+    }
+    return _array;
+}
+
 @end

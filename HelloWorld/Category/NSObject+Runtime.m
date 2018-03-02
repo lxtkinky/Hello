@@ -125,6 +125,10 @@
     
 }
 
+//void setMethod(id self, SEL _cmd, void *param){
+//    printf(param);
+//}
+
 //这里传递的的参数如何做到 可以接受任何类型????
 void hello(id self, SEL _cmd,int age){
     NSString *methodName = NSStringFromSelector(_cmd);

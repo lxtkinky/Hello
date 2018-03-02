@@ -33,7 +33,7 @@ const static char userNameKey;
 }
 
 - (void)lxt_viewDidLoad{
-    NSLog(@"====%@=====", self);
+    NSLog(@"|--%@", self);
 //    [self.rac_willDeallocSignal subscribeCompleted:^{
 //        NSLog(@"*************dealloc*****************");
 //    }];

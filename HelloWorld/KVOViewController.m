@@ -36,12 +36,12 @@ static NSString *keyPath = @"name";
         make.size.mas_equalTo(CGSizeMake(200, 60));
     }];
     
-    NSLog(@"%p", @"11");
-    NSMutableArray *array = [NSMutableArray array];
-    for (int i = 0; i < 10; i++) {
-        [array addObject:@"11"];
-    }
-    NSLog(@"==========");
+//    NSLog(@"%p", @"11");
+//    NSMutableArray *array = [NSMutableArray array];
+//    for (int i = 0; i < 10; i++) {
+//        [array addObject:@"11"];
+//    }
+//    NSLog(@"==========");
     
     [self observePerson];
 
@@ -51,22 +51,38 @@ static NSString *keyPath = @"name";
 
 - (void)observePerson{
     Person *person = [[Person alloc] init];
+    person.array = [NSMutableArray arrayWithCapacity:0];
     _person = person;
-//    [person addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
-    [person tx_addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
-    [person tx_addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    [person addObserver:self forKeyPath:@"array" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+//    [person tx_addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+//    [person tx_addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    NSLog(@"%@-->%@", [change objectForKey:NSKeyValueChangeOldKey], [change objectForKey:NSKeyValueChangeNewKey] );
+    NSLog(@"%@-->%@",change, self.person.array);
 //    if ([object isEqual:self]) {
 //        NSLog(@"name changed %@-->%@", [change objectForKey:NSKeyValueChangeOldKey], [change objectForKey:NSKeyValueChangeNewKey]);
 //    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    self.person.age = ++_age;
-    self.person.name = [NSString stringWithFormat:@"lxt%ld", _age];
+//    self.person.age = ++_age;
+//    self.person.name = [NSString stringWithFormat:@"lxt%ld", _age];
+    
+    //通过赋值的方式才能观察到array的变化，直接操作array无法观察到array的变化
+    /*
+    static NSMutableArray *array;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        array = [NSMutableArray array];
+    });
+    [array addObject:@"1111"];
+    self.person.array = array;
+     */
+    
+    //想要观察到array的变化 必须通过KVC的方式获取到array 然后再进行操作
+    NSMutableArray *tempArray = [self.person mutableArrayValueForKey:@"array"];
+    [tempArray addObject:@"1111"];
 }
 
 - (void)didReceiveMemoryWarning {
