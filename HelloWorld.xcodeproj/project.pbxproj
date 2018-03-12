@@ -130,11 +130,14 @@
 		52FD9CCE200619B30046193D /* CustomButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FD9CCC200619B30046193D /* CustomButtonController.m */; };
 		52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FD9CCD200619B30046193D /* CustomButtonController.xib */; };
 		78F527FE8EB0D26578857BF2 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */; };
+		DF66FE16202BE2C400CDEA89 /* RunTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF66FE15202BE2C400CDEA89 /* RunTimeController.m */; };
 		DF69B184202855200027E591 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF69B182202855200027E591 /* GoogleMobileAds.framework */; };
 		DF69B185202855200027E591 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DF69B183202855200027E591 /* README.txt */; };
 		DF69B188202855750027E591 /* TXGoogleAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69B187202855750027E591 /* TXGoogleAdController.m */; };
 		DF69B18B202855B70027E591 /* TXGoogleAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69B18A202855B70027E591 /* TXGoogleAdManager.m */; };
 		DF7EC5072029823A0055B907 /* TTDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7EC5062029823A0055B907 /* TTDetailContainerViewController.m */; };
+		DF9036B0204FD64C00163AAD /* monidingwei.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DF9036AF204FD64C00163AAD /* monidingwei.gpx */; };
+		DFF5231F202B016700F832ED /* TXRACController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF5231E202B016700F832ED /* TXRACController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -406,6 +409,8 @@
 		70D1B6F8907DD619DABEEDBA /* Pods-HelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
 		BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCA444BC4CA6080EDB6315F /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
+		DF66FE14202BE2C400CDEA89 /* RunTimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeController.h; sourceTree = "<group>"; };
+		DF66FE15202BE2C400CDEA89 /* RunTimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeController.m; sourceTree = "<group>"; };
 		DF69B182202855200027E591 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		DF69B183202855200027E591 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		DF69B186202855750027E591 /* TXGoogleAdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGoogleAdController.h; sourceTree = "<group>"; };
@@ -414,6 +419,9 @@
 		DF69B18A202855B70027E591 /* TXGoogleAdManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXGoogleAdManager.m; sourceTree = "<group>"; };
 		DF7EC5052029823A0055B907 /* TTDetailContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTDetailContainerViewController.h; sourceTree = "<group>"; };
 		DF7EC5062029823A0055B907 /* TTDetailContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTDetailContainerViewController.m; sourceTree = "<group>"; };
+		DF9036AF204FD64C00163AAD /* monidingwei.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = monidingwei.gpx; sourceTree = "<group>"; };
+		DFF5231D202B016700F832ED /* TXRACController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXRACController.h; sourceTree = "<group>"; };
+		DFF5231E202B016700F832ED /* TXRACController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXRACController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -577,6 +585,10 @@
 				52033E0A200EEB0B009DF7F8 /* LXTCalendarController.m */,
 				DF69B186202855750027E591 /* TXGoogleAdController.h */,
 				DF69B187202855750027E591 /* TXGoogleAdController.m */,
+				DFF5231D202B016700F832ED /* TXRACController.h */,
+				DFF5231E202B016700F832ED /* TXRACController.m */,
+				DF66FE14202BE2C400CDEA89 /* RunTimeController.h */,
+				DF66FE15202BE2C400CDEA89 /* RunTimeController.m */,
 				DF7EC5052029823A0055B907 /* TTDetailContainerViewController.h */,
 				DF7EC5062029823A0055B907 /* TTDetailContainerViewController.m */,
 			);
@@ -988,6 +1000,7 @@
 				52E70A1D1FE7657F0061213C /* Info.plist */,
 				52A9FB3E1FEA0FBF00366036 /* HelloWorld-prefix.pch */,
 				52A9FB451FEA39B000366036 /* 22.jpg */,
+				DF9036AF204FD64C00163AAD /* monidingwei.gpx */,
 				52EE56422008975000C8F035 /* HelloWorldModel.xcdatamodeld */,
 				520B95EC2004640A00E6DD54 /* Class */,
 				520B95E4200460D500E6DD54 /* Macro */,
@@ -1176,6 +1189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF9036B0204FD64C00163AAD /* monidingwei.gpx in Resources */,
 				5249FB161FFF224B005978B6 /* SVProgressHUD.bundle in Resources */,
 				52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */,
 				52A9FB461FEA39B000366036 /* 22.jpg in Resources */,
@@ -1285,6 +1299,7 @@
 				52208582200C77BB000AE575 /* JTCalendarWeekDayView.m in Sources */,
 				52EE56332008876000C8F035 /* FMDatabase.m in Sources */,
 				52A9FB391FEA0A4400366036 /* AFNViewController.m in Sources */,
+				DFF5231F202B016700F832ED /* TXRACController.m in Sources */,
 				DF69B188202855750027E591 /* TXGoogleAdController.m in Sources */,
 				DF69B18B202855B70027E591 /* TXGoogleAdManager.m in Sources */,
 				5204E0D62010372900500771 /* LxtCalendarViewModel.m in Sources */,
@@ -1343,6 +1358,7 @@
 				5213DE2E1FF4E2BA00D14432 /* MJRefreshAutoFooter.m in Sources */,
 				5224BC65200351AD00534BB0 /* BaseModel.m in Sources */,
 				5224BC6E200367CB00534BB0 /* UserModel.m in Sources */,
+				DF66FE16202BE2C400CDEA89 /* RunTimeController.m in Sources */,
 				52E589E51FFDD5FF001F66F5 /* ObserverManager.m in Sources */,
 				5220857A200C77BB000AE575 /* JTCalendarManager.m in Sources */,
 				52EE56472008990600C8F035 /* CoreDataController.m in Sources */,

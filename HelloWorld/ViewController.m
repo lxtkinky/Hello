@@ -20,6 +20,7 @@
 #import "UIAlertAction+Custom.h"
 #import "ProgressViewController.h"
 //#import "CustomButtonController.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -46,12 +47,25 @@
                     @"NotificationViewController", @"ArchieveViewController",
                     @"CustomButtonController", @"GCDViewController",
                     @"FMDBController", @"CalendarController",
-                    @"LXTCalendarController", @"TXGoogleAdController"];
+                    @"LXTCalendarController", @"TXGoogleAdController",
+                    @"TXRACController", @"RunTimeController"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.insets(UIEdgeInsetsMake(64, 0, 0, 0));
     }];
+    
+//    CLLocationCoordinate2D
+    
+    NSString *str = @"liveStream:2920995963:22:22.55736251497767:113.9360616338194";
+    if (str.length > 40) {
+        NSRange firstRange = [str rangeOfString:@":" options:NSBackwardsSearch];
+        NSLog(@"%@", NSStringFromRange(firstRange));
+        NSRange secondRange = [str rangeOfString:@":" options:NSBackwardsSearch range:NSMakeRange(0, firstRange.location)];
+        NSLog(@"%@", NSStringFromRange(secondRange));
+        NSString *tmpStr = [str substringWithRange:NSMakeRange(0, secondRange.location)];
+        tmpStr = [tmpStr stringByAppendingString:@":39.9110666857:116.4136103013"];
+    }
 
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

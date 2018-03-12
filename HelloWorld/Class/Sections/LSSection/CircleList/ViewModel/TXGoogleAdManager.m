@@ -18,6 +18,12 @@
 
 @implementation TXGoogleAdManager
 
+/*
+ #define movieBoxKey @"ca-app-pub-5735364568535755/6293430024"
+ #define movieBoxOtherKey @"ca-app-pub-5735364568535755/6691771223"
+ #define playBoxHDKey @"ca-app-pub-5735364568535755/6014228424"
+ */
+
 - (void)showGoogleAdWithController:(UIViewController *)controller{
     //ca-app-pub-6588575820465593~7644925034
 //    [GADMobileAds configureWithApplicationID:@"ca-app-pub-6588575820465593~7644925034"];
