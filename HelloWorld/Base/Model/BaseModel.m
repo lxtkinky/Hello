@@ -49,4 +49,18 @@
         
     }
 }
+
+- (id)valueForUndefinedKey:(NSString *)key{
+    NSLog(@"%@不能获取key:%@的值，没有这个key",self, key);
+    return nil;
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
+    NSLog(@"%@不能为key:%@赋值,没有这个key",self, key);
+}
+
+- (void)setNilValueForKey:(NSString *)key{
+    NSLog(@"%@的属性:%@不能设置为nil",self, key);
+}
+
 @end

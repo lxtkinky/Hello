@@ -10,4 +10,12 @@
 
 @interface NSObject (Runtime) <NSCoding>
 
+
+//手动实现KVO
+- (void)tx_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context;
+
+
+
+
+
 @end
