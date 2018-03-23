@@ -48,7 +48,7 @@
                     @"CustomButtonController", @"GCDViewController",
                     @"FMDBController", @"CalendarController",
                     @"LXTCalendarController", @"TXGoogleAdController",
-                    @"TXRACController", @"RunTimeController"];
+                    @"TXRACController", @"RunTimeController", @"SpriteKitController"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

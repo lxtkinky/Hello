@@ -130,6 +130,13 @@
 		52FD9CCE200619B30046193D /* CustomButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FD9CCC200619B30046193D /* CustomButtonController.m */; };
 		52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FD9CCD200619B30046193D /* CustomButtonController.xib */; };
 		78F527FE8EB0D26578857BF2 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */; };
+		BE3DB8D82047D47C00CB3859 /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DB8D72047D47C00CB3859 /* KVCViewController.m */; };
+		BE3DB8DB2047D4D000CB3859 /* KVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DB8DA2047D4D000CB3859 /* KVCModel.m */; };
+		BE52CDF12045511B006B01AC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF02045511B006B01AC /* Person.m */; };
+		BE52CDF4204551B0006B01AC /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF3204551B0006B01AC /* Dog.m */; };
+		DF3C116320592377000AE8EE /* SpriteKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3C116220592377000AE8EE /* SpriteKitController.m */; };
+		DF3C116720592394000AE8EE /* TXGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3C116620592394000AE8EE /* TXGameScene.m */; };
+		DF3C1169205924FB000AE8EE /* perRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DF3C1168205924FB000AE8EE /* perRun.atlas */; };
 		DF66FE16202BE2C400CDEA89 /* RunTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF66FE15202BE2C400CDEA89 /* RunTimeController.m */; };
 		DF69B184202855200027E591 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF69B182202855200027E591 /* GoogleMobileAds.framework */; };
 		DF69B185202855200027E591 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DF69B183202855200027E591 /* README.txt */; };
@@ -417,6 +424,11 @@
 		BE52CDF2204551B0006B01AC /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		BE52CDF3204551B0006B01AC /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		DDCA444BC4CA6080EDB6315F /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
+		DF3C116120592377000AE8EE /* SpriteKitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteKitController.h; sourceTree = "<group>"; };
+		DF3C116220592377000AE8EE /* SpriteKitController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKitController.m; sourceTree = "<group>"; };
+		DF3C116520592394000AE8EE /* TXGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXGameScene.h; sourceTree = "<group>"; };
+		DF3C116620592394000AE8EE /* TXGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXGameScene.m; sourceTree = "<group>"; };
+		DF3C1168205924FB000AE8EE /* perRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = perRun.atlas; sourceTree = "<group>"; };
 		DF66FE14202BE2C400CDEA89 /* RunTimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeController.h; sourceTree = "<group>"; };
 		DF66FE15202BE2C400CDEA89 /* RunTimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeController.m; sourceTree = "<group>"; };
 		DF69B182202855200027E591 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
@@ -599,6 +611,13 @@
 				DF66FE15202BE2C400CDEA89 /* RunTimeController.m */,
 				DF7EC5052029823A0055B907 /* TTDetailContainerViewController.h */,
 				DF7EC5062029823A0055B907 /* TTDetailContainerViewController.m */,
+				BE3DB8D62047D47C00CB3859 /* KVCViewController.h */,
+				BE3DB8D72047D47C00CB3859 /* KVCViewController.m */,
+				BE3DB8D92047D4D000CB3859 /* KVCModel.h */,
+				BE3DB8DA2047D4D000CB3859 /* KVCModel.m */,
+				DF3C116120592377000AE8EE /* SpriteKitController.h */,
+				DF3C116220592377000AE8EE /* SpriteKitController.m */,
+				DF3C11642059237D000AE8EE /* View */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1029,6 +1048,7 @@
 		52E70A0C1FE7657F0061213C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF3C1168205924FB000AE8EE /* perRun.atlas */,
 				52E70A0D1FE7657F0061213C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -1076,6 +1096,15 @@
 			children = (
 				52FD9CC8200619720046193D /* CustomButton.h */,
 				52FD9CC9200619720046193D /* CustomButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF3C11642059237D000AE8EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF3C116520592394000AE8EE /* TXGameScene.h */,
+				DF3C116620592394000AE8EE /* TXGameScene.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1206,6 +1235,7 @@
 				52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */,
 				52A9FB461FEA39B000366036 /* 22.jpg in Resources */,
 				5224BC3A2003092900534BB0 /* AlipaySDK.bundle in Resources */,
+				DF3C1169205924FB000AE8EE /* perRun.atlas in Resources */,
 				52D05F091FE79AFD001D7226 /* Info.plist in Resources */,
 				5213DE3C1FF4E2BA00D14432 /* MJRefresh.bundle in Resources */,
 				52E70A1C1FE7657F0061213C /* LaunchScreen.storyboard in Resources */,
@@ -1318,6 +1348,7 @@
 				DF69B18B202855B70027E591 /* TXGoogleAdManager.m in Sources */,
 				5204E0D62010372900500771 /* LxtCalendarViewModel.m in Sources */,
 				5211659A20075B7200F00019 /* GCDViewController.m in Sources */,
+				DF3C116720592394000AE8EE /* TXGameScene.m in Sources */,
 				5220858B200C964B000AE575 /* LXTCalenderView.m in Sources */,
 				520B95FB2004640A00E6DD54 /* CMRequest.m in Sources */,
 				520B95E020045BE200E6DD54 /* VFNetAPIClient.m in Sources */,
@@ -1357,6 +1388,7 @@
 				52208588200C7896000AE575 /* CalendarController.m in Sources */,
 				52E70A0E1FE7657F0061213C /* main.m in Sources */,
 				52E589EB1FFDF82A001F66F5 /* KVOViewController.m in Sources */,
+				DF3C116320592377000AE8EE /* SpriteKitController.m in Sources */,
 				5220857C200C77BB000AE575 /* JTDateHelper.m in Sources */,
 				5213DE3F1FF4E2BA00D14432 /* UIScrollView+MJExtension.m in Sources */,
 				5213DE411FF4E2BA00D14432 /* UIView+MJExtension.m in Sources */,
@@ -1547,7 +1579,7 @@
 					"$(PROJECT_DIR)/HelloWorld/thirdparty/GoogleMobileAdsSdk",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/yangyouming/Documents/lixt/Hello/HelloWorld/HelloWorld-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HelloWorld/HelloWorld-prefix.pch";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1573,7 +1605,7 @@
 					"$(PROJECT_DIR)/HelloWorld/thirdparty/GoogleMobileAdsSdk",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/yangyouming/Documents/lixt/Hello/HelloWorld/HelloWorld-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HelloWorld/HelloWorld-prefix.pch";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

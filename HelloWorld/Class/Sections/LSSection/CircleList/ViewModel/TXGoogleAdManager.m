@@ -10,10 +10,33 @@
 //#import <GoogleMobileAds/GoogleMobileAds.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
-@interface TXGoogleAdManager()<GADBannerViewDelegate>
+
+/*
+ //
+NSString *GADAppID = @"ca-app-pub-6588575820465593~7644925034";
+NSString *GADInterstitialID = @"ca-app-pub-6588575820465593/3375150101";
+NSString *GADBannerID = @"ca-app-pub-6588575820465593/5681817116";
+ 
+ #define movieBoxKey @"ca-app-pub-5735364568535755/6293430024"
+ #define movieBoxOtherKey @"ca-app-pub-5735364568535755/6691771223"
+ #define playBoxHDKey @"ca-app-pub-5735364568535755/6014228424"
+ */
+
+
+NSString *GADAppID = @"ca-app-pub-6588575820465593~7644925034";
+NSString *GADInterstitialID = @"ca-app-pub-6588575820465593/3375150101";
+NSString *GADBannerID = @"ca-app-pub-6588575820465593/5681817116";
+
+//googleAD
+NSString *GADTestAppID = @"ca-app-pub-3940256099942544~1458002511";
+NSString *GADTestBannerID = @"ca-app-pub-3940256099942544/2934735716";
+NSString *GADTestInterstitialID = @"ca-app-pub-3940256099942544/4411468910";
+
+@interface TXGoogleAdManager()<GADBannerViewDelegate,GADInterstitialDelegate>
 
 @property (nonatomic, strong) GADBannerView *bannerView;
-
+@property (nonatomic, strong) GADInterstitial *interstitial;
+@property (nonatomic, strong) UIViewController *controller;
 @end
 
 @implementation TXGoogleAdManager
@@ -24,21 +47,34 @@
  #define playBoxHDKey @"ca-app-pub-5735364568535755/6014228424"
  */
 
+
+
 - (void)showGoogleAdWithController:(UIViewController *)controller{
-    //ca-app-pub-6588575820465593~7644925034
-//    [GADMobileAds configureWithApplicationID:@"ca-app-pub-6588575820465593~7644925034"];
-    [GADMobileAds configureWithApplicationID:@"ca-app-pub-3940256099942544~1458002511"];//测试
+    self.controller = controller;
+    [self interstitialID:controller];
+}
+
+- (void)interstitialID:(UIViewController *)controller{
+//    [GADMobileAds configureWithApplicationID:GADTestAppID];
+    self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:GADTestInterstitialID];
+    self.interstitial.delegate = self;
+    
+    GADRequest *request = [GADRequest request];
+    request.testDevices = @[ @"4a39811ef2af17c0ef6e50cfcd42e434" ];
+    [self.interstitial loadRequest:request];
+}
+
+//banner广告
+- (void)bannerAD:(UIViewController *)controller{
+//    [GADMobileAds configureWithApplicationID:GADTestAppID];//Google提供的APP测试广告ID，如果要测试自己的广告请替换自己的APP广告ID
     
     self.bannerView = [[GADBannerView alloc] init];
     self.bannerView.delegate = self;
-    //ca-app-pub-6588575820465593/5681817116
-//    self.bannerView.adUnitID = @"ca-app-pub-6588575820465593/5681817116";
-    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";//测试
+    self.bannerView.adUnitID = GADTestBannerID;////Google提供的Banner测试广告ID，如果要测试自己的广告请替换自己的banner广告ID
     self.bannerView.rootViewController = controller;
     GADRequest *request = [GADRequest request];
     request.testDevices = @[ @"4a39811ef2af17c0ef6e50cfcd42e434" ];
     
-//    request.testDevices = @[kGADSimulatorID];
     [self.bannerView loadRequest:request];
     [controller.view addSubview:self.bannerView];
     
@@ -51,6 +87,40 @@
     [controller.view addConstraints:Hconstraints];
     [controller.view addConstraints:Vconstraints];
 }
+
+
+- (void)interstitialDidReceiveAd:(GADInterstitial *)ad{
+    NSLog(@"interstitialDidReceiveAd");
+    [self.interstitial presentFromRootViewController:self.controller];
+}
+
+- (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error{
+    NSLog(@"didFailToReceiveAdWithError");
+}
+
+#pragma mark Display-Time Lifecycle Notifications
+
+- (void)interstitialWillPresentScreen:(GADInterstitial *)ad{
+    NSLog(@"interstitialWillPresentScreen");
+}
+
+- (void)interstitialDidFailToPresentScreen:(GADInterstitial *)ad{
+    NSLog(@"interstitialDidFailToPresentScreen");
+}
+
+- (void)interstitialWillDismissScreen:(GADInterstitial *)ad{
+    NSLog(@"interstitialWillDismissScreen");
+}
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)ad{
+    NSLog(@"interstitialDidDismissScreen");
+}
+
+- (void)interstitialWillLeaveApplication:(GADInterstitial *)ad{
+    NSLog(@"interstitialWillLeaveApplication");
+}
+
+#pragma mark - BannerViewDelegate
 
 - (void)adViewDidReceiveAd:(GADBannerView *)bannerView{
     NSLog(@"adViewDidReceiveAd");
