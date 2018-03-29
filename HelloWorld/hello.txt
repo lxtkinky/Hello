@@ -1,0 +1,22 @@
+野指针：堆区的内存被释放，指向堆区的栈指针没有被释放，再次调用这个栈指针就会产生野指针
+内存泄漏：指向堆区的栈指针被释放了，堆区的内存空间没有释放，这块内存区域会一直存在无法释放，且无法使用
+
+栈：是向低地址扩展的内存空间
+堆：是向高地址扩展的内存空间
+
+x/100xb array 打印100个字节内存地址 从array开始
+po array 打印array
+
+class_copyIvarList
+再c 里面 copy new create 再堆区域里面开辟空间，在
+create new copy 默认都会开辟堆空间（都会调用malloc）
+
+CFRunloopRef *observer = 初始化;
+free(observer);
+CFRelease(observer);  的区别
+observer 里面有可能存放了其他堆内存的指针，如果用free(observer) 会直接释放observer所指向的堆内存，而不会释放observer堆内存中保存的指针所指向的堆内存
+
+clang -rewriete-objc  main.m
+
+sel_registerName("viewDidLoad")
+

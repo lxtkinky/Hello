@@ -134,6 +134,7 @@
 		BE3DB8DB2047D4D000CB3859 /* KVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DB8DA2047D4D000CB3859 /* KVCModel.m */; };
 		BE52CDF12045511B006B01AC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF02045511B006B01AC /* Person.m */; };
 		BE52CDF4204551B0006B01AC /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF3204551B0006B01AC /* Dog.m */; };
+		BEA496922049261800279F64 /* hello.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEA496912049261800279F64 /* hello.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -412,6 +413,7 @@
 		BE52CDF02045511B006B01AC /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		BE52CDF2204551B0006B01AC /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		BE52CDF3204551B0006B01AC /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		BEA496912049261800279F64 /* hello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
 		DDCA444BC4CA6080EDB6315F /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -987,6 +989,7 @@
 				52E70A1D1FE7657F0061213C /* Info.plist */,
 				52A9FB3E1FEA0FBF00366036 /* HelloWorld-prefix.pch */,
 				52A9FB451FEA39B000366036 /* 22.jpg */,
+				BEA496912049261800279F64 /* hello.txt */,
 				52EE56422008975000C8F035 /* HelloWorldModel.xcdatamodeld */,
 				520B95EC2004640A00E6DD54 /* Class */,
 				520B95E4200460D500E6DD54 /* Macro */,
@@ -1173,6 +1176,7 @@
 				52D05F091FE79AFD001D7226 /* Info.plist in Resources */,
 				5213DE3C1FF4E2BA00D14432 /* MJRefresh.bundle in Resources */,
 				52E70A1C1FE7657F0061213C /* LaunchScreen.storyboard in Resources */,
+				BEA496922049261800279F64 /* hello.txt in Resources */,
 				52E70A191FE7657F0061213C /* Assets.xcassets in Resources */,
 				52208579200C77BB000AE575 /* Info.plist in Resources */,
 				52EE56382008876000C8F035 /* Info.plist in Resources */,
