@@ -137,6 +137,8 @@
 		DF3C116320592377000AE8EE /* SpriteKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3C116220592377000AE8EE /* SpriteKitController.m */; };
 		DF3C116720592394000AE8EE /* TXGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3C116620592394000AE8EE /* TXGameScene.m */; };
 		DF3C1169205924FB000AE8EE /* perRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DF3C1168205924FB000AE8EE /* perRun.atlas */; };
+		DF4D3489206CD94D0002B1AC /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4D3488206CD94D0002B1AC /* NSString+Hash.m */; };
+		DF5FBB002069EE400021B6C3 /* TXVipVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5FBAFF2069EE400021B6C3 /* TXVipVideoController.m */; };
 		DF66FE16202BE2C400CDEA89 /* RunTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF66FE15202BE2C400CDEA89 /* RunTimeController.m */; };
 		DF69B184202855200027E591 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF69B182202855200027E591 /* GoogleMobileAds.framework */; };
 		DF69B185202855200027E591 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DF69B183202855200027E591 /* README.txt */; };
@@ -429,6 +431,10 @@
 		DF3C116520592394000AE8EE /* TXGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXGameScene.h; sourceTree = "<group>"; };
 		DF3C116620592394000AE8EE /* TXGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXGameScene.m; sourceTree = "<group>"; };
 		DF3C1168205924FB000AE8EE /* perRun.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = perRun.atlas; sourceTree = "<group>"; };
+		DF4D3487206CD94D0002B1AC /* NSString+Hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		DF4D3488206CD94D0002B1AC /* NSString+Hash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		DF5FBAFE2069EE400021B6C3 /* TXVipVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXVipVideoController.h; sourceTree = "<group>"; };
+		DF5FBAFF2069EE400021B6C3 /* TXVipVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXVipVideoController.m; sourceTree = "<group>"; };
 		DF66FE14202BE2C400CDEA89 /* RunTimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeController.h; sourceTree = "<group>"; };
 		DF66FE15202BE2C400CDEA89 /* RunTimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeController.m; sourceTree = "<group>"; };
 		DF69B182202855200027E591 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
@@ -617,6 +623,8 @@
 				BE3DB8DA2047D4D000CB3859 /* KVCModel.m */,
 				DF3C116120592377000AE8EE /* SpriteKitController.h */,
 				DF3C116220592377000AE8EE /* SpriteKitController.m */,
+				DF5FBAFE2069EE400021B6C3 /* TXVipVideoController.h */,
+				DF5FBAFF2069EE400021B6C3 /* TXVipVideoController.m */,
 				DF3C11642059237D000AE8EE /* View */,
 			);
 			path = ViewController;
@@ -661,6 +669,8 @@
 				52E589E41FFDD5FF001F66F5 /* ObserverManager.m */,
 				52E589E61FFDD659001F66F5 /* ObserverModel.h */,
 				52E589E71FFDD659001F66F5 /* ObserverModel.m */,
+				DF4D3487206CD94D0002B1AC /* NSString+Hash.h */,
+				DF4D3488206CD94D0002B1AC /* NSString+Hash.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1319,6 +1329,7 @@
 				BE52CDF4204551B0006B01AC /* Dog.m in Sources */,
 				52D05F0C1FE79AFD001D7226 /* MASConstraintMaker.m in Sources */,
 				5224BC6B200354D200534BB0 /* ArchieveViewController.m in Sources */,
+				DF4D3489206CD94D0002B1AC /* NSString+Hash.m in Sources */,
 				5213DE361FF4E2BA00D14432 /* MJRefreshBackGifFooter.m in Sources */,
 				52A9FB3C1FEA0A8800366036 /* AFNViewModel.m in Sources */,
 				52E70A141FE7657F0061213C /* ViewController.m in Sources */,
@@ -1417,6 +1428,7 @@
 				52208584200C77BB000AE575 /* JTHorizontalCalendarView.m in Sources */,
 				5249FB181FFF224B005978B6 /* SVRadialGradientLayer.m in Sources */,
 				52D05F0A1FE79AFD001D7226 /* MASCompositeConstraint.m in Sources */,
+				DF5FBB002069EE400021B6C3 /* TXVipVideoController.m in Sources */,
 				5220857E200C77BB000AE575 /* JTCalendarScrollManager.m in Sources */,
 				5224BC6120031AEE00534BB0 /* NotificationViewController.m in Sources */,
 				52FD9CCA200619720046193D /* CustomButton.m in Sources */,
