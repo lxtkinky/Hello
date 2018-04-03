@@ -8,9 +8,12 @@
 
 #import "RunLoopController.h"
 
+typedef void(^RunLoopBlock)();
+
 @interface RunLoopController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *taskArr;  //任务数组
 
 @end
 
@@ -26,8 +29,48 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.insets(UIEdgeInsetsZero);
+        make.edges.insets(UIEdgeInsetsMake(100, 0, 0, 0));
     }];
+    
+    self.taskArr = [NSMutableArray array];
+    
+    [self addObserForMainRunLoop];
+}
+
+- (void)addObserForMainRunLoop{
+    CFRunLoopRef mainLoop = CFRunLoopGetMain();
+    //new copy create 堆区域开辟内存空间
+    /*
+    typedef struct {
+        CFIndex    version;
+        void *    info;
+        const void *(*retain)(const void *info);
+        void    (*release)(const void *info);
+        CFStringRef    (*copyDescription)(const void *info);
+    } CFRunLoopObserverContext;
+     */
+    CFRunLoopObserverContext context = {
+        0,
+        (__bridge void*)self,
+        CFRetain,
+        CFRelease,
+        NULL
+    };
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreate(NULL, kCFRunLoopBeforeWaiting, YES, 0, &runloopCallback, &context);
+    CFRunLoopAddObserver(mainLoop, observer, kCFRunLoopCommonModes);
+    CFRelease(observer);        //释放Observer
+}
+
+void runloopCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
+//    NSLog(@"%@", info);
+    RunLoopController *vc = (__bridge RunLoopController *)info;
+    if (vc.taskArr.count == 0) {
+        return;
+    }
+    
+    RunLoopBlock task = [vc.taskArr firstObject];
+    task();
+    [vc.taskArr removeObjectAtIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +88,8 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     for (UIView *subView in cell.contentView.subviews) {
         [subView removeFromSuperview];
     }
@@ -53,10 +97,13 @@
     NSMutableArray *array = [NSMutableArray array];
     for (int i = 0; i < 3; i++) {
         UIImageView *imageView = [[UIImageView alloc] init];
-        NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"meinv" ofType:@"jpg"];
-        imageView.image = [[UIImage alloc] initWithContentsOfFile:imagePath];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         imageView.backgroundColor = [UIColor redColor];
+        
+        [self addTask:^{
+            [RunLoopController loadImage:imageView];
+        }];
+        
         [array addObject:imageView];
         [cell.contentView addSubview:imageView];
     }
@@ -83,6 +130,20 @@
     }
     
     return cell;
+}
+
++ (void)loadImage:(UIImageView *)imageView{
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"meinv" ofType:@"jpg"];
+    imageView.image = [[UIImage alloc] initWithContentsOfFile:imagePath];
+}
+
+- (void)addTask:(RunLoopBlock)runLoopBlock{
+    [self.taskArr addObject:runLoopBlock];
+    NSLog(@"array count %ld", self.taskArr.count);
+    if (self.taskArr.count > 21) {
+        [self.taskArr removeObjectAtIndex:0];
+    }
+    
 }
 
 @end
