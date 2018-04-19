@@ -103,9 +103,9 @@
 
 #pragma mark - //手动实现KVO
 /**
- 1、添加一个子类
- 2、给子类添加一个setter方法
- 3、绑定observer 再setter方法中调用observer方法
+ 1、添加一个子类，修改调用者的类型，把要观察的对象类型修改成子类类型
+ 2、重写子类的setter方法
+ 3、绑定observer 在setter方法中调用observer方法
  */
 
 - (void)tx_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context{

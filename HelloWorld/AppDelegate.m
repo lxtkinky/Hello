@@ -12,6 +12,8 @@
 
 extern BMKMapManager *mapManager;
 
+extern CFAbsoluteTime startTime;
+
 @interface AppDelegate ()<BMKGeneralDelegate>
 
 @end
@@ -23,6 +25,9 @@ extern BMKMapManager *mapManager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSLog(@"Lanuch Time = %f", CFAbsoluteTimeGetCurrent() - startTime);
+    
     
     _manager = [[BMKMapManager alloc] init];
     [_manager start:@"pWKVccKiI6LI7ke43BhToi6l" generalDelegate:self];

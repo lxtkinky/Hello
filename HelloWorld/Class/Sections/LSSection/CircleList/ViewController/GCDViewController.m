@@ -8,9 +8,12 @@
 
 #import "GCDViewController.h"
 
+
+
 @interface GCDViewController ()
 
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) NSString *name;
 
 @end
 
@@ -25,6 +28,9 @@
         make.center.equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(100, 50));
     }];
+    
+    [self threadBlock];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +53,27 @@
     return _button;
 }
 
+/**
+ 线程销毁的两种情况
+ 1、主动效果，调用exit
+ 2、被动销毁，线程没有任务了，线程就会自动退出
+ */
+- (void)threadBlock{
+    NSThread *thread = [[NSThread alloc] initWithBlock:^{
+        int i = 0;
+        
+        while (true) {
+            i++;
+            NSLog(@"%ld", i);
+            if (i > 100000) {
+                
+//                exit(0);
+            }
+        }
+    }];
+    [thread start];
+}
+
 - (void)startOperation{
     NSBlockOperation *operation1 = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"blockOperation");
@@ -61,10 +88,19 @@
     NSLog(@"NSInvocationOperation");
 }
 
+- (void)GCDTimer{
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(0, 0));
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC, 1.0 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(timer, ^{
+        NSLog(@"GCD timer");
+    });
+    dispatch_resume(timer);
+}
+
 - (void)startGCD{
     dispatch_queue_t queue1 = dispatch_queue_create("queue1", DISPATCH_QUEUE_CONCURRENT);
     
-    dispatch_queue_t queue2 = dispatch_queue_create("queue2", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t queue2 =  ("queue2", DISPATCH_QUEUE_CONCURRENT);
 
     
     dispatch_group_t group = dispatch_group_create();

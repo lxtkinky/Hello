@@ -136,6 +136,10 @@
 		BE52CDF4204551B0006B01AC /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF3204551B0006B01AC /* Dog.m */; };
 		BEA496922049261800279F64 /* hello.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEA496912049261800279F64 /* hello.txt */; };
 		DF089553206E1C890038F1D1 /* monidingwei.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DF089552206E1C880038F1D1 /* monidingwei.gpx */; };
+		DF345D24208087CB00CC468D /* MVVMController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF345D23208087CB00CC468D /* MVVMController.m */; };
+		DF345D27208087F500CC468D /* MVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF345D26208087F500CC468D /* MVVMViewModel.m */; };
+		DF345D2E2080888A00CC468D /* MVVMTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF345D2C2080888A00CC468D /* MVVMTableCell.m */; };
+		DF345D2F2080888A00CC468D /* MVVMTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF345D2D2080888A00CC468D /* MVVMTableCell.xib */; };
 		DF3C116320592377000AE8EE /* SpriteKitController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3C116220592377000AE8EE /* SpriteKitController.m */; };
 		DF3C116720592394000AE8EE /* TXGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3C116620592394000AE8EE /* TXGameScene.m */; };
 		DF3C1169205924FB000AE8EE /* perRun.atlas in Resources */ = {isa = PBXBuildFile; fileRef = DF3C1168205924FB000AE8EE /* perRun.atlas */; };
@@ -146,6 +150,7 @@
 		DF69B185202855200027E591 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DF69B183202855200027E591 /* README.txt */; };
 		DF69B188202855750027E591 /* TXGoogleAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69B187202855750027E591 /* TXGoogleAdController.m */; };
 		DF69B18B202855B70027E591 /* TXGoogleAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69B18A202855B70027E591 /* TXGoogleAdManager.m */; };
+		DF7C6F43207F34CF004C72FF /* ArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6F42207F34CF004C72FF /* ArrayViewController.m */; };
 		DF7EC5072029823A0055B907 /* TTDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7EC5062029823A0055B907 /* TTDetailContainerViewController.m */; };
 		DF9036B0204FD64C00163AAD /* monidingwei.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DF9036AF204FD64C00163AAD /* monidingwei.gpx */; };
 		DF93322D20732B43000AD255 /* RunLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF93322C20732B43000AD255 /* RunLoopController.m */; };
@@ -432,6 +437,13 @@
 		BEA496912049261800279F64 /* hello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
 		DDCA444BC4CA6080EDB6315F /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
 		DF089552206E1C880038F1D1 /* monidingwei.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = monidingwei.gpx; sourceTree = "<group>"; };
+		DF345D22208087CB00CC468D /* MVVMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMController.h; sourceTree = "<group>"; };
+		DF345D23208087CB00CC468D /* MVVMController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMController.m; sourceTree = "<group>"; };
+		DF345D25208087F500CC468D /* MVVMViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewModel.h; sourceTree = "<group>"; };
+		DF345D26208087F500CC468D /* MVVMViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMViewModel.m; sourceTree = "<group>"; };
+		DF345D2B2080888A00CC468D /* MVVMTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMTableCell.h; sourceTree = "<group>"; };
+		DF345D2C2080888A00CC468D /* MVVMTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMTableCell.m; sourceTree = "<group>"; };
+		DF345D2D2080888A00CC468D /* MVVMTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVMTableCell.xib; sourceTree = "<group>"; };
 		DF3C116120592377000AE8EE /* SpriteKitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteKitController.h; sourceTree = "<group>"; };
 		DF3C116220592377000AE8EE /* SpriteKitController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKitController.m; sourceTree = "<group>"; };
 		DF3C116520592394000AE8EE /* TXGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXGameScene.h; sourceTree = "<group>"; };
@@ -449,6 +461,8 @@
 		DF69B187202855750027E591 /* TXGoogleAdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXGoogleAdController.m; sourceTree = "<group>"; };
 		DF69B189202855B70027E591 /* TXGoogleAdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGoogleAdManager.h; sourceTree = "<group>"; };
 		DF69B18A202855B70027E591 /* TXGoogleAdManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXGoogleAdManager.m; sourceTree = "<group>"; };
+		DF7C6F41207F34CF004C72FF /* ArrayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayViewController.h; sourceTree = "<group>"; };
+		DF7C6F42207F34CF004C72FF /* ArrayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayViewController.m; sourceTree = "<group>"; };
 		DF7EC5052029823A0055B907 /* TTDetailContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTDetailContainerViewController.h; sourceTree = "<group>"; };
 		DF7EC5062029823A0055B907 /* TTDetailContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTDetailContainerViewController.m; sourceTree = "<group>"; };
 		DF9036AF204FD64C00163AAD /* monidingwei.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = monidingwei.gpx; sourceTree = "<group>"; };
@@ -636,6 +650,12 @@
 				DF5FBAFF2069EE400021B6C3 /* TXVipVideoController.m */,
 				DF93322B20732B43000AD255 /* RunLoopController.h */,
 				DF93322C20732B43000AD255 /* RunLoopController.m */,
+				DF7C6F41207F34CF004C72FF /* ArrayViewController.h */,
+				DF7C6F42207F34CF004C72FF /* ArrayViewController.m */,
+				DF345D22208087CB00CC468D /* MVVMController.h */,
+				DF345D23208087CB00CC468D /* MVVMController.m */,
+				DF345D25208087F500CC468D /* MVVMViewModel.h */,
+				DF345D26208087F500CC468D /* MVVMViewModel.m */,
 				DF3C11642059237D000AE8EE /* View */,
 			);
 			path = ViewController;
@@ -1137,6 +1157,9 @@
 			children = (
 				DF3C116520592394000AE8EE /* TXGameScene.h */,
 				DF3C116620592394000AE8EE /* TXGameScene.m */,
+				DF345D2B2080888A00CC468D /* MVVMTableCell.h */,
+				DF345D2C2080888A00CC468D /* MVVMTableCell.m */,
+				DF345D2D2080888A00CC468D /* MVVMTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1262,6 +1285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF345D2F2080888A00CC468D /* MVVMTableCell.xib in Resources */,
 				DF9036B0204FD64C00163AAD /* monidingwei.gpx in Resources */,
 				5249FB161FFF224B005978B6 /* SVProgressHUD.bundle in Resources */,
 				52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */,
@@ -1351,6 +1375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF345D2E2080888A00CC468D /* MVVMTableCell.m in Sources */,
 				BE52CDF4204551B0006B01AC /* Dog.m in Sources */,
 				52D05F0C1FE79AFD001D7226 /* MASConstraintMaker.m in Sources */,
 				5224BC6B200354D200534BB0 /* ArchieveViewController.m in Sources */,
@@ -1365,6 +1390,7 @@
 				52EE56362008876000C8F035 /* FMDatabaseQueue.m in Sources */,
 				52D05F0B1FE79AFD001D7226 /* MASConstraint.m in Sources */,
 				5213DE381FF4E2BA00D14432 /* MJRefreshBackStateFooter.m in Sources */,
+				DF345D27208087F500CC468D /* MVVMViewModel.m in Sources */,
 				520ED5E41FF6321C000D97A7 /* UIAlertAction+Custom.m in Sources */,
 				527809351FFB8E13001E783F /* LTProgressView.m in Sources */,
 				52EE563B200887B800C8F035 /* FMDBManager.m in Sources */,
@@ -1381,9 +1407,11 @@
 				52A9FB391FEA0A4400366036 /* AFNViewController.m in Sources */,
 				DFF5231F202B016700F832ED /* TXRACController.m in Sources */,
 				DF69B188202855750027E591 /* TXGoogleAdController.m in Sources */,
+				DF7C6F43207F34CF004C72FF /* ArrayViewController.m in Sources */,
 				DF69B18B202855B70027E591 /* TXGoogleAdManager.m in Sources */,
 				5204E0D62010372900500771 /* LxtCalendarViewModel.m in Sources */,
 				5211659A20075B7200F00019 /* GCDViewController.m in Sources */,
+				DF345D24208087CB00CC468D /* MVVMController.m in Sources */,
 				DF3C116720592394000AE8EE /* TXGameScene.m in Sources */,
 				5220858B200C964B000AE575 /* LXTCalenderView.m in Sources */,
 				520B95FB2004640A00E6DD54 /* CMRequest.m in Sources */,

@@ -50,7 +50,8 @@
                     @"LXTCalendarController", @"TXGoogleAdController",
                     @"TXRACController", @"RunTimeController",
                     @"SpriteKitController", @"KVCViewController",
-                    @"TXVipVideoController", @"RunLoopController"];
+                    @"TXVipVideoController", @"RunLoopController",
+                    @"ArrayViewController", @"MVVMController"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

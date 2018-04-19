@@ -7,6 +7,8 @@
 //
 
 #import "RunLoopController.h"
+#import <sys/socket.h>
+#import <objc/objc.h>
 
 typedef void(^RunLoopBlock)();
 
@@ -15,6 +17,8 @@ typedef void(^RunLoopBlock)();
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *taskArr;  //任务数组
 
+@property (nonatomic) CFRunLoopObserverRef observer;
+
 @end
 
 @implementation RunLoopController
@@ -22,6 +26,8 @@ typedef void(^RunLoopBlock)();
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.taskArr = [NSMutableArray array];
     
     self.tableView = [[UITableView alloc] init];
     self.tableView.delegate = self;
@@ -32,10 +38,34 @@ typedef void(^RunLoopBlock)();
         make.edges.insets(UIEdgeInsetsMake(100, 0, 0, 0));
     }];
     
-    self.taskArr = [NSMutableArray array];
+    
     
     [self addObserForMainRunLoop];
 }
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    CFRunLoopRemoveObserver(CFRunLoopGetMain(), _observer, kCFRunLoopCommonModes); 
+}
+
+
+
+/*
+ 所有的图片渲染都在主线程的一次RunLoop循环里面，UI渲染也属于RunLoop的事情
+ -次RunLoop循环，渲染的图片太多就会造成卡顿
+ 解决思路：
+ 让一次RunLoop循环，只给我加载一张图片
+ 步骤：
+ 1、观察（Observer）RunLoop循环
+ 2、一次循环，加载一张图片
+ |-Cell数据源加载的图片放到数组里面
+ |-RunLoop循环一次，从数组里面取出一张图片进行加载
+ if (status) {
+ [[NSRunLoop currentRunLoop] runUntilDate:[[NSDate date] dateByAddingTimeInterval:1]];
+ }
+ 通过标志来控制RunLoop运行
+ */
 
 - (void)addObserForMainRunLoop{
     CFRunLoopRef mainLoop = CFRunLoopGetMain();
@@ -49,6 +79,8 @@ typedef void(^RunLoopBlock)();
         CFStringRef    (*copyDescription)(const void *info);
     } CFRunLoopObserverContext;
      */
+    
+
     CFRunLoopObserverContext context = {
         0,
         (__bridge void*)self,
@@ -57,8 +89,10 @@ typedef void(^RunLoopBlock)();
         NULL
     };
     CFRunLoopObserverRef observer = CFRunLoopObserverCreate(NULL, kCFRunLoopBeforeWaiting, YES, 0, &runloopCallback, &context);
+    _observer = observer;
     CFRunLoopAddObserver(mainLoop, observer, kCFRunLoopCommonModes);
     CFRelease(observer);        //释放Observer
+    
 }
 
 void runloopCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
@@ -71,6 +105,13 @@ void runloopCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, 
     RunLoopBlock task = [vc.taskArr firstObject];
     task();
     [vc.taskArr removeObjectAtIndex:0];
+}
+- (void)addTask:(RunLoopBlock)runLoopBlock{
+    [self.taskArr addObject:runLoopBlock];
+    NSLog(@"array count %ld", self.taskArr.count);
+    if (self.taskArr.count > 21) {
+        [self.taskArr removeObjectAtIndex:0];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -100,9 +141,10 @@ void runloopCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, 
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         imageView.backgroundColor = [UIColor redColor];
         
-        [self addTask:^{
-            [RunLoopController loadImage:imageView];
-        }];
+//        [self addTask:^{
+//            [RunLoopController loadImage:imageView];
+//        }];
+         [RunLoopController loadImage:imageView];
         
         [array addObject:imageView];
         [cell.contentView addSubview:imageView];
@@ -137,13 +179,8 @@ void runloopCallback(CFRunLoopObserverRef observer, CFRunLoopActivity activity, 
     imageView.image = [[UIImage alloc] initWithContentsOfFile:imagePath];
 }
 
-- (void)addTask:(RunLoopBlock)runLoopBlock{
-    [self.taskArr addObject:runLoopBlock];
-    NSLog(@"array count %ld", self.taskArr.count);
-    if (self.taskArr.count > 21) {
-        [self.taskArr removeObjectAtIndex:0];
-    }
-    
-}
+//- (void)dealloc{
+//
+//}
 
 @end
