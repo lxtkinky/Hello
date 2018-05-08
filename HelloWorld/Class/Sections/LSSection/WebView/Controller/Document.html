@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+</head>
+<body>
+<input type="text" name="hello" id="abc" value = "123">
+<script type="text/javascript">
+function helo(param='aa11')
+{
+	document.getElementById('abc').value=param;
+    window.webkit.messageHandlers.hello.postMessage('666');
+    window.webkit.messageHandlers.func.postMessage('888');
+}
+</script>
+</body>
+</html>

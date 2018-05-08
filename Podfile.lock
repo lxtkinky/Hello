@@ -14,24 +14,35 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - BaiduMapKit (3.4.2)
+  - BaiduMapKit (4.0.0)
+  - BAWKWebView (1.0.8)
   - ReactiveObjC (3.0.0)
-  - SDWebImage (4.2.2):
-    - SDWebImage/Core (= 4.2.2)
-  - SDWebImage/Core (4.2.2)
+  - SDWebImage (4.2.3):
+    - SDWebImage/Core (= 4.2.3)
+  - SDWebImage/Core (4.2.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - BaiduMapKit
+  - BAWKWebView
   - ReactiveObjC (~> 3.0.0)
   - SDWebImage (~> 4.2.2)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - BaiduMapKit
+    - BAWKWebView
+    - ReactiveObjC
+    - SDWebImage
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  BaiduMapKit: f61b19ecf07a3f2deede72b221b366bf698739ed
+  BaiduMapKit: 8fa2eb2ca81b92b740b19d9ff3b59d751d3e92e1
+  BAWKWebView: 63bb0ef2b3b653a3d9ded58d9c1061003f1af827
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
-  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
 
-PODFILE CHECKSUM: d2326dda5e7f1045f869b46657acfc2ee9a0df0c
+PODFILE CHECKSUM: 34e9239dc53eb01e932c570eaeb7bd88717f8ef5
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.0

@@ -51,7 +51,9 @@
                     @"TXRACController", @"RunTimeController",
                     @"SpriteKitController", @"KVCViewController",
                     @"TXVipVideoController", @"RunLoopController",
-                    @"ArrayViewController", @"MVVMController"];
+                    @"ArrayViewController", @"MVVMController",
+                    @"TXBAWebViewController", @"BTCViewController",
+                    @"QRCodeViewController", @"TXPhotoController"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

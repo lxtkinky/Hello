@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://blog.csdn.net/cljandpean/article/details/66476536"/> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="referrer" content="always">
+    <meta name="description" content="JS与原生OC的三种交互方式大家在做项目的时候应该也遇到过需要h5与OC之间通信，来实现某种特定的效果，于是我总结一下最近用到过的这两者之间的交互的方式：
+通过在UIWebView的代理方法里拦截URL实现
+通过OC自带的JavaScriptCore.framework来实现
+通过ajax方式拦截url来实现首先来说一下目前最常见的第一种方式来实现的方式（通过在UIWebView的代理方法里拦截UR" />
+    <meta name="keywords" content="ios开发,ajax" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <title>JS与原生OC的三种交互方式 - CSDN博客</title>
+    
+            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/detail-95d26ed23f.min.css">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/themes/big-white/big-white-02ffddfbf5.min.css">
+
+    <script type="text/javascript">
+        var username = "cljandpean";
+        var blog_address = "https://blog.csdn.net/cljandpean";
+        var static_host = "https://csdnimg.cn/release/phoenix/";
+        var currentUserName = ""; 
+        var isShowAds = true;
+        var isOwner = false;
+        var loginUrl = "https://passport.csdn.net/account/login?from=https://blog.csdn.net/cljandpean/article/details/66476536"
+        var blogUrl = "https://blog.csdn.net/";
+        var curSkin = "big-white";
+    </script>
+    <script type="text/javascript">
+        // Traffic Stats of the entire Web site By baidu
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6bcd52f51e9b3dce32bec4a3997715ac";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+        // Traffic Stats of the entire Web site By baidu end
+    </script>
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="https://csdnimg.cn/rabbit/exposure-click/main-1.0.5.js"></script>
+        <script type="text/javascript" src="https://csdnimg.cn/pubfooter/js/tracking-1.0.2.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="https://csdnimg.cn/public/sandalstrap/1.2/css/sandalstrap.min.css"> 
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+</head>
+<body>    
+    <link rel="stylesheet" href="https://csdnimg.cn/public/common/toolbar/content_toolbar_css/content_toolbar.css">
+    <script id="toolbar-tpl-scriptId" src="https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js" type="text/javascript" domain="https://blog.csdn.net/"></script>
+    <script src="https://csdnimg.cn/public/sandalstrap/1.2/fonts/csdnc/csdnc.js"></script><link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/blog_code-c3a0c33d5c.css">
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.css">
+<script>
+    var recommendCount = 10;
+    recommendCount = recommendCount > 1 ? recommendCount+1 : recommendCount;
+    var articleTit = 'JS与原生OC的三种交互方式';
+    var ChannelId = 1;
+    var articleId = '66476536';
+    var commentscount = 0;
+    var islock = false;
+    var curentUrl = "https://blog.csdn.net/cljandpean/article/details/66476536";
+    var myUrl = "https://my.csdn.net/";
+    //1禁止评论，2正常
+    var commentAuth = 2;
+    //百度搜索
+    var baiduKey = "ios%E5%8E%9F%E7%94%9F%E4%B8%8Ejs%E7%9A%84%E4%BA%A4%E4%BA%92";
+    var needInsertBaidu = false;;
+</script>
+
+<header>
+	<div class="container d-flex clearfix">
+		<div class="title-box">
+			<h6 class="title-blog">
+				<a href="https://blog.csdn.net/cljandpean">我的博客</a>
+			</h6>
+			<p class="description"></p>
+		</div>
+		<div class="opt-box d-flex justify-content-end">
+			<a class="btn btn-sm" href="https://blog.csdn.net/cljandpean/rss/list">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#csdnc-rss"></use>
+					</svg>RSS订阅</a>
+					</div>
+	</div>
+</header><script src="https://dup.baidustatic.com/js/ds.js"></script>
+<div class="container clearfix pt0" id="mainBox">
+    <aside>
+		    <div id="asideProfile" class="aside-box">
+    <h3 class="aside-title">个人资料</h3>
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/cljandpean">
+                <img src="https://avatar.csdn.net/7/5/8/3_cljandpean.jpg" class="avatar_pic">
+            </a>
+        </div>
+        <div class="user-info d-flex justify-content-center flex-column">
+            <p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                <a href="https://blog.csdn.net/cljandpean" target="_blank" class="text-truncate" id="uid">cljandpean</a>
+            </p>
+                    </div>
+                <div class="opt-box d-flex justify-content-center flex-column">
+            <span  class="csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                                <a class="btn btn-sm btn-red-hollow" href="https://passport.csdn.net/account/login?from=https://blog.csdn.net/cljandpean/article/details/66476536" target="_self">关注</a>
+                            </span>
+            
+        </div>
+            </div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="7">
+            <dt>原创</dt>
+            <dd><span class="count">7</span></dd>
+        </dl>
+        <dl class="text-center" title="0">
+            <dt>粉丝</dt>
+            <dd id='fan'><span class="count">0</span></dd>
+        </dl>
+        <dl class="text-center" title="0">
+            <dt>喜欢</dt>
+            <dd><span class="count">0</span></dd>
+        </dl>
+        <dl class="text-center" title="0">
+            <dt>评论</dt>
+            <dd><span class="count">0</span></dd>
+        </dl>
+    </div>
+    <div class="grade-box clearfix">
+        <dl>
+            <dt>等级：</dt>
+            <dd>
+                <a href="https://blog.csdn.net/home/help.html#level" title="2级,点击查看等级说明" target="_blank">
+                    <svg class="icon icon-level" aria-hidden="true">
+                        <use xlink:href="#csdnc-bloglevel-2"></use>
+                    </svg>
+                </a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>访问：</dt>
+            <dd title="3379">
+                3379            </dd>
+        </dl>
+        <dl>
+            <dt>积分：</dt>
+            <dd title="109">
+                109            </dd>
+        </dl>
+        <dl title="1254653">
+            <dt>排名：</dt>
+            <dd>125万+</dd>
+        </dl>
+    </div>
+    </div>		    <div class="csdn-tracking-statistics mb8 box-shadow" data-pid="blog" data-mod="popu_4" style="height:250px;">
+    <div class="aside-content text-center" id="cpro_u2734133">
+        <!-- 投放代码 -->
+        <script type="text/javascript" src="//cee1.iteye.com/lgyyovfyh.js"></script>
+    </div>
+</div>
+		    <div id="asideNewArticle" class="aside-box">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix csdn-tracking-statistics tracking-click" data-mod="popu_382">
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/cljAndPean/article/details/52778508" target="_blank">使用CocoaPods在现有项目集成React-Native</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/cljAndPean/article/details/52777888" target="_blank">CocoaPods的使用</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/cljAndPean/article/details/51955984" target="_blank">CodePush 热更新React-Native(ios)</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/cljAndPean/article/details/51939611" target="_blank">ReactNative-ios 生成bundle文件</a>
+            </li>
+                        <li class="clearfix">
+                <a href="https://blog.csdn.net/cljAndPean/article/details/50556698" target="_blank">CALayer</a>
+            </li>
+                    </ul>
+    </div>
+</div>
+		    		    		    <div id="asideArchive" class="aside-box">
+    <h3 class="aside-title">归档</h3>
+    <div class="aside-content">
+        <ul class="archive-list">
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/cljandpean/article/month/2017/03">
+                    2017年3月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/cljandpean/article/month/2016/10">
+                    2016年10月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/cljandpean/article/month/2016/07">
+                    2016年7月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/cljandpean/article/month/2016/01">
+                    2016年1月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/cljandpean/article/month/2015/12">
+                    2015年12月                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+    </div>
+		    <div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list csdn-tracking-statistics tracking-click" data-mod="popu_521">
+							<li>
+					<a href="https://blog.csdn.net/cljandpean/article/details/66476536">JS与原生OC的三种交互方式</a>
+					<p class="read">阅读量：<span>2006</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/cljandpean/article/details/50556698">CALayer</a>
+					<p class="read">阅读量：<span>232</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/cljandpean/article/details/51939611">ReactNative-ios 生成bundle文件</a>
+					<p class="read">阅读量：<span>231</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/cljandpean/article/details/50352509">关于3DTouch</a>
+					<p class="read">阅读量：<span>202</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/cljandpean/article/details/50388581">Quartz 2D   绘图基础</a>
+					<p class="read">阅读量：<span>199</span></p>
+				</li>
+					</ul>
+	</div>
+</div>
+		    		<div id="asideFooter">
+			
+		<div class="aside-box">
+						<script type="text/javascript" src="//cee1.iteye.com/avneunkwb.js"></script>
+					</div>
+				<div class="aside-box">
+			<div class="persion_article">
+			</div>
+		</div>
+	</div>
+</aside>
+<script src="https://csdnimg.cn/pubfooter/js/publib_footer-1.0.3.js?20180309" data-isfootertrack="false" type="text/javascript"></script>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).remove();
+	})
+</script>
+    <main>
+        <div class="blog-content-box">
+	<div class="article-title-box">
+			<span class="article-type type-1 float-left">原</span>		<h6 class="title-article">JS与原生OC的三种交互方式</h6>
+	</div>
+	<div class="article-info-box">
+		<div class="article-bar-top d-flex">
+												<span class="time">2017年03月26日 16:27:01</span>
+			<div class="float-right">
+				<span class="read-count">阅读数：2024</span>
+											</div>
+		</div>
+	</div>
+	<article>
+		<div id="article_content" class="article_content csdn-tracking-statistics" data-pid="blog"  data-mod=popu_307  data-dsm = "post" >
+                    <div class="markdown_views">
+                <h1 id="js与原生oc的三种交互方式">JS与原生OC的三种交互方式</h1>
+
+<p>大家在做项目的时候应该也遇到过需要h5与OC之间通信，来实现某种特定的效果，于是我总结一下最近用到过的这两者之间的交互的方式(当然现在还有很多其他的交互方式，比如使用其他第三方的组件等等)：</p>
+
+<ul>
+<li><strong>通过在UIWebView的代理方法里拦截URL实现</strong></li>
+<li><strong>通过OC自带的JavaScriptCore.framework来实现</strong></li>
+<li><p><strong>通过ajax方式拦截url来实现</strong></p>
+
+<ol><li>首先来说一下目前最常见的第一种方式来实现的方式（通过在UIWebView的代理方法里拦截URL实现），这种方式是在webview代理方法中获取所需要的url,再根据获取的url里规定的特殊字段来进行处理，如下代码： <br>
+<code>-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType <br>
+{ <br>
+//第一种交互方式 <br>
+NSString *urlStr = request.URL.absoluteString; <br>
+if ([urlStr rangeOfString:@"baidu"].location!=NSNotFound) { <br>
+UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"" message:@"第一种方式" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil]; <br>
+[alertView show]; <br>
+} <br>
+return YES; <br>
+} <br>
+</code></li>
+<li>然后再说一下JavaScriptCore.framework来实现的方式：首先在UIWebView中用JSContext获取该UIWebView的javascript执行环境，</li></ol></li>
+</ul>
+
+<pre class="prettyprint"><code class=" hljs objectivec">  _webview = [[<span class="hljs-built_in">UIWebView</span> alloc] initWithFrame:CGRectMake(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">self</span><span class="hljs-variable">.view</span><span class="hljs-variable">.frame</span><span class="hljs-variable">.size</span><span class="hljs-variable">.width</span>, <span class="hljs-keyword">self</span><span class="hljs-variable">.view</span><span class="hljs-variable">.frame</span><span class="hljs-variable">.size</span><span class="hljs-variable">.height</span>)];
+    _webview<span class="hljs-variable">.backgroundColor</span> = [<span class="hljs-built_in">UIColor</span> lightGrayColor];
+    _webview<span class="hljs-variable">.delegate</span> = <span class="hljs-keyword">self</span>;
+    [<span class="hljs-keyword">self</span><span class="hljs-variable">.view</span> addSubview:_webview];
+
+    <span class="hljs-built_in">NSString</span> *htmlPath = [[<span class="hljs-built_in">NSBundle</span> mainBundle] pathForResource:@<span class="hljs-string">"index"</span> ofType:@<span class="hljs-string">"html"</span>];
+    <span class="hljs-built_in">NSURL</span> *localUrl = [[<span class="hljs-built_in">NSURL</span> alloc] initFileURLWithPath:htmlPath];
+    [_webview loadRequest:[<span class="hljs-built_in">NSURLRequest</span> requestWithURL:localUrl]];
+
+
+    <span class="hljs-comment">//第二种交互方式</span>
+    JSContext *context = [_webview  valueForKeyPath:@<span class="hljs-string">"documentView.webView.mainFrame.javaScriptContext"</span>];
+    context[@<span class="hljs-string">"button2Click22"</span>]=^(){
+            <span class="hljs-built_in">NSArray</span> *args = [JSContext currentArguments];
+            <span class="hljs-keyword">for</span> (JSValue *jsVal in args) {
+                <span class="hljs-keyword">if</span>([[<span class="hljs-built_in">NSString</span> stringWithFormat:@<span class="hljs-string">"%@"</span>,jsVal] isEqualToString:@<span class="hljs-string">"duijieyu"</span>])
+                {
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@<span class="hljs-string">""</span> message:@<span class="hljs-string">"第二种方式"</span> delegate:<span class="hljs-keyword">self</span> cancelButtonTitle:<span class="hljs-literal">nil</span> otherButtonTitles:@<span class="hljs-string">"确定"</span>, <span class="hljs-literal">nil</span>];
+                    [alertView show];
+                    <span class="hljs-keyword">break</span>;
+                }
+            }
+            JSValue *<span class="hljs-keyword">this</span> = [JSContext currentThis];
+            <span class="hljs-built_in">NSLog</span>(@<span class="hljs-string">"this: %@"</span>,<span class="hljs-keyword">this</span>);
+    };</code></pre>
+
+<p>然后在javascript执行环境中，定义一个相对应的js函数，如下代码：</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs xml"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">" "</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"jquery.js"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">br</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">br</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"javascript:;"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"btn2"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"font-size: 18px"</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">"button2Click()"</span>&gt;</span>第二种交互方式（JavaScriptCore）<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">br</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript">
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">button2Click</span><span class="hljs-params">()</span>
+{</span>
+    button2Click22(<span class="hljs-string">"duijieyu"</span>);<span class="hljs-comment">//oc里捕获的对接语</span>
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+
+<p>里面相对应的细节需要改成你们自己项目里规定好的细节。</p>
+
+<ol>
+<li>然后再说一下同ajax的方式进行通信吧，安卓系统通过ajax进行与h5页面的痛心特别容易，但是如果iOS也想要通过ajax进行与h5交互的话，就可以使用这种方法了（目前我能找到的方法，如果有好的方法，欢迎指教），首先这个方法需要再项目里加一下桥接文件，作为交互的桥梁，然后通过ajax里用规定的好的链接与字段与桥接文件里对应的字段进行转换，最后ViewController通过桥接文件获取相对应的信息进行处理，代码如下：</li>
+</ol>
+
+
+
+<pre class="prettyprint"><code class=" hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript">
+$(<span class="hljs-string">'#btn3'</span>).on(<span class="hljs-string">'click'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>
+    $.ajax({
+        type : <span class="hljs-string">'get'</span>,
+        url : <span class="hljs-string">'http://myApp.example.org/alert?title=Test%20from%20AJAX&amp;message=this%20is%20a%20message%20from%20an%20AJAX%20request"'</span>,
+        data:<span class="hljs-string">''</span>,
+        dataType : <span class="hljs-string">'json'</span>,
+        timeout : <span class="hljs-number">300</span>,
+        success:<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data)</span> {</span>
+          $(<span class="hljs-string">'#btn'</span>).html(<span class="hljs-string">'点我了'</span>);
+        },
+        error:<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(errMsg)</span> {</span>
+            $(<span class="hljs-string">'#btn'</span>).html(<span class="hljs-string">'出错了'</span>);
+        }
+    })
+})</span></code></pre>
+
+
+
+<pre class="prettyprint"><code class=" hljs objectivec">}
+
+
+<span class="hljs-preprocessor">#pragma mark - NativeActionDelegate</span>
+-(<span class="hljs-built_in">NSDictionary</span> *)handleAction:(NativeAction *)action error:(<span class="hljs-built_in">NSError</span> *__autoreleasing *)error
+{
+    <span class="hljs-keyword">if</span> ([action<span class="hljs-variable">.action</span> isEqualToString:@<span class="hljs-string">"alert"</span>]) {
+        <span class="hljs-built_in">dispatch_async</span>(dispatch_get_main_queue(), ^{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[action<span class="hljs-variable">.params</span> objectForKey:@<span class="hljs-string">"title"</span>] message:[action<span class="hljs-variable">.params</span> objectForKey:@<span class="hljs-string">"message"</span>] delegate:<span class="hljs-literal">nil</span> cancelButtonTitle:@<span class="hljs-string">"Ok"</span> otherButtonTitles:<span class="hljs-literal">nil</span>];
+            [alertView show];
+        });
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;
+}
+</code></pre>
+
+<p>注意：大家不要忘了设置桥接文件的代理哦。 <br>
+附demo地址：</p>            </div>
+                        <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/markdown_views-ea0013b516.css" />
+                            </div>
+				<div class="hide-article-box text-center csdn-tracking-statistics tracking-click" data-mod="popu_376">
+			<a class="btn btn-red-hollow" id="btn-readmore">阅读更多</a>
+		</div>
+        	</article>
+	
+		<div class="article-bar-bottom">
+				<div class="article-copyright">
+			版权声明：本文为博主原创文章，未经博主允许不得转载。			https://blog.csdn.net/cljAndPean/article/details/66476536		</div>
+						<div class="tags-box artic-tag-box">
+			<span class="label">文章标签：</span>
+						<a class="tag-link" href="http://so.csdn.net/so/search/s.do?q=ios开发&t=blog" target="_blank">ios开发						<a class="tag-link" href="http://so.csdn.net/so/search/s.do?q=ajax&t=blog" target="_blank">ajax						<a class="tag-link" href="http://so.csdn.net/so/search/s.do?q=uiwebview&t=blog" target="_blank">uiwebview						<a class="tag-link" href="http://so.csdn.net/so/search/s.do?q=javascript&t=blog" target="_blank">javascript						</a>
+		</div>
+						<div class="tags-box">
+			<span class="label">个人分类：</span>
+						<a class="tag-link" href="https://blog.csdn.net/cljandpean/article/category/6319333"  target="_blank">移动开发						</a>
+		</div>
+					</div>
+	
+	<!-- !empty($pre_next_article[0]) -->
+		</div>
+<script>
+    $(".MathJax").remove();
+</script>
+<script type="text/javascript" src="https://static-blog.csdn.net/mdeditor/public/res/bower-libs/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> 
+    MathJax.Hub.Config({ 
+			"HTML-CSS": { 
+					linebreaks: { automatic: true, width: "94%container" },
+					imageFont: null
+			},
+			tex2jax: {
+				preview: "none"
+			},
+			mml2jax: {
+				preview: 'none'
+			}
+	});
+</script>
+<script>
+	(function(){
+		var btnReadmore = $("#btn-readmore");
+		if(btnReadmore.length>0){
+			var winH = $(window).height();
+			var articleBox = $("div.article_content");
+			var artH = articleBox.height();
+			if(artH > winH*2){
+				articleBox.css({
+					'height':winH*2+'px',
+					'overflow':'hidden'
+				})
+				btnReadmore.click(function(){
+					articleBox.removeAttr("style");
+					$(this).parent().remove();
+				})
+			}else{
+				btnReadmore.parent().remove();
+			}
+		}
+	})()
+</script>        <div class="edu-promotion"></div>
+        <a id="commentBox"></a>
+<div class="comment-box">
+	  	<div class="unlogin-box text-center">
+		想对作者说点什么？
+		<!-- $curl 当前地址 -->
+		<a href="https://passport.csdn.net/account/login?from=https://blog.csdn.net/cljandpean/article/details/66476536#commentBox" class="btn btn-sm btn-red">我来说一句</a>
+	</div>
+			<div class="comment-list-container">
+		<a id="comments"></a>
+		<div class="comment-list-box">
+		</div>
+		<div id="commentPage" class="pagination-box d-none"></div>
+		<div class="opt-box text-center">
+			<button class="btn btn-sm btn-link-blue" id="btnMoreComment"></button>
+		</div>
+	</div>
+</div>        <div class="recommend-box">
+            		<div class="recommend-item-box csdn-tracking-statistics" data-mod="popu_387" data-poputype="feed"  data-feed-show="false"  data-dsm="post">
+		<h4 class="text-truncate">
+			<a href="https://edu.csdn.net/topic/web110?utm_source=blogre1" target="_blank" strategy="EduRecommendInPriority_0">
+				Web全栈工程师特训班			</a>
+		</h4>
+		<p class="content">
+			<a href="https://edu.csdn.net/topic/web110?utm_source=blogre1" target="_blank" strategy="EduRecommendInPriority_0">
+				本课程包含了Web 全栈核心技术实战、Node.js实战 、前端框架实战、移动端与桌面程序开发。全面而丰富的教学系统，打造高端技术型Web全栈工程师			</a>
+		</p>
+		<div class="info-box d-flex align-content-center">
+			<p>
+				<span class="read-num">学院</span>
+			</p>
+			<p>
+				<span class="date">2018年04月26日 14:42</span>
+			</p>
+		</div>
+	</div>
+					<div class="recommend-item-box csdn-tracking-statistics" data-mod="popu_387" data-poputype="feed"  data-feed-show="false"  data-dsm="post">
+		<h4 class="text-truncate">
+			<a href="https://blog.csdn.net/haoxindasoft/article/details/50808013" target="_blank" strategy="BlogCommendFromBaidu_1">
+				OC与JS的相互交互			</a>
+		</h4>
+		<p class="content">
+			<a href="https://blog.csdn.net/haoxindasoft/article/details/50808013" target="_blank" strategy="BlogCommendFromBaidu_1">
+				在Objective-C中提供了一个JavaScriptCore.frame类库来进行OC与JS之间的交互，在OC中可通过此类库来进行与JS的交互...			</a>
+		</p>
+		<div class="info-box d-flex align-content-center">
+			<p>
+				<a class="avatar" src="https://blog.csdn.net/haoxindasoft" title="haoxindasoft" target="_blank">
+					<img src="https://avatar.csdn.net/F/6/1/3_haoxindasoft.jpg" alt="haoxindasoft" class="avatar-pic">
+					<span class="name">haoxindasoft</span>
+				</a>
+			</p>
+			<p>
+				<span class="date">2016-03-05 12:56:39</span>
+			</p>
+			<p>
+				<span class="read-num">阅读数：1171</span>
+			</p>
+		</div>
+	</div>
+				<div class="recommend-item-box recommend-ad-box" id="ad1">
+
+			
+				<script>
+				(function() {
+					var s = "_" + Math.random().toString(36).slice(2);
+					document.write('<div id="' + s + '"></div>');
+					(window.slotbydup=window.slotbydup || []).push({
+						id: '4765209',
+						container: s,
+						size: '808,120',
+						display: 'inlay-fix'
+					});
+				})();
+				</script>
+				<script src="http://dup.baidustatic.com/js/os.js"></script>
+
+			
+		</div>
+				<div class="recommend-item-box csdn-tracking-statistics" data-mod="popu_387" data-poputype="feed"  data-feed-show="false"  data-dsm="post">
+		<h4 class="text-truncate">
+			<a href="https://blog.csdn.net/SandyLoo/article/details/65630863" target="_blank" strategy="BlogCommendFromBaidu_2">
+				OC与JS的交互（iOS与H5混编）			</a>
+		</h4>
+		<p class="content">
+			<a href="https://blog.csdn.net/SandyLoo/article/details/65630863" target="_blank" strategy="BlogCommendFromBaidu_2">
+				OC与JS的交互（iOS与H5混编）在开发过程中，经常会出现需要iOS移动端与H5混编的使用场景。 iOS中加载html网页， 可以使用UIWebView或WKWebView. 本篇博客将介绍两种控件...			</a>
+		</p>
+		<div class="info-box d-flex align-content-center">
+			<p>
+				<a class="avatar" src="https://blog.csdn.net/SandyLoo" title="SandyLoo" target="_blank">
+					<img src="https://avatar.csdn.net/B/C/A/3_sandyloo.jpg" alt="SandyLoo" class="avatar-pic">
+					<span class="name">SandyLoo</span>
+				</a>
+			</p>
+			<p>
+				<span class="date">2017-03-24 14:50:00</span>
+			</p>
+			<p>
+				<span class="read-num">阅读数：8436</span>
+			</p>
+		</div>
+	</div>
+					<div class="recommend-item-box csdn-tracking-statistics" data-mod="popu_387" data-poputype="feed"  data-feed-show="false"  data-dsm="post">
+		<h4 class="text-truncate">
+			<a href="https://blog.csdn.net/liu_wentao/article/details/52934710" target="_blank" strategy="BlogCommendFromBaidu_3">
+				OC 与 JS 交互遇到的坑			</a>
+		</h4>
+		<p class="content">
+			<a href="https://blog.csdn.net/liu_wentao/article/details/52934710" target="_blank" strategy="BlogCommendFromBaidu_3">
+				注入交互对象的时机跟我用JavaScript调用交互方法的时机不对。当我们在- (void)viewDidLoad中注入JS代码之后，如果页面发生了重定向，此时web页面的JS已经发生了变化，而- (...			</a>
+		</p>
+		<div class="info-box d-flex align-content-center">
+			<p>
+				<a class="avatar" src="https://blog.csdn.net/liu_wentao" title="liu_wentao" target="_blank">
+					<img src="https://avatar.csdn.net/5/3/E/3_liu_wentao.jpg" alt="liu_wentao" class="avatar-pic">
+					<span class="name">liu_wentao</span>
+				</a>
+			</p>
+			<p>
+				<span class="date">2016-10-26 15:20:45</span>
+			</p>
+			<p>
+				<span class="read-num">阅读数：512</span>
+			</p>
+		</div>
+	</div>
+					<div class="recommend-item-box csdn-tracking-statistics" data-mod="popu_387" data-poputype="feed"  data-feed-show="false"  data-dsm="post">
+		<h4 class="text-truncate">
+			<a href="https://blog.csdn.net/Apple_0611/article/details/44780503" target="_blank" strategy="BlogCommendFromBaidu_4">
+				webView中OC和JS交互			</a>
+		</h4>
+		<p class="content">
+			<a href="https://blog.csdn.net/Apple_0611/article/details/44780503" target="_blank" strategy="BlogCommendFromBaidu_4">
+				UIWebView是IOS SDK中渲染网面的控件，在显示网页的时候，我们可以hack网页然后显示想显示的内容。其中就要用到javascript的知识，而UIWebView与javascript交互的...			</a>
+		</p>
+		<div class="info-box d-flex align-content-center">
+			<p>
+				<a class="avatar" src="https://blog.csdn.net/Apple_0611" title="Apple_0611" target="_blank">
+					<img src="https://avatar.csdn.net/B/4/2/3_apple_0611.jpg" alt="Apple_0611" class="avatar-pic">
+					<span class="name">Apple_0611</span>
+				</a>
+			</p>
+			<p>
+				<span class="date">2015-03-31 15:43:17</span>
+			</p>
+			<p>
+				<span class="read-num">阅读数：744</span>
+			</p>
+		</div>
+	</div>
+					<div class="recommend-item-box csdn-tracking-statistics" data-mod="popu_387" data-poputype="feed"  data-feed-show="false"  data-dsm="post">
+		<h4 class="text-truncate">
+			<a href="https://blog.csdn.net/qq_25781639/article/details/51393473" target="_blank" strategy="BlogCommendFromBaidu_5">
+				iOS7 通过jsContext调用js交互问题			</a>
+		</h4>
+		<p class="content">
+			<a href="https://blog.csdn.net/qq_25781639/article/details/51393473" target="_blank" strategy="BlogCommendFromBaidu_5">
+				现在很多原生的应用喜欢嵌套H5网页，这时就会涉及到js交互的问题。下面来说说iOS7以后自带的js交互。 
+准备工作：导入JavaScript的系统工具库。 
+直接上码： 
+1、js调用OC方法 
+首...			</a>
+		</p>
+		<div class="info-box d-flex align-content-center">
+			<p>
+				<a class="avatar" src="https://blog.csdn.net/qq_25781639" title="qq_25781639" target="_blank">
+					<img src="https://avatar.csdn.net/4/E/1/3_qq_25781639.jpg" alt="qq_25781639" class="avatar-pic">
+					<span class="name">qq_25781639</span>
+				</a>
+			</p>
+			<p>
+				<span class="date">2016-05-13 10:54:45</span>
+			</p>
+			<p>
+				<span class="read-num">阅读数：1472</span>
+			</p>
+		</div>
+	</div>
+					<div class="recommend-item-box recommend-ad-box" id="yd_a_d_feed_0">
+			<script>
+				var new_element = document.createElement("script"); 
+        new_element.setAttribute("async", "async"); 
+        new_element.setAttribute("charset", "utf-8"); 
+        new_element.setAttribute("data-notify", "inforFlowMulti_notify");
+        new_element.setAttribute("src", "https://shared.ydstatic.com/js/yatdk/3.0.0/stream.js");
+        new_element.setAttribute("data-id", "8935aa488dd58452b9e5ee3b44f1212f");
+
+        new_element.setAttribute("data-insert-nodes", "yd_a_d_feed_0");
+
+        new_element.setAttribute("data-pos", "inline");
+        new_element.setAttribute("data-img-Style", "float:right;width:120px;");
+        new_element.setAttribute("data-des-Style", "color: #8e959a;line-height: 24px;font-size:14px;font-family: 'PingFang SC', 'Microsoft YaHei', SimHei, Arial, SimSun;");
+        new_element.setAttribute("data-tit-Style", "font-size:20px;font-weight:bold;margin-bottom:10px;font-family: 'PingFang SC', 'Microsoft YaHei', SimHei, Arial, SimSun;");
+        new_element.setAttribute("data-div-Style", "background-image: url(//img-ads.csdn.net/2016/201608021757063065.png);background-repeat: no-repeat;background-position: bottom left;");
+        document.body.appendChild(new_element);
+			</script>
+		</div>
+			<div class="recommend-item-box csdn-tracking-statistics" data-mod="popu_387" data-poputype="feed"  data-feed-show="false"  data-dsm="post">
+		<h4 class="text-truncate">
+			<a href="https://blog.csdn.net/lwjok2007/article/details/47058101" target="_blank" strategy="BlogCommendFromBaidu_6">
+				iOS js oc相互调用（JavaScriptCore）			</a>
+		</h4>
+		<p class="content">
+			<a href="https://blog.csdn.net/lwjok2007/article/details/47058101" target="_blank" strategy="BlogCommendFromBaidu_6">
+				从iOS7开始 苹果公布了JavaScriptCore.framework 它使得JS与OC的交互更加方便了。
+下面我们就简单了解一下这个框架
+首先我导入framework
+方法如下
+
+
+
+
+
+点击L...			</a>
+		</p>
+		<div class="info-box d-flex align-content-center">
+			<p>
+				<a class="avatar" src="https://blog.csdn.net/lwjok2007" title="lwjok2007" target="_blank">
+					<img src="https://avatar.csdn.net/1/3/6/3_lwjok2007.jpg" alt="lwjok2007" class="avatar-pic">
+					<span class="name">lwjok2007</span>
+				</a>
+			</p>
+			<p>
+				<span class="date">2015-07-25 19:33:25</span>
+			</p>
+			<p>
+				<span class="read-num">阅读数：67524</span>
+			</p>
+		</div>
+	</div>
+					<div class="recommend-item-box csdn-tracking-statistics" data-mod="popu_387" data-poputype="feed"  data-feed-show="false"  data-dsm="post">
+		<h4 class="text-truncate">
+			<a href="https://blog.csdn.net/MinJing_Lin/article/details/51581029" target="_blank" strategy="BlogCommendFromBaidu_7">
+				OC与JS交互			</a>
+		</h4>
+		<p class="content">
+			<a href="https://blog.csdn.net/MinJing_Lin/article/details/51581029" target="_blank" strategy="BlogCommendFromBaidu_7">
+				iOS原生应用和web页面的交互大致上有这几种方法iOS7之后的JavaScriptCore、拦截协议、第三方框架WebViewJavaScriptBridge、iOS8之后的WKWebView。在这...			</a>
+		</p>
+		<div class="info-box d-flex align-content-center">
+			<p>
+				<a class="avatar" src="https://blog.csdn.net/MinJing_Lin" title="MinJing_Lin" target="_blank">
+					<img src="https://avatar.csdn.net/F/7/5/3_minjing_lin.jpg" alt="MinJing_Lin" class="avatar-pic">
+					<span class="name">MinJing_Lin</span>
+				</a>
+			</p>
+			<p>
+				<span class="date">2016-07-12 15:21:16</span>
+			</p>
+			<p>
+				<span class="read-num">阅读数：1260</span>
+			</p>
+		</div>
+	</div>
+					<div class="recommend-item-box csdn-tracking-statistics" data-mod="popu_387" data-poputype="feed"  data-feed-show="false"  data-dsm="post">
+		<h4 class="text-truncate">
+			<a href="https://blog.csdn.net/jwzhangjie/article/details/46823721" target="_blank" strategy="BlogCommendFromBaidu_8">
+				OC与JS互相调用			</a>
+		</h4>
+		<p class="content">
+			<a href="https://blog.csdn.net/jwzhangjie/article/details/46823721" target="_blank" strategy="BlogCommendFromBaidu_8">
+				最近项目中要用到html5来实现，涉及到OC调用JS，以及JS调用OC的方法，这里把遇到的问题以及实现方法介绍一下。//
+//  ViewController.h
+//  OC_And_JS
+//
+/...			</a>
+		</p>
+		<div class="info-box d-flex align-content-center">
+			<p>
+				<a class="avatar" src="https://blog.csdn.net/jwzhangjie" title="jwzhangjie" target="_blank">
+					<img src="https://avatar.csdn.net/F/E/F/3_jwzhangjie.jpg" alt="jwzhangjie" class="avatar-pic">
+					<span class="name">jwzhangjie</span>
+				</a>
+			</p>
+			<p>
+				<span class="date">2015-07-10 00:27:14</span>
+			</p>
+			<p>
+				<span class="read-num">阅读数：29410</span>
+			</p>
+		</div>
+	</div>
+					<div class="recommend-item-box csdn-tracking-statistics" data-mod="popu_387" data-poputype="feed"  data-feed-show="false"  data-dsm="post">
+		<h4 class="text-truncate">
+			<a href="https://blog.csdn.net/HeroGuo_JP/article/details/51443004" target="_blank" strategy="BlogCommendFromBaidu_9">
+				IOS 开发 OC（Object_C）与前端页面JS（JavaScript）交互整理（一）			</a>
+		</h4>
+		<p class="content">
+			<a href="https://blog.csdn.net/HeroGuo_JP/article/details/51443004" target="_blank" strategy="BlogCommendFromBaidu_9">
+				IOS开发OC与JS交互			</a>
+		</p>
+		<div class="info-box d-flex align-content-center">
+			<p>
+				<a class="avatar" src="https://blog.csdn.net/HeroGuo_JP" title="HeroGuo_JP" target="_blank">
+					<img src="https://avatar.csdn.net/2/4/5/3_heroguo_jp.jpg" alt="HeroGuo_JP" class="avatar-pic">
+					<span class="name">HeroGuo_JP</span>
+				</a>
+			</p>
+			<p>
+				<span class="date">2016-05-18 12:40:47</span>
+			</p>
+			<p>
+				<span class="read-num">阅读数：3582</span>
+			</p>
+		</div>
+	</div>
+			            <div class="recommend-loading-box">
+                <img src='https://csdnimg.cn/release/phoenix/images/feedLoading.gif'>
+            </div>
+            <div class="recommend-end-box">
+                <p class="text-center">没有更多推荐了，<a href="https://blog.csdn.net/" class="c-blue c-blue-hover c-blue-focus">返回首页</a></p>
+            </div>
+        </div>
+    </main>
+</div>
+<div class="mask-dark"></div>
+<div class="report-box">
+    <div class="pos-box">
+        <h2 class="title">不良信息举报</h2>
+        <a class="btn-close">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#csdnc-times"></use>
+            </svg>
+        </a>
+        <form id="frmReport">
+            <div class="form-box">
+                <div class="txt-row-box">
+                    <label class="title" id="reptTit">举报内容：</label>
+                    <p class="rpt-title text-truncate">JS与原生OC的三种交互方式</p>
+                </div>
+                <div class="txt-row-box">
+                    <label class="title">举报原因：</label>
+                    <div class="rdo-box">
+                        <label><input type="radio" class="rdo-chk report-type" id="report_sex" name="report_type" value="1">色情</label>
+                        <label><input type="radio" class="rdo-chk report-type" id="report_Politics" name="report_type" value="2">政治</label>
+                        <label><input type="radio" class="rdo-chk report-type" id="report_copy" name="report_type" value="3">抄袭</label>
+                        <label><input type="radio" class="rdo-chk report-type" id="report_ad" name="report_type" value="4">广告</label>
+                        <label><input type="radio" class="rdo-chk report-type" id="report_want" name="report_type" value="5">招聘</label>
+                        <label><input type="radio" class="rdo-chk report-type" id="report_call" name="report_type" value="6">骂人</label>
+                        <label><input type="radio" class="rdo-chk report-type" id="report_other" name="report_type" value="7">其他</label>
+                    </div>
+                </div>
+                <div class="txt-row-box" id="rptOriginalurl">
+                    <label class="title">原文地址：</label>
+                    <div class="txt-box">
+                        <input class="ipt" type="text" name="originalurl">
+                    </div>
+                </div>
+                <div class="txt-row-box">
+                    <label class="title">原因补充：</label>
+                    <div class="txt-box">
+                        <textarea class="ipt ipt-textarea" name="description" maxlength="30"></textarea>
+                        <p class="remark">最多只允许输入30个字</p>
+                    </div>
+                </div>
+            </div>
+            <div class="opt-box text-right">
+                <input type="reset" class="btn btn-link-gray btn-close" value="取消">
+                <input type="submit" class="btn btn-red btn-submit" value="提交">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="pulllog-box" style="display: block;">
+	<div class="pulllog clearfix">
+		<span class="text float-left">加入CSDN，享受更精准的内容推荐，与500万程序员共同成长！</span>
+		<div class="pulllog-btn float-right clearfix">
+            <button class="pulllog-login float-left csdn-tracking-statistics tracking-click" data-mod="popu_557">
+                登录
+            </button>
+            <div class="pulllog-sigin float-left csdn-tracking-statistics tracking-click" data-mod="popu_558">
+                <a href="https://passport.csdn.net/account/mobileregister" target="_blank">注册</a>
+            </div>
+            <button class="btn-close">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#csdnc-times"></use>
+                </svg>
+            </button>
+		</div>
+	</div>
+</div>
+<div id="loginWrap" style="display:none"></div>
+<div class="tool-box">
+	<ul class="meau-list">
+		<li>
+			<button class="btn-like" title="点赞">
+				<svg class="icon active" aria-hidden="true">
+					<use xlink:href="#csdnc-thumbsup-ok"></use>
+				</svg><svg class="icon no-active" aria-hidden="true">
+					<use xlink:href="#csdnc-thumbsup"></use>
+				</svg>
+				<p>0</p>
+			</button>
+		</li>
+		<li class="toc-container-box" id="liTocBox">
+			<button class="btn-toc" title="目录">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#csdnc-contents"></use>
+				</svg><br>目录
+			</button>
+			<div class="toc-container">
+				<div class="pos-box">
+					<div class="icon-arrow"></div>
+					<div class="scroll-box">
+						<div class="toc-box"></div>
+					</div>
+				</div>
+				<div class="opt-box">
+					<button class="btn-opt prev nomore" title="向上">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#csdnc-chevronup"></use>
+						</svg>
+					</button>
+					<button class="btn-opt next">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#csdnc-chevrondown"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</li>
+		<li>
+			<button class="btn-bookmark" title="收藏">
+				<svg class="icon active" aria-hidden="true">
+					<use xlink:href="#csdnc-bookmark-ok"></use>
+				</svg><svg class="icon no-active" aria-hidden="true">
+					<use xlink:href="#csdnc-bookmark"></use>
+				</svg><br>收藏
+			</button>
+		</li>
+		<li>
+			<a class="btn-comments" title="评论" href="#commentBox">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#csdnc-comments"></use>
+				</svg><br>评论
+			</a>
+		</li>
+				<li class="bdsharebuttonbox">
+			<a class="btn-comments bds_weixin" data-cmd="weixin" title="微信分享">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#csdnc-wechat"></use>
+				</svg><br>微信
+			</a>
+		</li>
+		<li class="bdsharebuttonbox">
+			<a class="btn-comments bds_tsina" data-cmd="tsina" title="微博分享">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#csdnc-weibo"></use>
+				</svg><br>微博
+			</a>
+		</li>
+		<li class="bdsharebuttonbox">
+			<a class="btn-comments bds_qzone" data-cmd="qzone" title="QQ分享">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#csdnc-qq"></use>
+				</svg><br>QQ
+			</a>
+		</li>
+	</ul>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'https://csdnimg.cn/static/api/js/share.js?v=89860594'];</script>
+<script src="https://csdnimg.cn/public/sandalstrap/1.2/js/sandalstrap.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.js"></script>
+<script src='https://csdnimg.cn/public/common/gotop/js/goTop-v1.0.min.js?v201803151422'></script>
+<script>
+    GoTop({
+        right: 8,
+        hasReport: true,
+        reportFun: function() {
+            showReport(false,'JS与原生OC的三种交互方式');
+        }
+    })
+</script>
+<script src="https://csdnimg.cn/release/phoenix/template/js/common-bd54b21308.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/js/detail-dd0e825f48.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/themes/big-white/big-white-46c7bd3d86.min.js"></script>
+<script src="https://csdnimg.cn/search/baidu_search-1.1.2.js?v=201802071056&autorun=true&install=true&keyword=ios%E5%8E%9F%E7%94%9F%E4%B8%8Ejs%E7%9A%84%E4%BA%A4%E4%BA%92"  type="text/javascript"></script>
+</body>
+<div class="box-box-default">
+    <a class="btn-remove">
+        关闭
+    </a>
+    <script type="text/javascript" src="//cee1.iteye.com/mhzzjepzz.js"></script>
+</div>
+<div class="box-box-large">
+    <a class="btn-remove">
+        关闭
+    </a>
+    <script type="text/javascript" src="//cee1.iteye.com/idvveasfs.js"></script>
+</div>
+</html>

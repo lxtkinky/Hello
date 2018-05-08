@@ -47,6 +47,13 @@ self.block = ^{
 _property = [NSObject new];//隐式持有
 
 }
+|-SDWebImage有五大模块
+使用category对常用的view进行扩展，方便我们使用，
+manager联合下载和缓存起协调作用
+cache缓存模块
+download下载模块
+perfetch下载一组图片
+调用category的sd_setImageWithURL方法会创建一个UIImageView对象，然后再调用sd_internalSetImageWithURL()方法，这里会创建以个UIView对象，然后调用loadImageWithURL()，会创建一个SDWebImageManager对象，manager调用queryDiskCache方法查找磁盘缓存，这里会创建一个SDImageCache对象并返回图片数据，如果没有缓存就去下载，这里会创建一个SDWebImageDownloader对象，并由它去下载图片，下载完成后返回图片数据同时对图片进行缓存
 
 |-Weak的底层实现
 weak声明的变量释放后，自动赋值为nil

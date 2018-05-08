@@ -121,7 +121,6 @@
 		52EE56352008876000C8F035 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EE562C2008876000C8F035 /* FMDatabasePool.m */; };
 		52EE56362008876000C8F035 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EE562E2008876000C8F035 /* FMDatabaseQueue.m */; };
 		52EE56372008876000C8F035 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EE56312008876000C8F035 /* FMResultSet.m */; };
-		52EE56382008876000C8F035 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52EE56322008876000C8F035 /* Info.plist */; };
 		52EE563B200887B800C8F035 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EE563A200887B800C8F035 /* FMDBManager.m */; };
 		52EE563E200892A700C8F035 /* FMDBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EE563D200892A700C8F035 /* FMDBController.m */; };
 		52EE56442008975000C8F035 /* HelloWorldModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52EE56422008975000C8F035 /* HelloWorldModel.xcdatamodeld */; };
@@ -130,11 +129,26 @@
 		52FD9CCE200619B30046193D /* CustomButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FD9CCC200619B30046193D /* CustomButtonController.m */; };
 		52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FD9CCD200619B30046193D /* CustomButtonController.xib */; };
 		78F527FE8EB0D26578857BF2 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */; };
+		BE21C21220A038DA0025015D /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21C21120A038DA0025015D /* QRCodeViewController.m */; };
+		BE21C21520A0488F0025015D /* TXPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21C21420A0488F0025015D /* TXPhotoController.m */; };
 		BE3DB8D82047D47C00CB3859 /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DB8D72047D47C00CB3859 /* KVCViewController.m */; };
 		BE3DB8DB2047D4D000CB3859 /* KVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DB8DA2047D4D000CB3859 /* KVCModel.m */; };
 		BE52CDF12045511B006B01AC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF02045511B006B01AC /* Person.m */; };
 		BE52CDF4204551B0006B01AC /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF3204551B0006B01AC /* Dog.m */; };
+		BE54BC0F209DB2C900FE5147 /* BTCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE54BC0E209DB2C900FE5147 /* BTCViewController.m */; };
+		BE54BC12209DB34300FE5147 /* TXTableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE54BC11209DB34300FE5147 /* TXTableViewHelper.m */; };
+		BE6E079C20A13A5F008FE29D /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BE6E079B20A13A5F008FE29D /* timg.jpeg */; };
+		BE6E082C20A19FE4008FE29D /* TXQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6E082920A19FE2008FE29D /* TXQRCodeManager.m */; };
+		BE6E082D20A19FE4008FE29D /* TXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6E082B20A19FE4008FE29D /* TXShareManager.m */; };
+		BE6E083420A1A180008FE29D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE6E083120A1A180008FE29D /* README.txt */; };
+		BE6E083520A1A180008FE29D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6E083320A1A180008FE29D /* libWeChatSDK.a */; };
 		BEA496922049261800279F64 /* hello.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEA496912049261800279F64 /* hello.txt */; };
+		BEDBC4C72094562A00B527F8 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDBC4C62094562A00B527F8 /* CollectionViewController.m */; };
+		BEF01379209D3C6900C09305 /* TXBAWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF01378209D3C6900C09305 /* TXBAWebViewController.m */; };
+		BEF013BD209D8F6B00C09305 /* JSOC.html in Resources */ = {isa = PBXBuildFile; fileRef = BEF013BC209D8F6B00C09305 /* JSOC.html */; };
+		BEF013C0209D8FD100C09305 /* TXHtmlLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF013BF209D8FD100C09305 /* TXHtmlLoader.m */; };
+		BEF013C2209D91CA00C09305 /* OCJS.html in Resources */ = {isa = PBXBuildFile; fileRef = BEF013C1209D91CA00C09305 /* OCJS.html */; };
+		BEF013C4209D967600C09305 /* Document.html in Resources */ = {isa = PBXBuildFile; fileRef = BEF013C3209D967600C09305 /* Document.html */; };
 		DF089553206E1C890038F1D1 /* monidingwei.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DF089552206E1C880038F1D1 /* monidingwei.gpx */; };
 		DF345D24208087CB00CC468D /* MVVMController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF345D23208087CB00CC468D /* MVVMController.m */; };
 		DF345D27208087F500CC468D /* MVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF345D26208087F500CC468D /* MVVMViewModel.m */; };
@@ -411,7 +425,6 @@
 		52EE562F2008876000C8F035 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		52EE56302008876000C8F035 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		52EE56312008876000C8F035 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		52EE56322008876000C8F035 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EE5639200887B800C8F035 /* FMDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
 		52EE563A200887B800C8F035 /* FMDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
 		52EE563C200892A700C8F035 /* FMDBController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBController.h; sourceTree = "<group>"; };
@@ -426,6 +439,10 @@
 		52FD9CCD200619B30046193D /* CustomButtonController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonController.xib; sourceTree = "<group>"; };
 		70D1B6F8907DD619DABEEDBA /* Pods-HelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
 		BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE21C21020A038DA0025015D /* QRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		BE21C21120A038DA0025015D /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		BE21C21320A0488F0025015D /* TXPhotoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXPhotoController.h; sourceTree = "<group>"; };
+		BE21C21420A0488F0025015D /* TXPhotoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXPhotoController.m; sourceTree = "<group>"; };
 		BE3DB8D62047D47C00CB3859 /* KVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
 		BE3DB8D72047D47C00CB3859 /* KVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
 		BE3DB8D92047D4D000CB3859 /* KVCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCModel.h; sourceTree = "<group>"; };
@@ -434,7 +451,30 @@
 		BE52CDF02045511B006B01AC /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		BE52CDF2204551B0006B01AC /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		BE52CDF3204551B0006B01AC /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		BE54BC0D209DB2C900FE5147 /* BTCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTCViewController.h; sourceTree = "<group>"; };
+		BE54BC0E209DB2C900FE5147 /* BTCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTCViewController.m; sourceTree = "<group>"; };
+		BE54BC10209DB34300FE5147 /* TXTableViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXTableViewHelper.h; sourceTree = "<group>"; };
+		BE54BC11209DB34300FE5147 /* TXTableViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXTableViewHelper.m; sourceTree = "<group>"; };
+		BE6E079B20A13A5F008FE29D /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
+		BE6E082820A19FE1008FE29D /* TXQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXQRCodeManager.h; sourceTree = "<group>"; };
+		BE6E082920A19FE2008FE29D /* TXQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXQRCodeManager.m; sourceTree = "<group>"; };
+		BE6E082A20A19FE3008FE29D /* TXShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXShareManager.h; sourceTree = "<group>"; };
+		BE6E082B20A19FE4008FE29D /* TXShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXShareManager.m; sourceTree = "<group>"; };
+		BE6E082F20A1A180008FE29D /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		BE6E083020A1A180008FE29D /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		BE6E083120A1A180008FE29D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		BE6E083220A1A180008FE29D /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		BE6E083320A1A180008FE29D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		BEA496912049261800279F64 /* hello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
+		BEDBC4C52094562A00B527F8 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		BEDBC4C62094562A00B527F8 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		BEF01377209D3C6900C09305 /* TXBAWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXBAWebViewController.h; sourceTree = "<group>"; };
+		BEF01378209D3C6900C09305 /* TXBAWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXBAWebViewController.m; sourceTree = "<group>"; };
+		BEF013BC209D8F6B00C09305 /* JSOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JSOC.html; sourceTree = "<group>"; };
+		BEF013BE209D8FD100C09305 /* TXHtmlLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXHtmlLoader.h; sourceTree = "<group>"; };
+		BEF013BF209D8FD100C09305 /* TXHtmlLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXHtmlLoader.m; sourceTree = "<group>"; };
+		BEF013C1209D91CA00C09305 /* OCJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = OCJS.html; sourceTree = "<group>"; };
+		BEF013C3209D967600C09305 /* Document.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Document.html; sourceTree = "<group>"; };
 		DDCA444BC4CA6080EDB6315F /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
 		DF089552206E1C880038F1D1 /* monidingwei.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = monidingwei.gpx; sourceTree = "<group>"; };
 		DF345D22208087CB00CC468D /* MVVMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMController.h; sourceTree = "<group>"; };
@@ -492,6 +532,7 @@
 				78F527FE8EB0D26578857BF2 /* Pods_HelloWorld.framework in Frameworks */,
 				DF69B184202855200027E591 /* GoogleMobileAds.framework in Frameworks */,
 				5224BC3B2003092900534BB0 /* AlipaySDK.framework in Frameworks */,
+				BE6E083520A1A180008FE29D /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +609,8 @@
 				520B95F12004640A00E6DD54 /* CMRequest.m */,
 				520B95F22004640A00E6DD54 /* LSCoreToolCenter.h */,
 				520B95F32004640A00E6DD54 /* LSCoreToolCenter.m */,
+				BE54BC10209DB34300FE5147 /* TXTableViewHelper.h */,
+				BE54BC11209DB34300FE5147 /* TXTableViewHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -590,6 +633,9 @@
 		520B95F62004640A00E6DD54 /* LSSection */ = {
 			isa = PBXGroup;
 			children = (
+				BE21C20F20A038B80025015D /* Second */,
+				BE54BC0C209DB2A000FE5147 /* BTC */,
+				BEF01375209D3C2300C09305 /* WebView */,
 				520B95F72004640A00E6DD54 /* CircleList */,
 			);
 			path = LSSection;
@@ -656,6 +702,8 @@
 				DF345D23208087CB00CC468D /* MVVMController.m */,
 				DF345D25208087F500CC468D /* MVVMViewModel.h */,
 				DF345D26208087F500CC468D /* MVVMViewModel.m */,
+				BEDBC4C52094562A00B527F8 /* CollectionViewController.h */,
+				BEDBC4C62094562A00B527F8 /* CollectionViewController.m */,
 				DF3C11642059237D000AE8EE /* View */,
 			);
 			path = ViewController;
@@ -686,6 +734,10 @@
 				520B95E220045C7C00E6DD54 /* LXTNetworkManager.m */,
 				52EE5639200887B800C8F035 /* FMDBManager.h */,
 				52EE563A200887B800C8F035 /* FMDBManager.m */,
+				BE6E082820A19FE1008FE29D /* TXQRCodeManager.h */,
+				BE6E082920A19FE2008FE29D /* TXQRCodeManager.m */,
+				BE6E082A20A19FE3008FE29D /* TXShareManager.h */,
+				BE6E082B20A19FE4008FE29D /* TXShareManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -920,6 +972,7 @@
 		52508C461FF0DAC600E0115B /* thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				BE6E082E20A1A180008FE29D /* WechatSDK */,
 				DF69B181202855200027E591 /* GoogleMobileAdsSdk */,
 				52208554200C77BB000AE575 /* JTCalendar */,
 				52EE56262008876000C8F035 /* fmdb */,
@@ -1130,7 +1183,6 @@
 				52EE562F2008876000C8F035 /* FMDB.h */,
 				52EE56302008876000C8F035 /* FMResultSet.h */,
 				52EE56312008876000C8F035 /* FMResultSet.m */,
-				52EE56322008876000C8F035 /* Info.plist */,
 			);
 			path = fmdb;
 			sourceTree = "<group>";
@@ -1142,6 +1194,61 @@
 				52FD9CC9200619720046193D /* CustomButton.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BE21C20F20A038B80025015D /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				BE21C21020A038DA0025015D /* QRCodeViewController.h */,
+				BE21C21120A038DA0025015D /* QRCodeViewController.m */,
+				BE21C21320A0488F0025015D /* TXPhotoController.h */,
+				BE21C21420A0488F0025015D /* TXPhotoController.m */,
+				BE6E079B20A13A5F008FE29D /* timg.jpeg */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		BE54BC0C209DB2A000FE5147 /* BTC */ = {
+			isa = PBXGroup;
+			children = (
+				BE54BC0D209DB2C900FE5147 /* BTCViewController.h */,
+				BE54BC0E209DB2C900FE5147 /* BTCViewController.m */,
+			);
+			path = BTC;
+			sourceTree = "<group>";
+		};
+		BE6E082E20A1A180008FE29D /* WechatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				BE6E082F20A1A180008FE29D /* WXApi.h */,
+				BE6E083020A1A180008FE29D /* WXApiObject.h */,
+				BE6E083120A1A180008FE29D /* README.txt */,
+				BE6E083220A1A180008FE29D /* WechatAuthSDK.h */,
+				BE6E083320A1A180008FE29D /* libWeChatSDK.a */,
+			);
+			path = WechatSDK;
+			sourceTree = "<group>";
+		};
+		BEF01375209D3C2300C09305 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				BEF01376209D3C4200C09305 /* Controller */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		BEF01376209D3C4200C09305 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BEF01377209D3C6900C09305 /* TXBAWebViewController.h */,
+				BEF01378209D3C6900C09305 /* TXBAWebViewController.m */,
+				BEF013BE209D8FD100C09305 /* TXHtmlLoader.h */,
+				BEF013BF209D8FD100C09305 /* TXHtmlLoader.m */,
+				BEF013BC209D8F6B00C09305 /* JSOC.html */,
+				BEF013C1209D91CA00C09305 /* OCJS.html */,
+				BEF013C3209D967600C09305 /* Document.html */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		DF089551206DD0860038F1D1 /* Recovered References */ = {
@@ -1243,8 +1350,8 @@
 				TargetAttributes = {
 					52E70A081FE7657F0061213C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 34Y7VA8GFC;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = VX33RZ3VAZ;
+						ProvisioningStyle = Manual;
 					};
 					52E70A211FE7657F0061213C = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1287,19 +1394,23 @@
 			files = (
 				DF345D2F2080888A00CC468D /* MVVMTableCell.xib in Resources */,
 				DF9036B0204FD64C00163AAD /* monidingwei.gpx in Resources */,
+				BE6E083420A1A180008FE29D /* README.txt in Resources */,
 				5249FB161FFF224B005978B6 /* SVProgressHUD.bundle in Resources */,
 				52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */,
+				BEF013C4209D967600C09305 /* Document.html in Resources */,
 				52A9FB461FEA39B000366036 /* 22.jpg in Resources */,
 				5224BC3A2003092900534BB0 /* AlipaySDK.bundle in Resources */,
 				DF3C1169205924FB000AE8EE /* perRun.atlas in Resources */,
+				BE6E079C20A13A5F008FE29D /* timg.jpeg in Resources */,
+				BEF013C2209D91CA00C09305 /* OCJS.html in Resources */,
 				DF089553206E1C890038F1D1 /* monidingwei.gpx in Resources */,
 				52D05F091FE79AFD001D7226 /* Info.plist in Resources */,
 				5213DE3C1FF4E2BA00D14432 /* MJRefresh.bundle in Resources */,
 				52E70A1C1FE7657F0061213C /* LaunchScreen.storyboard in Resources */,
 				BEA496922049261800279F64 /* hello.txt in Resources */,
 				52E70A191FE7657F0061213C /* Assets.xcassets in Resources */,
+				BEF013BD209D8F6B00C09305 /* JSOC.html in Resources */,
 				52208579200C77BB000AE575 /* Info.plist in Resources */,
-				52EE56382008876000C8F035 /* Info.plist in Resources */,
 				DF69B185202855200027E591 /* README.txt in Resources */,
 				DF93322F20735AFA000AD255 /* meinv.jpg in Resources */,
 				52E70A171FE7657F0061213C /* Main.storyboard in Resources */,
@@ -1329,9 +1440,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BAWKWebView/BAWKWebView.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BAWKWebView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1344,9 +1464,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld-resources.sh",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1359,13 +1482,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloWorld-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1391,6 +1517,7 @@
 				52D05F0B1FE79AFD001D7226 /* MASConstraint.m in Sources */,
 				5213DE381FF4E2BA00D14432 /* MJRefreshBackStateFooter.m in Sources */,
 				DF345D27208087F500CC468D /* MVVMViewModel.m in Sources */,
+				BEDBC4C72094562A00B527F8 /* CollectionViewController.m in Sources */,
 				520ED5E41FF6321C000D97A7 /* UIAlertAction+Custom.m in Sources */,
 				527809351FFB8E13001E783F /* LTProgressView.m in Sources */,
 				52EE563B200887B800C8F035 /* FMDBManager.m in Sources */,
@@ -1425,6 +1552,7 @@
 				52EE56372008876000C8F035 /* FMResultSet.m in Sources */,
 				52A9FB441FEA188E00366036 /* KXMViewController.m in Sources */,
 				5213DE3A1FF4E2BA00D14432 /* MJRefreshNormalHeader.m in Sources */,
+				BE21C21220A038DA0025015D /* QRCodeViewController.m in Sources */,
 				5249FB171FFF224B005978B6 /* SVProgressHUD.m in Sources */,
 				5249FB1B1FFF5193005978B6 /* WebViewController.m in Sources */,
 				5213DE391FF4E2BA00D14432 /* MJRefreshGifHeader.m in Sources */,
@@ -1443,8 +1571,11 @@
 				52EE56342008876000C8F035 /* FMDatabaseAdditions.m in Sources */,
 				52A9FB521FEA670B00366036 /* MapViewController.m in Sources */,
 				52E589E81FFDD659001F66F5 /* ObserverModel.m in Sources */,
+				BE21C21520A0488F0025015D /* TXPhotoController.m in Sources */,
+				BE6E082C20A19FE4008FE29D /* TXQRCodeManager.m in Sources */,
 				52D05F121FE79AFD001D7226 /* View+MASAdditions.m in Sources */,
 				5220858E200C9C2E000AE575 /* LXTWeekMenuView.m in Sources */,
+				BEF013C0209D8FD100C09305 /* TXHtmlLoader.m in Sources */,
 				52FD9CCE200619B30046193D /* CustomButtonController.m in Sources */,
 				52208583200C77BB000AE575 /* JTCalendarWeekView.m in Sources */,
 				5257DE6D1FE8BE130094C259 /* SecondViewController.m in Sources */,
@@ -1455,7 +1586,9 @@
 				52E589EB1FFDF82A001F66F5 /* KVOViewController.m in Sources */,
 				DF3C116320592377000AE8EE /* SpriteKitController.m in Sources */,
 				5220857C200C77BB000AE575 /* JTDateHelper.m in Sources */,
+				BE6E082D20A19FE4008FE29D /* TXShareManager.m in Sources */,
 				5213DE3F1FF4E2BA00D14432 /* UIScrollView+MJExtension.m in Sources */,
+				BEF01379209D3C6900C09305 /* TXBAWebViewController.m in Sources */,
 				5213DE411FF4E2BA00D14432 /* UIView+MJExtension.m in Sources */,
 				5224BC362003086700534BB0 /* AlipayViewController.m in Sources */,
 				5213DE311FF4E2BA00D14432 /* MJRefreshFooter.m in Sources */,
@@ -1473,9 +1606,11 @@
 				5224BC6E200367CB00534BB0 /* UserModel.m in Sources */,
 				DF66FE16202BE2C400CDEA89 /* RunTimeController.m in Sources */,
 				52E589E51FFDD5FF001F66F5 /* ObserverManager.m in Sources */,
+				BE54BC12209DB34300FE5147 /* TXTableViewHelper.m in Sources */,
 				5220857A200C77BB000AE575 /* JTCalendarManager.m in Sources */,
 				52EE56472008990600C8F035 /* CoreDataController.m in Sources */,
 				52D05F171FE79F2D001D7226 /* ViewModel.m in Sources */,
+				BE54BC0F209DB2C900FE5147 /* BTCViewController.m in Sources */,
 				DF7EC5072029823A0055B907 /* TTDetailContainerViewController.m in Sources */,
 				5213DE351FF4E2BA00D14432 /* MJRefreshAutoStateFooter.m in Sources */,
 				5220857D200C77BB000AE575 /* JTCalendarDelegateManager.m in Sources */,
@@ -1637,7 +1772,9 @@
 			baseConfigurationReference = 70D1B6F8907DD619DABEEDBA /* Pods-HelloWorld.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 34Y7VA8GFC;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VX33RZ3VAZ;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1652,9 +1789,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HelloWorld/OpenPlayer",
+					"$(PROJECT_DIR)/HelloWorld/thirdparty/WechatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lixt.HelloWorld;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appvv.guessball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ba169f98-0dad-44ce-97d7-cf96f3d6f9a7";
+				PROVISIONING_PROFILE_SPECIFIER = "guessball profile";
 			};
 			name = Debug;
 		};
@@ -1663,7 +1803,9 @@
 			baseConfigurationReference = DDCA444BC4CA6080EDB6315F /* Pods-HelloWorld.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 34Y7VA8GFC;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1678,9 +1820,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HelloWorld/OpenPlayer",
+					"$(PROJECT_DIR)/HelloWorld/thirdparty/WechatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lixt.HelloWorld;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appvv.guessball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
