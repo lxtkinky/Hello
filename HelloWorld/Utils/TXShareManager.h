@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger, TXWXScene) {
  */
 - (void)shareMessageToWchat:(NSString *)message scene:(TXWXScene)scene;
 
+- (void)shareImageToWechat:(NSData *)imageData scene:(TXWXScene)scene;
+
 @end
 
 /*

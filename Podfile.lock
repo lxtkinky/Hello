@@ -20,6 +20,7 @@ PODS:
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
+  - SocketRocket (0.5.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - BAWKWebView
   - ReactiveObjC (~> 3.0.0)
   - SDWebImage (~> 4.2.2)
+  - SocketRocket
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -35,6 +37,7 @@ SPEC REPOS:
     - BAWKWebView
     - ReactiveObjC
     - SDWebImage
+    - SocketRocket
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -42,7 +45,8 @@ SPEC CHECKSUMS:
   BAWKWebView: 63bb0ef2b3b653a3d9ded58d9c1061003f1af827
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
 
-PODFILE CHECKSUM: 34e9239dc53eb01e932c570eaeb7bd88717f8ef5
+PODFILE CHECKSUM: ceb129d2374eef932d2b3cc7472ba85aea64dbeb
 
 COCOAPODS: 1.5.0

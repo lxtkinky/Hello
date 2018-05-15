@@ -7,11 +7,14 @@
 //
 
 #import "BTCViewController.h"
+#import "TXNetworkManager.h"
+#import "TXBTCModel.h"
 
 @interface BTCViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSDictionary *apiDict;
+@property (nonatomic, strong) NSMutableDictionary *DataDict;
 
 @end
 
@@ -43,7 +46,93 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.insets(UIEdgeInsetsMake(64, 0, 0, 0 ));
     }];
+    
+    [self loadData];
 
+}
+
+- (void)loadData{
+    
+    dispatch_queue_t queue1 = dispatch_queue_create("network.queue1", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_enter(group);
+    dispatch_group_async(group, queue1, ^{
+        NSString *urlStr = _apiDict[@"BTC"];
+        [[TXNetworkManager sharedInstance] getRequest:urlStr success:^(id responseObj) {
+            NSLog(@"BTC result = %@", responseObj);
+            dispatch_group_leave(group);
+        } failure:^(NSError *error) {
+            NSLog(@"error = %@", error);
+        }];
+    });
+    
+    
+//    dispatch_queue_t queue2 = dispatch_queue_create("network.queue2", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_enter(group);
+    dispatch_group_async(group, queue1, ^{
+        NSString *urlStr = _apiDict[@"ETH"];
+        [[TXNetworkManager sharedInstance] getRequest:urlStr success:^(id responseObj) {
+            NSLog(@"ETH result = %@", responseObj);
+            dispatch_group_leave(group);
+        } failure:^(NSError *error) {
+            NSLog(@"error = %@", error);
+        }];
+    });
+    
+//    dispatch_queue_t queue3 = dispatch_queue_create("network.queue2", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_enter(group);
+    dispatch_group_async(group, queue1, ^{
+        NSString *urlStr = _apiDict[@"LTC"];
+        [[TXNetworkManager sharedInstance] getRequest:urlStr success:^(id responseObj) {
+            NSLog(@"LTC result = %@", responseObj);
+            dispatch_group_leave(group);
+        } failure:^(NSError *error) {
+            NSLog(@"error = %@", error);
+        }];
+    });
+    
+    dispatch_group_enter(group);
+    dispatch_group_async(group, queue1, ^{
+        NSString *urlStr = _apiDict[@"ETC"];
+        [[TXNetworkManager sharedInstance] getRequest:urlStr success:^(id responseObj) {
+            NSLog(@"LTC result = %@", responseObj);
+            dispatch_group_leave(group);
+        } failure:^(NSError *error) {
+            NSLog(@"error = %@", error);
+        }];
+    });
+    
+    
+    dispatch_group_enter(group);
+    dispatch_group_async(group, queue1, ^{
+        NSString *urlStr = _apiDict[@"DOGE"];
+        [[TXNetworkManager sharedInstance] getRequest:urlStr success:^(id responseObj) {
+            NSLog(@"DOGE result = %@", responseObj);
+            dispatch_group_leave(group);
+        } failure:^(NSError *error) {
+            NSLog(@"error = %@", error);
+        }];
+    });
+    
+    
+    dispatch_group_enter(group);
+    dispatch_group_async(group, queue1, ^{
+        NSString *urlStr = _apiDict[@"YBC"];
+        [[TXNetworkManager sharedInstance] getRequest:urlStr success:^(id responseObj) {
+            NSLog(@"YBC result = %@", responseObj);
+            TXBTCModel *model = [TXBTCModel modelFromDict:responseObj];
+            dispatch_group_leave(group);
+        } failure:^(NSError *error) {
+            NSLog(@"error = %@", error);
+        }];
+    });
+    
+    dispatch_group_notify(group, queue1, ^{
+        NSLog(@"都完了");
+    });
+    
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +148,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.textLabel.text = [_apiDict.allKeys objectAtIndex:indexPath.row];
     return cell;
+}
+
+- (NSMutableDictionary *)DataDict{
+    if (!_DataDict) {
+        _DataDict = [[NSMutableDictionary alloc] init];
+    }
+    return _DataDict;
 }
 
 @end

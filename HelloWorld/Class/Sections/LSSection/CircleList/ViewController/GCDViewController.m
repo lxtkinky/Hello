@@ -78,7 +78,13 @@
     NSBlockOperation *operation1 = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"blockOperation");
     }];
+    
+    
     [operation1 start];
+    
+    [NSBlockOperation blockOperationWithBlock:^{
+        
+    }];
     
     NSInvocationOperation *operation2 = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(invokeMethod) object:nil];
     [operation2 start];

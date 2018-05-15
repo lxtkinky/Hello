@@ -191,7 +191,7 @@ nc 127.0.0.1 9999 连接127.0.0.1的9999端口
 连接服务器端
 向服务器发送数据
 
-
+NSStrig，是一个只读对象，它不应该被修改，NSMutableString是NSString的子类对象，NSMutableString是可以赋值给NSString的，如果使用strong，并且把NSMutableString赋值给它，修改NSMutableString对象会导致NSString对象也被修改（NSString和NSMutableString指向同一块内存地址），这是不应该出现的,使用copy就不会出现这个问题.
 
 
 ------------------------------------复习笔记------------------------------------

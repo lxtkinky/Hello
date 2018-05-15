@@ -133,6 +133,17 @@
 		BE21C21520A0488F0025015D /* TXPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21C21420A0488F0025015D /* TXPhotoController.m */; };
 		BE3DB8D82047D47C00CB3859 /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DB8D72047D47C00CB3859 /* KVCViewController.m */; };
 		BE3DB8DB2047D4D000CB3859 /* KVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DB8DA2047D4D000CB3859 /* KVCModel.m */; };
+		BE4A211720AAC4E2006EC7DA /* TXLabelHeightController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A211620AAC4E2006EC7DA /* TXLabelHeightController.m */; };
+		BE4A211A20AACE5A006EC7DA /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A211920AACE5A006EC7DA /* NSString+Helper.m */; };
+		BE4B645A20A28721007B9015 /* TXShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B645920A28721007B9015 /* TXShareController.m */; };
+		BE4B64F420A290D8007B9015 /* TXWebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B64F320A290D8007B9015 /* TXWebSocketManager.m */; };
+		BE4B64F720A2939A007B9015 /* TXWebSocketController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B64F620A2939A007B9015 /* TXWebSocketController.m */; };
+		BE4B64FE20A298DC007B9015 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B64FB20A298DB007B9015 /* GTMBase64.m */; };
+		BE4B64FF20A298DC007B9015 /* EasyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B64FC20A298DC007B9015 /* EasyHelper.m */; };
+		BE4B650220A29B9E007B9015 /* NSString+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B650020A29B9D007B9015 /* NSString+AES.m */; };
+		BE4B650520A2A002007B9015 /* TXEncryptTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B650420A2A002007B9015 /* TXEncryptTool.m */; };
+		BE4B651420A2E679007B9015 /* TXNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B651320A2E679007B9015 /* TXNetworkManager.m */; };
+		BE4B651720A2F500007B9015 /* TXBTCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B651620A2F500007B9015 /* TXBTCModel.m */; };
 		BE52CDF12045511B006B01AC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF02045511B006B01AC /* Person.m */; };
 		BE52CDF4204551B0006B01AC /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF3204551B0006B01AC /* Dog.m */; };
 		BE54BC0F209DB2C900FE5147 /* BTCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE54BC0E209DB2C900FE5147 /* BTCViewController.m */; };
@@ -144,6 +155,12 @@
 		BE6E083520A1A180008FE29D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6E083320A1A180008FE29D /* libWeChatSDK.a */; };
 		BEA496922049261800279F64 /* hello.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEA496912049261800279F64 /* hello.txt */; };
 		BEDBC4C72094562A00B527F8 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDBC4C62094562A00B527F8 /* CollectionViewController.m */; };
+		BEDFA40320A3F1B900B77600 /* TXGifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDFA40220A3F1B900B77600 /* TXGifViewController.m */; };
+		BEDFA40520A3F1C100B77600 /* turntable_tur_bk_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEDFA40420A3F1C100B77600 /* turntable_tur_bk_gif.gif */; };
+		BEDFA40820A41C9400B77600 /* TXAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDFA40720A41C9400B77600 /* TXAudioController.m */; };
+		BEDFA40A20A4209000B77600 /* 10085.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BEDFA40920A4209000B77600 /* 10085.mp3 */; };
+		BEDFA40C20A4214700B77600 /* 9939.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BEDFA40B20A4214700B77600 /* 9939.mp3 */; };
+		BEDFA41120A4356400B77600 /* home_classic.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEDFA41020A4356400B77600 /* home_classic.gif */; };
 		BEF01379209D3C6900C09305 /* TXBAWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF01378209D3C6900C09305 /* TXBAWebViewController.m */; };
 		BEF013BD209D8F6B00C09305 /* JSOC.html in Resources */ = {isa = PBXBuildFile; fileRef = BEF013BC209D8F6B00C09305 /* JSOC.html */; };
 		BEF013C0209D8FD100C09305 /* TXHtmlLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF013BF209D8FD100C09305 /* TXHtmlLoader.m */; };
@@ -447,6 +464,29 @@
 		BE3DB8D72047D47C00CB3859 /* KVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
 		BE3DB8D92047D4D000CB3859 /* KVCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCModel.h; sourceTree = "<group>"; };
 		BE3DB8DA2047D4D000CB3859 /* KVCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCModel.m; sourceTree = "<group>"; };
+		BE4A211520AAC4E2006EC7DA /* TXLabelHeightController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXLabelHeightController.h; sourceTree = "<group>"; };
+		BE4A211620AAC4E2006EC7DA /* TXLabelHeightController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXLabelHeightController.m; sourceTree = "<group>"; };
+		BE4A211820AACE5A006EC7DA /* NSString+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		BE4A211920AACE5A006EC7DA /* NSString+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		BE4B645820A28721007B9015 /* TXShareController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXShareController.h; sourceTree = "<group>"; };
+		BE4B645920A28721007B9015 /* TXShareController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXShareController.m; sourceTree = "<group>"; };
+		BE4B64F220A290D8007B9015 /* TXWebSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXWebSocketManager.h; sourceTree = "<group>"; };
+		BE4B64F320A290D8007B9015 /* TXWebSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXWebSocketManager.m; sourceTree = "<group>"; };
+		BE4B64F520A2939A007B9015 /* TXWebSocketController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXWebSocketController.h; sourceTree = "<group>"; };
+		BE4B64F620A2939A007B9015 /* TXWebSocketController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXWebSocketController.m; sourceTree = "<group>"; };
+		BE4B64F920A298DB007B9015 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		BE4B64FA20A298DB007B9015 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		BE4B64FB20A298DB007B9015 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		BE4B64FC20A298DC007B9015 /* EasyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyHelper.m; sourceTree = "<group>"; };
+		BE4B64FD20A298DC007B9015 /* EasyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyHelper.h; sourceTree = "<group>"; };
+		BE4B650020A29B9D007B9015 /* NSString+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES.m"; sourceTree = "<group>"; };
+		BE4B650120A29B9D007B9015 /* NSString+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AES.h"; sourceTree = "<group>"; };
+		BE4B650320A2A002007B9015 /* TXEncryptTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXEncryptTool.h; sourceTree = "<group>"; };
+		BE4B650420A2A002007B9015 /* TXEncryptTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXEncryptTool.m; sourceTree = "<group>"; };
+		BE4B651220A2E679007B9015 /* TXNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXNetworkManager.h; sourceTree = "<group>"; };
+		BE4B651320A2E679007B9015 /* TXNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXNetworkManager.m; sourceTree = "<group>"; };
+		BE4B651520A2F500007B9015 /* TXBTCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXBTCModel.h; sourceTree = "<group>"; };
+		BE4B651620A2F500007B9015 /* TXBTCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXBTCModel.m; sourceTree = "<group>"; };
 		BE52CDEF2045511B006B01AC /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		BE52CDF02045511B006B01AC /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		BE52CDF2204551B0006B01AC /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
@@ -468,6 +508,14 @@
 		BEA496912049261800279F64 /* hello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
 		BEDBC4C52094562A00B527F8 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		BEDBC4C62094562A00B527F8 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		BEDFA40120A3F1B900B77600 /* TXGifViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGifViewController.h; sourceTree = "<group>"; };
+		BEDFA40220A3F1B900B77600 /* TXGifViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXGifViewController.m; sourceTree = "<group>"; };
+		BEDFA40420A3F1C100B77600 /* turntable_tur_bk_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = turntable_tur_bk_gif.gif; sourceTree = "<group>"; };
+		BEDFA40620A41C9400B77600 /* TXAudioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXAudioController.h; sourceTree = "<group>"; };
+		BEDFA40720A41C9400B77600 /* TXAudioController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXAudioController.m; sourceTree = "<group>"; };
+		BEDFA40920A4209000B77600 /* 10085.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 10085.mp3; sourceTree = "<group>"; };
+		BEDFA40B20A4214700B77600 /* 9939.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 9939.mp3; sourceTree = "<group>"; };
+		BEDFA41020A4356400B77600 /* home_classic.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = home_classic.gif; sourceTree = "<group>"; };
 		BEF01377209D3C6900C09305 /* TXBAWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXBAWebViewController.h; sourceTree = "<group>"; };
 		BEF01378209D3C6900C09305 /* TXBAWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXBAWebViewController.m; sourceTree = "<group>"; };
 		BEF013BC209D8F6B00C09305 /* JSOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JSOC.html; sourceTree = "<group>"; };
@@ -723,6 +771,13 @@
 		520ED5931FF5E160000D97A7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BE4B64FD20A298DC007B9015 /* EasyHelper.h */,
+				BE4B64FC20A298DC007B9015 /* EasyHelper.m */,
+				BE4B650120A29B9D007B9015 /* NSString+AES.h */,
+				BE4B650020A29B9D007B9015 /* NSString+AES.m */,
+				BE4A211820AACE5A006EC7DA /* NSString+Helper.h */,
+				BE4A211920AACE5A006EC7DA /* NSString+Helper.m */,
+				BE4B64F820A298DB007B9015 /* GTM */,
 				520ED5941FF5E1E0000D97A7 /* LTImageUtil.h */,
 				520ED5951FF5E1E0000D97A7 /* LTImageUtil.m */,
 				527809331FFB8E13001E783F /* LTProgressView.h */,
@@ -730,6 +785,8 @@
 				52E589EC1FFDFE3D001F66F5 /* DefineMacro.h */,
 				520B95DF20045BE200E6DD54 /* VFNetAPIClient.h */,
 				520B95DE20045BE200E6DD54 /* VFNetAPIClient.m */,
+				BE4B651220A2E679007B9015 /* TXNetworkManager.h */,
+				BE4B651320A2E679007B9015 /* TXNetworkManager.m */,
 				520B95E120045C7C00E6DD54 /* LXTNetworkManager.h */,
 				520B95E220045C7C00E6DD54 /* LXTNetworkManager.m */,
 				52EE5639200887B800C8F035 /* FMDBManager.h */,
@@ -738,6 +795,10 @@
 				BE6E082920A19FE2008FE29D /* TXQRCodeManager.m */,
 				BE6E082A20A19FE3008FE29D /* TXShareManager.h */,
 				BE6E082B20A19FE4008FE29D /* TXShareManager.m */,
+				BE4B64F220A290D8007B9015 /* TXWebSocketManager.h */,
+				BE4B64F320A290D8007B9015 /* TXWebSocketManager.m */,
+				BE4B650320A2A002007B9015 /* TXEncryptTool.h */,
+				BE4B650420A2A002007B9015 /* TXEncryptTool.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1201,11 +1262,35 @@
 			children = (
 				BE21C21020A038DA0025015D /* QRCodeViewController.h */,
 				BE21C21120A038DA0025015D /* QRCodeViewController.m */,
+				BE4B645820A28721007B9015 /* TXShareController.h */,
+				BE4B645920A28721007B9015 /* TXShareController.m */,
 				BE21C21320A0488F0025015D /* TXPhotoController.h */,
 				BE21C21420A0488F0025015D /* TXPhotoController.m */,
+				BE4B64F520A2939A007B9015 /* TXWebSocketController.h */,
+				BE4B64F620A2939A007B9015 /* TXWebSocketController.m */,
+				BE4A211520AAC4E2006EC7DA /* TXLabelHeightController.h */,
+				BE4A211620AAC4E2006EC7DA /* TXLabelHeightController.m */,
 				BE6E079B20A13A5F008FE29D /* timg.jpeg */,
+				BEDFA40120A3F1B900B77600 /* TXGifViewController.h */,
+				BEDFA40220A3F1B900B77600 /* TXGifViewController.m */,
+				BEDFA40420A3F1C100B77600 /* turntable_tur_bk_gif.gif */,
+				BEDFA41020A4356400B77600 /* home_classic.gif */,
+				BEDFA40620A41C9400B77600 /* TXAudioController.h */,
+				BEDFA40720A41C9400B77600 /* TXAudioController.m */,
+				BEDFA40920A4209000B77600 /* 10085.mp3 */,
+				BEDFA40B20A4214700B77600 /* 9939.mp3 */,
 			);
 			path = Second;
+			sourceTree = "<group>";
+		};
+		BE4B64F820A298DB007B9015 /* GTM */ = {
+			isa = PBXGroup;
+			children = (
+				BE4B64F920A298DB007B9015 /* GTMBase64.h */,
+				BE4B64FA20A298DB007B9015 /* GTMDefines.h */,
+				BE4B64FB20A298DB007B9015 /* GTMBase64.m */,
+			);
+			path = GTM;
 			sourceTree = "<group>";
 		};
 		BE54BC0C209DB2A000FE5147 /* BTC */ = {
@@ -1213,6 +1298,8 @@
 			children = (
 				BE54BC0D209DB2C900FE5147 /* BTCViewController.h */,
 				BE54BC0E209DB2C900FE5147 /* BTCViewController.m */,
+				BE4B651520A2F500007B9015 /* TXBTCModel.h */,
+				BE4B651620A2F500007B9015 /* TXBTCModel.m */,
 			);
 			path = BTC;
 			sourceTree = "<group>";
@@ -1395,6 +1482,7 @@
 				DF345D2F2080888A00CC468D /* MVVMTableCell.xib in Resources */,
 				DF9036B0204FD64C00163AAD /* monidingwei.gpx in Resources */,
 				BE6E083420A1A180008FE29D /* README.txt in Resources */,
+				BEDFA40520A3F1C100B77600 /* turntable_tur_bk_gif.gif in Resources */,
 				5249FB161FFF224B005978B6 /* SVProgressHUD.bundle in Resources */,
 				52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */,
 				BEF013C4209D967600C09305 /* Document.html in Resources */,
@@ -1404,9 +1492,12 @@
 				BE6E079C20A13A5F008FE29D /* timg.jpeg in Resources */,
 				BEF013C2209D91CA00C09305 /* OCJS.html in Resources */,
 				DF089553206E1C890038F1D1 /* monidingwei.gpx in Resources */,
+				BEDFA41120A4356400B77600 /* home_classic.gif in Resources */,
+				BEDFA40A20A4209000B77600 /* 10085.mp3 in Resources */,
 				52D05F091FE79AFD001D7226 /* Info.plist in Resources */,
 				5213DE3C1FF4E2BA00D14432 /* MJRefresh.bundle in Resources */,
 				52E70A1C1FE7657F0061213C /* LaunchScreen.storyboard in Resources */,
+				BEDFA40C20A4214700B77600 /* 9939.mp3 in Resources */,
 				BEA496922049261800279F64 /* hello.txt in Resources */,
 				52E70A191FE7657F0061213C /* Assets.xcassets in Resources */,
 				BEF013BD209D8F6B00C09305 /* JSOC.html in Resources */,
@@ -1445,6 +1536,7 @@
 				"${BUILT_PRODUCTS_DIR}/BAWKWebView/BAWKWebView.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1452,6 +1544,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BAWKWebView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1501,12 +1594,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4B645A20A28721007B9015 /* TXShareController.m in Sources */,
 				DF345D2E2080888A00CC468D /* MVVMTableCell.m in Sources */,
 				BE52CDF4204551B0006B01AC /* Dog.m in Sources */,
 				52D05F0C1FE79AFD001D7226 /* MASConstraintMaker.m in Sources */,
 				5224BC6B200354D200534BB0 /* ArchieveViewController.m in Sources */,
 				DF4D3489206CD94D0002B1AC /* NSString+Hash.m in Sources */,
 				5213DE361FF4E2BA00D14432 /* MJRefreshBackGifFooter.m in Sources */,
+				BEDFA40320A3F1B900B77600 /* TXGifViewController.m in Sources */,
 				52A9FB3C1FEA0A8800366036 /* AFNViewModel.m in Sources */,
 				52E70A141FE7657F0061213C /* ViewController.m in Sources */,
 				5213DE3B1FF4E2BA00D14432 /* MJRefreshStateHeader.m in Sources */,
@@ -1538,6 +1633,7 @@
 				DF69B18B202855B70027E591 /* TXGoogleAdManager.m in Sources */,
 				5204E0D62010372900500771 /* LxtCalendarViewModel.m in Sources */,
 				5211659A20075B7200F00019 /* GCDViewController.m in Sources */,
+				BE4B651420A2E679007B9015 /* TXNetworkManager.m in Sources */,
 				DF345D24208087CB00CC468D /* MVVMController.m in Sources */,
 				DF3C116720592394000AE8EE /* TXGameScene.m in Sources */,
 				5220858B200C964B000AE575 /* LXTCalenderView.m in Sources */,
@@ -1546,6 +1642,8 @@
 				52D05F0D1FE79AFD001D7226 /* MASLayoutConstraint.m in Sources */,
 				52E589F61FFE177E001F66F5 /* BaseViewController.m in Sources */,
 				5249FB141FFF224B005978B6 /* SVIndefiniteAnimatedView.m in Sources */,
+				BE4B64FF20A298DC007B9015 /* EasyHelper.m in Sources */,
+				BE4B651720A2F500007B9015 /* TXBTCModel.m in Sources */,
 				52508C4A1FF0DAC600E0115B /* LTAVPlayerView.m in Sources */,
 				5213DE341FF4E2BA00D14432 /* MJRefreshAutoNormalFooter.m in Sources */,
 				5213DE371FF4E2BA00D14432 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1560,14 +1658,18 @@
 				520B95FC2004640A00E6DD54 /* LSCoreToolCenter.m in Sources */,
 				BE3DB8D82047D47C00CB3859 /* KVCViewController.m in Sources */,
 				52D05F101FE79AFD001D7226 /* NSArray+MASAdditions.m in Sources */,
+				BE4B64F720A2939A007B9015 /* TXWebSocketController.m in Sources */,
 				52EE56352008876000C8F035 /* FMDatabasePool.m in Sources */,
 				52D05F0F1FE79AFD001D7226 /* MASViewConstraint.m in Sources */,
 				527809381FFB8EFE001E783F /* ProgressViewController.m in Sources */,
 				5249FB151FFF224B005978B6 /* SVProgressAnimatedView.m in Sources */,
+				BE4A211720AAC4E2006EC7DA /* TXLabelHeightController.m in Sources */,
 				520B95E320045C7C00E6DD54 /* LXTNetworkManager.m in Sources */,
+				BE4B650220A29B9E007B9015 /* NSString+AES.m in Sources */,
 				52EE563E200892A700C8F035 /* FMDBController.m in Sources */,
 				52D05F0E1FE79AFD001D7226 /* MASViewAttribute.m in Sources */,
 				5213DE3D1FF4E2BA00D14432 /* MJRefreshConst.m in Sources */,
+				BE4B650520A2A002007B9015 /* TXEncryptTool.m in Sources */,
 				52EE56342008876000C8F035 /* FMDatabaseAdditions.m in Sources */,
 				52A9FB521FEA670B00366036 /* MapViewController.m in Sources */,
 				52E589E81FFDD659001F66F5 /* ObserverModel.m in Sources */,
@@ -1589,6 +1691,7 @@
 				BE6E082D20A19FE4008FE29D /* TXShareManager.m in Sources */,
 				5213DE3F1FF4E2BA00D14432 /* UIScrollView+MJExtension.m in Sources */,
 				BEF01379209D3C6900C09305 /* TXBAWebViewController.m in Sources */,
+				BEDFA40820A41C9400B77600 /* TXAudioController.m in Sources */,
 				5213DE411FF4E2BA00D14432 /* UIView+MJExtension.m in Sources */,
 				5224BC362003086700534BB0 /* AlipayViewController.m in Sources */,
 				5213DE311FF4E2BA00D14432 /* MJRefreshFooter.m in Sources */,
@@ -1599,6 +1702,7 @@
 				5257DEEE1FE8FABC0094C259 /* ThirdViewController.m in Sources */,
 				520ED5E11FF630FF000D97A7 /* UIAlertController+Custom.m in Sources */,
 				52EE56442008975000C8F035 /* HelloWorldModel.xcdatamodeld in Sources */,
+				BE4A211A20AACE5A006EC7DA /* NSString+Helper.m in Sources */,
 				5213DE321FF4E2BA00D14432 /* MJRefreshHeader.m in Sources */,
 				5220857B200C77BB000AE575 /* JTCalendarSettings.m in Sources */,
 				5213DE2E1FF4E2BA00D14432 /* MJRefreshAutoFooter.m in Sources */,
@@ -1614,11 +1718,13 @@
 				DF7EC5072029823A0055B907 /* TTDetailContainerViewController.m in Sources */,
 				5213DE351FF4E2BA00D14432 /* MJRefreshAutoStateFooter.m in Sources */,
 				5220857D200C77BB000AE575 /* JTCalendarDelegateManager.m in Sources */,
+				BE4B64FE20A298DC007B9015 /* GTMBase64.m in Sources */,
 				52208584200C77BB000AE575 /* JTHorizontalCalendarView.m in Sources */,
 				5249FB181FFF224B005978B6 /* SVRadialGradientLayer.m in Sources */,
 				52D05F0A1FE79AFD001D7226 /* MASCompositeConstraint.m in Sources */,
 				DF5FBB002069EE400021B6C3 /* TXVipVideoController.m in Sources */,
 				5220857E200C77BB000AE575 /* JTCalendarScrollManager.m in Sources */,
+				BE4B64F420A290D8007B9015 /* TXWebSocketManager.m in Sources */,
 				5224BC6120031AEE00534BB0 /* NotificationViewController.m in Sources */,
 				52FD9CCA200619720046193D /* CustomButton.m in Sources */,
 				5213DE401FF4E2BA00D14432 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1791,7 +1897,7 @@
 					"$(PROJECT_DIR)/HelloWorld/OpenPlayer",
 					"$(PROJECT_DIR)/HelloWorld/thirdparty/WechatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appvv.guessball;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lxt.HelloWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ba169f98-0dad-44ce-97d7-cf96f3d6f9a7";
 				PROVISIONING_PROFILE_SPECIFIER = "guessball profile";
@@ -1822,7 +1928,7 @@
 					"$(PROJECT_DIR)/HelloWorld/OpenPlayer",
 					"$(PROJECT_DIR)/HelloWorld/thirdparty/WechatSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appvv.guessball;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lxt.HelloWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

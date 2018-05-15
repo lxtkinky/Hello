@@ -22,6 +22,9 @@ NSString *GADBannerID = @"ca-app-pub-6588575820465593/5681817116";
  #define playBoxHDKey @"ca-app-pub-5735364568535755/6014228424"
  */
 
+#define movieBoxKey @"ca-app-pub-5735364568535755/6293430024"
+#define movieBoxOtherKey @"ca-app-pub-5735364568535755/6691771223"
+#define playBoxHDKey @"ca-app-pub-5735364568535755/6014228424"
 
 NSString *GADAppID = @"ca-app-pub-6588575820465593~7644925034";
 NSString *GADInterstitialID = @"ca-app-pub-6588575820465593/3375150101";
@@ -56,11 +59,12 @@ NSString *GADTestInterstitialID = @"ca-app-pub-3940256099942544/4411468910";
 
 - (void)interstitialID:(UIViewController *)controller{
 //    [GADMobileAds configureWithApplicationID:GADTestAppID];
-    self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:GADTestInterstitialID];
+    self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:playBoxHDKey];
     self.interstitial.delegate = self;
     
     GADRequest *request = [GADRequest request];
-    request.testDevices = @[ @"4a39811ef2af17c0ef6e50cfcd42e434" ];
+//    request.testDevices = @[ @"4a39811ef2af17c0ef6e50cfcd42e434" ];
+    request.testDevices = @[kGADSimulatorID];
     [self.interstitial loadRequest:request];
 }
 

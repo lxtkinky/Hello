@@ -38,6 +38,18 @@
     return self;
 }
 
++ (instancetype)modelFromDict:(NSDictionary *)dict{
+    id model = [[self alloc] init];
+    u_int count = 0;
+    objc_property_t *properties = class_copyPropertyList([self class], &count);
+    for (int i = 0; i < count; i++) {
+        NSString *propertyName = [NSString stringWithCString:property_getName(properties[i]) encoding:NSUTF8StringEncoding];
+        NSValue *value = [dict objectForKey:propertyName];
+        [model setValue:value forKey:propertyName];
+    }
+    return model;
+}
+
 - (void)test{
     u_int count = 0;
     objc_property_t *properties = class_copyPropertyList([self class], &count);

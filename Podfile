@@ -7,4 +7,5 @@ pod 'ReactiveObjC', '~> 3.0.0'
 pod 'AFNetworking', '~> 3.1.0'
 pod 'BaiduMapKit'
 pod 'BAWKWebView'
+pod 'SocketRocket'
 end

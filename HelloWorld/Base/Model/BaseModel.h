@@ -10,6 +10,6 @@
 
 @interface BaseModel : NSObject <NSCoding>
 
-- (void)test;
++ (instancetype)modelFromDict:(NSDictionary *)dict;
 
 @end

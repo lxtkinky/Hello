@@ -25,6 +25,7 @@ static TXShareManager *manager;
     SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
     req.bText = YES;
     req.text = message;
+//    req.im
     switch (scene) {
         case TXWXSceneSession:
             req.scene = WXSceneSession;
@@ -38,6 +39,30 @@ static TXShareManager *manager;
             break;
     }
     
+    [WXApi sendReq:req];
+}
+
+- (void)shareImageToWechat:(NSData *)imageData scene:(TXWXScene)scene{
+    WXMediaMessage *message = [[WXMediaMessage alloc] init];
+    WXImageObject *imageObj = [WXImageObject object];
+    imageObj.imageData = imageData;
+    message.mediaObject = imageObj;
+    
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+    req.message = message;
+    req.bText = NO;
+    switch (scene) {
+        case TXWXSceneSession:
+            req.scene = WXSceneSession;
+            break;
+        case TXWXSceneFavorite:
+            req.scene = WXSceneFavorite;
+            break;
+            
+        default:
+            req.scene = WXSceneTimeline;
+            break;
+    }
     [WXApi sendReq:req];
 }
 

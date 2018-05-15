@@ -53,7 +53,10 @@
                     @"TXVipVideoController", @"RunLoopController",
                     @"ArrayViewController", @"MVVMController",
                     @"TXBAWebViewController", @"BTCViewController",
-                    @"QRCodeViewController", @"TXPhotoController"];
+                    @"QRCodeViewController", @"TXPhotoController",
+                    @"TXShareController", @"TXWebSocketController",
+                    @"TXGifViewController", @"TXAudioController",
+                    @"TXLabelHeightController"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
