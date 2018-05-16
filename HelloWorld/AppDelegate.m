@@ -32,6 +32,8 @@ extern CFAbsoluteTime startTime;
     _manager = [[BMKMapManager alloc] init];
     [_manager start:@"pWKVccKiI6LI7ke43BhToi6l" generalDelegate:self];
     
+    [self startNetworkMonitor];
+    
     return YES;
 }
 
@@ -83,5 +85,28 @@ extern CFAbsoluteTime startTime;
     return YES;
 }
 
+
+#pragma  mark - 退出应用时保持状态
+/*
+ 在iOS6之后视图控制器都添加了两个：encodeRestorableStateWithCoder:和decodeRestorableStateWithCoder:用来实现该控制器中的控件或数据的保存和恢复。
+ 其中encodeRestorableStateWithCoder: 方法是在保存时候调用
+ decodeRestorableStateWithCoder：方法是回复数据时调用
+ 需要实现这两个方法
+ */
+- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder{
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder{
+    return YES;
+}
+
+- (void)application:(UIApplication *)application willEncodeRestorableStateWithCoder:(NSCoder *)coder{
+    [coder encodeFloat:2.0 forKey:@"Version"];
+}
+
+- (void)application:(UIApplication *)application didDecodeRestorableStateWithCoder:(NSCoder *)coder{
+    float version = [coder decodeFloatForKey:@"Version"];
+}
 
 @end

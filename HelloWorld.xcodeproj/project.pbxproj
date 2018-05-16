@@ -153,6 +153,7 @@
 		BE6E082D20A19FE4008FE29D /* TXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6E082B20A19FE4008FE29D /* TXShareManager.m */; };
 		BE6E083420A1A180008FE29D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE6E083120A1A180008FE29D /* README.txt */; };
 		BE6E083520A1A180008FE29D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6E083320A1A180008FE29D /* libWeChatSDK.a */; };
+		BE7B488020ABD4CE00C2F94E /* TXNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7B487F20ABD4CE00C2F94E /* TXNetworkHelper.m */; };
 		BEA496922049261800279F64 /* hello.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEA496912049261800279F64 /* hello.txt */; };
 		BEDBC4C72094562A00B527F8 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDBC4C62094562A00B527F8 /* CollectionViewController.m */; };
 		BEDFA40320A3F1B900B77600 /* TXGifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDFA40220A3F1B900B77600 /* TXGifViewController.m */; };
@@ -505,6 +506,8 @@
 		BE6E083120A1A180008FE29D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		BE6E083220A1A180008FE29D /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		BE6E083320A1A180008FE29D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		BE7B487E20ABD4CE00C2F94E /* TXNetworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXNetworkHelper.h; sourceTree = "<group>"; };
+		BE7B487F20ABD4CE00C2F94E /* TXNetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXNetworkHelper.m; sourceTree = "<group>"; };
 		BEA496912049261800279F64 /* hello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
 		BEDBC4C52094562A00B527F8 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		BEDBC4C62094562A00B527F8 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
@@ -777,6 +780,8 @@
 				BE4B650020A29B9D007B9015 /* NSString+AES.m */,
 				BE4A211820AACE5A006EC7DA /* NSString+Helper.h */,
 				BE4A211920AACE5A006EC7DA /* NSString+Helper.m */,
+				BE7B487E20ABD4CE00C2F94E /* TXNetworkHelper.h */,
+				BE7B487F20ABD4CE00C2F94E /* TXNetworkHelper.m */,
 				BE4B64F820A298DB007B9015 /* GTM */,
 				520ED5941FF5E1E0000D97A7 /* LTImageUtil.h */,
 				520ED5951FF5E1E0000D97A7 /* LTImageUtil.m */,
@@ -1630,6 +1635,7 @@
 				DFF5231F202B016700F832ED /* TXRACController.m in Sources */,
 				DF69B188202855750027E591 /* TXGoogleAdController.m in Sources */,
 				DF7C6F43207F34CF004C72FF /* ArrayViewController.m in Sources */,
+				BE7B488020ABD4CE00C2F94E /* TXNetworkHelper.m in Sources */,
 				DF69B18B202855B70027E591 /* TXGoogleAdManager.m in Sources */,
 				5204E0D62010372900500771 /* LxtCalendarViewModel.m in Sources */,
 				5211659A20075B7200F00019 /* GCDViewController.m in Sources */,

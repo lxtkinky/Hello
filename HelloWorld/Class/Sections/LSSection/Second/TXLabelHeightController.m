@@ -34,6 +34,8 @@
     }];
     
     
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:nil];
+    
     UIView *backView = [[UIView alloc] init];
     [self.view addSubview:backView];
     backView.backgroundColor = [UIColor redColor];

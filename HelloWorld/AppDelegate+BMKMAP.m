@@ -59,4 +59,8 @@
     }
 }
 
+- (void)startNetworkMonitor{
+    [[TXNetworkHelper sharedInstance] startNetworkReach];
+}
+
 @end

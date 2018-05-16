@@ -15,4 +15,6 @@
 /**检测支付宝链接*/
 - (void)aliapyWithURL:(NSURL *)url;
 
+- (void)startNetworkMonitor;
+
 @end

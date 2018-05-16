@@ -17,9 +17,6 @@
 #import <AFNetworking/AFNetworking.h>
 #import "Masonry.h"
 
-#pragma mark - 用户自定义文件
-#import "UIViewController+Common.h"
-#import "BaseViewController.h"
 
 #pragma mark - 宏定义文件
 #import "DefineMacro.h"
@@ -30,5 +27,10 @@
 #import "ToolView.h"
 #import "UtilsMacro.h"
 #import "VendorMarco.h"
+
+#pragma mark - 用户自定义文件
+#import "UIViewController+Common.h"
+#import "BaseViewController.h"
+#import "TXNetworkHelper.h"
 
 #endif /* HelloWorld_prefix_pch */
