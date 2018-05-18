@@ -32,6 +32,8 @@
     [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         [self testSocket];
     }];
+    
+    
 }
 
 - (void)testSocket{
@@ -62,7 +64,7 @@
         NSLog(@"接收数据！= %@", message);
     };
     
-    [manager openSocketWithURLString:@"ws://192.168.2.100:8000/quiz/?"];
+    [manager openSocketWithURLString:@"ws://apiv2.wocaicai.com/ws/quiz/?"];
 }
 
 

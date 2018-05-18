@@ -8,4 +8,10 @@ pod 'AFNetworking', '~> 3.1.0'
 pod 'BaiduMapKit'
 pod 'BAWKWebView'
 pod 'SocketRocket'
+
+# pod 'UMCCommon'
+#pod 'UMCSecurityPlugins'
+#pod 'UMCAnalytics'
+#pod 'UMCPush'
+
 end

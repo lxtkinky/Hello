@@ -17,4 +17,8 @@
 
 - (void)startNetworkMonitor;
 
+//- (void)configUShare;
+
+- (void)configThirdComments;
+
 @end

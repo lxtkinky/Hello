@@ -9,6 +9,7 @@
 #import "AppDelegate+BMKMAP.h"
 #import <BaiduMapAPI_Base/BMKMapManager.h>
 #import <AlipaySDK/AlipaySDK.h>
+//#import <UMCommon/UMCommon.h>
 
 //extern BMKMapManager *mapManager;
 //
@@ -61,6 +62,20 @@
 
 - (void)startNetworkMonitor{
     [[TXNetworkHelper sharedInstance] startNetworkReach];
+}
+
+/**初始化友盟的所有组件
+ * appKey 开发者在友盟官网申请的AppKey
+ * channel 渠道标识，可设置nil表示"App Store".
+ */
+- (void)configUShare{
+//    NSString *appKey = @"5afe32dca40fa307a6000182";
+//    NSString *appStore = nil;
+//    [UMConfigure initWithAppkey:appKey channel:appStore];
+}
+
+- (void)configThirdComments{
+    [self configUShare];
 }
 
 @end

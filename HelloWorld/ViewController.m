@@ -56,7 +56,8 @@
                     @"QRCodeViewController", @"TXPhotoController",
                     @"TXShareController", @"TXWebSocketController",
                     @"TXGifViewController", @"TXAudioController",
-                    @"TXLabelHeightController"];
+                    @"TXLabelHeightController", @"TXFontViewController",
+                    @"TXAnimationController"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

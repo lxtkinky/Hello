@@ -33,6 +33,7 @@ extern CFAbsoluteTime startTime;
     [_manager start:@"pWKVccKiI6LI7ke43BhToi6l" generalDelegate:self];
     
     [self startNetworkMonitor];
+    [self configThirdComments];
     
     return YES;
 }

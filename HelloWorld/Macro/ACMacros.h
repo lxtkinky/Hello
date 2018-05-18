@@ -349,6 +349,12 @@
 #define HB8 [UIFont boldSystemFontOfSize:8]
 
 #define PingFang_SC_Medium  @"PingFang-SC-Medium"
+#define PingFang_SC_Semibold @"PingFangSC-Semibold"
+#define PingFang_SC_Light @"PingFangSC-Light"
+#define PingFang_SC_Ultralight @"PingFangSC-Ultralight"
+#define PingFang_SC_Regular @"PingFangSC-Regular"
+#define PingFang_SC_Thin @"PingFangSC-Thin"
+
 
 ///常用颜色
 #define black_color     [UIColor blackColor]

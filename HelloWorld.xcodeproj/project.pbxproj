@@ -154,7 +154,13 @@
 		BE6E083420A1A180008FE29D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE6E083120A1A180008FE29D /* README.txt */; };
 		BE6E083520A1A180008FE29D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6E083320A1A180008FE29D /* libWeChatSDK.a */; };
 		BE7B488020ABD4CE00C2F94E /* TXNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7B487F20ABD4CE00C2F94E /* TXNetworkHelper.m */; };
+		BE9F244120AD668E00F7EA80 /* TXFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F244020AD668E00F7EA80 /* TXFontViewController.m */; };
+		BE9F244A20AD857200F7EA80 /* TXAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F244920AD857200F7EA80 /* TXAnimationController.m */; };
 		BEA496922049261800279F64 /* hello.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEA496912049261800279F64 /* hello.txt */; };
+		BEB0416C20AE806B00E924A8 /* TXWtaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB0416B20AE806B00E924A8 /* TXWtaterView.m */; };
+		BEB0416F20AEAC5900E924A8 /* TXBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB0416E20AEAC5900E924A8 /* TXBallView.m */; };
+		BEB0417220AEBAFB00E924A8 /* TXSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB0417120AEBAFB00E924A8 /* TXSpringAnimation.m */; };
+		BEB0417520AEBFF700E924A8 /* TXBezierLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB0417420AEBFF700E924A8 /* TXBezierLayer.m */; };
 		BEDBC4C72094562A00B527F8 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDBC4C62094562A00B527F8 /* CollectionViewController.m */; };
 		BEDFA40320A3F1B900B77600 /* TXGifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDFA40220A3F1B900B77600 /* TXGifViewController.m */; };
 		BEDFA40520A3F1C100B77600 /* turntable_tur_bk_gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEDFA40420A3F1C100B77600 /* turntable_tur_bk_gif.gif */; };
@@ -508,7 +514,19 @@
 		BE6E083320A1A180008FE29D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		BE7B487E20ABD4CE00C2F94E /* TXNetworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXNetworkHelper.h; sourceTree = "<group>"; };
 		BE7B487F20ABD4CE00C2F94E /* TXNetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXNetworkHelper.m; sourceTree = "<group>"; };
+		BE9F243F20AD668E00F7EA80 /* TXFontViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXFontViewController.h; sourceTree = "<group>"; };
+		BE9F244020AD668E00F7EA80 /* TXFontViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXFontViewController.m; sourceTree = "<group>"; };
+		BE9F244820AD857200F7EA80 /* TXAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXAnimationController.h; sourceTree = "<group>"; };
+		BE9F244920AD857200F7EA80 /* TXAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXAnimationController.m; sourceTree = "<group>"; };
 		BEA496912049261800279F64 /* hello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
+		BEB0416A20AE806B00E924A8 /* TXWtaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXWtaterView.h; sourceTree = "<group>"; };
+		BEB0416B20AE806B00E924A8 /* TXWtaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXWtaterView.m; sourceTree = "<group>"; };
+		BEB0416D20AEAC5900E924A8 /* TXBallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXBallView.h; sourceTree = "<group>"; };
+		BEB0416E20AEAC5900E924A8 /* TXBallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXBallView.m; sourceTree = "<group>"; };
+		BEB0417020AEBAFB00E924A8 /* TXSpringAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXSpringAnimation.h; sourceTree = "<group>"; };
+		BEB0417120AEBAFB00E924A8 /* TXSpringAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXSpringAnimation.m; sourceTree = "<group>"; };
+		BEB0417320AEBFF700E924A8 /* TXBezierLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXBezierLayer.h; sourceTree = "<group>"; };
+		BEB0417420AEBFF700E924A8 /* TXBezierLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXBezierLayer.m; sourceTree = "<group>"; };
 		BEDBC4C52094562A00B527F8 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		BEDBC4C62094562A00B527F8 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		BEDFA40120A3F1B900B77600 /* TXGifViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGifViewController.h; sourceTree = "<group>"; };
@@ -684,6 +702,7 @@
 		520B95F62004640A00E6DD54 /* LSSection */ = {
 			isa = PBXGroup;
 			children = (
+				BE9F244720AD855C00F7EA80 /* Animation */,
 				BE21C20F20A038B80025015D /* Second */,
 				BE54BC0C209DB2A000FE5147 /* BTC */,
 				BEF01375209D3C2300C09305 /* WebView */,
@@ -1275,6 +1294,8 @@
 				BE4B64F620A2939A007B9015 /* TXWebSocketController.m */,
 				BE4A211520AAC4E2006EC7DA /* TXLabelHeightController.h */,
 				BE4A211620AAC4E2006EC7DA /* TXLabelHeightController.m */,
+				BE9F243F20AD668E00F7EA80 /* TXFontViewController.h */,
+				BE9F244020AD668E00F7EA80 /* TXFontViewController.m */,
 				BE6E079B20A13A5F008FE29D /* timg.jpeg */,
 				BEDFA40120A3F1B900B77600 /* TXGifViewController.h */,
 				BEDFA40220A3F1B900B77600 /* TXGifViewController.m */,
@@ -1319,6 +1340,23 @@
 				BE6E083320A1A180008FE29D /* libWeChatSDK.a */,
 			);
 			path = WechatSDK;
+			sourceTree = "<group>";
+		};
+		BE9F244720AD855C00F7EA80 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F244820AD857200F7EA80 /* TXAnimationController.h */,
+				BE9F244920AD857200F7EA80 /* TXAnimationController.m */,
+				BEB0417020AEBAFB00E924A8 /* TXSpringAnimation.h */,
+				BEB0417120AEBAFB00E924A8 /* TXSpringAnimation.m */,
+				BEB0416A20AE806B00E924A8 /* TXWtaterView.h */,
+				BEB0416B20AE806B00E924A8 /* TXWtaterView.m */,
+				BEB0416D20AEAC5900E924A8 /* TXBallView.h */,
+				BEB0416E20AEAC5900E924A8 /* TXBallView.m */,
+				BEB0417320AEBFF700E924A8 /* TXBezierLayer.h */,
+				BEB0417420AEBFF700E924A8 /* TXBezierLayer.m */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		BEF01375209D3C2300C09305 /* WebView */ = {
@@ -1611,6 +1649,7 @@
 				52E70A141FE7657F0061213C /* ViewController.m in Sources */,
 				5213DE3B1FF4E2BA00D14432 /* MJRefreshStateHeader.m in Sources */,
 				52E70A111FE7657F0061213C /* AppDelegate.m in Sources */,
+				BEB0417220AEBAFB00E924A8 /* TXSpringAnimation.m in Sources */,
 				5213DE301FF4E2BA00D14432 /* MJRefreshComponent.m in Sources */,
 				52033E0B200EEB0B009DF7F8 /* LXTCalendarController.m in Sources */,
 				52EE56362008876000C8F035 /* FMDatabaseQueue.m in Sources */,
@@ -1671,19 +1710,23 @@
 				5249FB151FFF224B005978B6 /* SVProgressAnimatedView.m in Sources */,
 				BE4A211720AAC4E2006EC7DA /* TXLabelHeightController.m in Sources */,
 				520B95E320045C7C00E6DD54 /* LXTNetworkManager.m in Sources */,
+				BEB0416C20AE806B00E924A8 /* TXWtaterView.m in Sources */,
 				BE4B650220A29B9E007B9015 /* NSString+AES.m in Sources */,
 				52EE563E200892A700C8F035 /* FMDBController.m in Sources */,
 				52D05F0E1FE79AFD001D7226 /* MASViewAttribute.m in Sources */,
 				5213DE3D1FF4E2BA00D14432 /* MJRefreshConst.m in Sources */,
 				BE4B650520A2A002007B9015 /* TXEncryptTool.m in Sources */,
 				52EE56342008876000C8F035 /* FMDatabaseAdditions.m in Sources */,
+				BE9F244120AD668E00F7EA80 /* TXFontViewController.m in Sources */,
 				52A9FB521FEA670B00366036 /* MapViewController.m in Sources */,
 				52E589E81FFDD659001F66F5 /* ObserverModel.m in Sources */,
 				BE21C21520A0488F0025015D /* TXPhotoController.m in Sources */,
+				BEB0417520AEBFF700E924A8 /* TXBezierLayer.m in Sources */,
 				BE6E082C20A19FE4008FE29D /* TXQRCodeManager.m in Sources */,
 				52D05F121FE79AFD001D7226 /* View+MASAdditions.m in Sources */,
 				5220858E200C9C2E000AE575 /* LXTWeekMenuView.m in Sources */,
 				BEF013C0209D8FD100C09305 /* TXHtmlLoader.m in Sources */,
+				BE9F244A20AD857200F7EA80 /* TXAnimationController.m in Sources */,
 				52FD9CCE200619B30046193D /* CustomButtonController.m in Sources */,
 				52208583200C77BB000AE575 /* JTCalendarWeekView.m in Sources */,
 				5257DE6D1FE8BE130094C259 /* SecondViewController.m in Sources */,
@@ -1705,6 +1748,7 @@
 				5220857F200C77BB000AE575 /* JTCalendarDayView.m in Sources */,
 				BE52CDF12045511B006B01AC /* Person.m in Sources */,
 				5213DE3E1FF4E2BA00D14432 /* NSBundle+MJRefresh.m in Sources */,
+				BEB0416F20AEAC5900E924A8 /* TXBallView.m in Sources */,
 				5257DEEE1FE8FABC0094C259 /* ThirdViewController.m in Sources */,
 				520ED5E11FF630FF000D97A7 /* UIAlertController+Custom.m in Sources */,
 				52EE56442008975000C8F035 /* HelloWorldModel.xcdatamodeld in Sources */,
