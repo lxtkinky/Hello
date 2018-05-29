@@ -12,4 +12,8 @@
 
 - (CGFloat)getHeightWithWidth:(CGFloat)width font:(UIFont *)font;
 
++ (NSString *)randomString;
+
+-(BOOL)IsChinese:(NSString *)str;
+
 @end

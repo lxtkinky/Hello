@@ -45,7 +45,7 @@
     [self.view addSubview:qrView];
     
     
-    TXQRCodeManager *manager = [TXQRCodeManager sharedInstance];
+    TXQRCodeManager *manager = [TXQRCodeManager qrCodeManager];
     self.manager = manager;
     //扫码二维码
     [manager scanQRCodeAtView:qrView];

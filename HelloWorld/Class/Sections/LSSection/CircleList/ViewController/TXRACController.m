@@ -48,8 +48,45 @@
     }];
 }
 
-- (void)testRACKVO{
+#pragma mark - 根据文本长度改变提交按钮状态
+- (void)test0{
+    /*
+     //根据文本长度改变提交按钮状态
+    RAC(nickView.submitButton, enabled) = [nickView.nickNameText.rac_textSignal map:^id(NSString *value) {
+        return value.length > 3 ? @YES : @NO;
+    }];
+     */
+}
+#pragma mark - 把输入框内从和vm的属性关联起来
+- (void)test1{
+    /*
+     //把输入框内从和vm的属性关联起来
+     RAC(nickView.vm, nickName) = nickView.nickNameText.rac_textSignal;
+     __weak TXNickNameView *weakObject = nickView;
+     [[nickView.nickNameText rac_textSignal] subscribeNext:^(NSString *string) {
+     weakObject.vm.nickName = string;
+     NSLog(@"string = %@", string);
+     }];
+     */
+}
+#pragma mark -  多个信号
+- (void)test2{
+//    // 6.处理多个请求，都返回结果的时候，统一做处理.
+//    RACSignal *request1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//
+//        // 发送请求1
+//        [subscriber sendNext:@"发送请求1"];
+//        return nil;
+//    }];
+//
+//    RACSignal *request2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        // 发送请求2
+//        [subscriber sendNext:@"发送请求2"];
+//        return nil;
+//    }];
     
+    // 使用注意：几个信号，参数一的方法就几个参数，每个参数对应信号发出的数据。
+//    [self rac_liftSelector:@selector(updateUIWithR1:r2:) withSignalsFromArray:@[request1,request2]];
 }
 
 @end

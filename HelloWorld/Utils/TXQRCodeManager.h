@@ -12,12 +12,14 @@
 
 @interface TXQRCodeManager : NSObject
 
-+ (instancetype)sharedInstance;
++ (instancetype)qrCodeManager;
 
 - (void)scanQRCodeAtView:(UIView *)view;
 
 - (NSMutableArray *)scanQRCodeFromImage:(UIImage *)image;
 
 - (UIImage *)createQRCodeWithString:(NSString *)string;
+
+- (UIImage *)createQRCodeWithString:(NSString *)string size:(CGFloat)size;
 
 @end

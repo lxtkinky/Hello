@@ -18,18 +18,8 @@
 
 @implementation TXQRCodeManager
 
-+ (instancetype)sharedInstance{
++ (instancetype)qrCodeManager{
     return [[[self class] alloc] init];
-}
-
-+(id)allocWithZone:(NSZone *)zone{
-    return [TXQRCodeManager sharedInstance];
-}
--(id)copyWithZone:(NSZone *)zone{
-    return [TXQRCodeManager sharedInstance];
-}
--(id)mutableCopyWithZone:(NSZone *)zone{
-    return [TXQRCodeManager sharedInstance];
 }
 
 - (void)scanQRCodeAtView:(UIView *)view{
@@ -93,6 +83,13 @@
     CIImage *ciImage = [self creatQRcodeWithString:string];
 //    UIImage *image = [UIImage imageWithCIImage:ciImage];  //图片模糊
     UIImage *image = [self changeImageSizeWithCIImage:ciImage andSize:200]; //生成清晰的图片
+    return image;
+}
+
+- (UIImage *)createQRCodeWithString:(NSString *)string size:(CGFloat)size{
+    CIImage *ciImage = [self creatQRcodeWithString:string];
+    //    UIImage *image = [UIImage imageWithCIImage:ciImage];  //图片模糊
+    UIImage *image = [self changeImageSizeWithCIImage:ciImage andSize:size]; //生成清晰的图片
     return image;
 }
 

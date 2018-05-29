@@ -20,5 +20,38 @@
     return height;
 }
 
++ (NSString *)randomString{
+    NSMutableString *noneStr = [NSMutableString string];
+    for (int i = 0; i < 16; i++) {
+        int number = arc4random() % 36;
+        if (number < 10) {
+            [noneStr appendFormat:@"%d", number];
+        }
+        else{
+            char character = number - 10 + 97;
+            [noneStr appendFormat:@"%c", character];
+        }
+    }
+    return noneStr;
+}
+
+-(BOOL)IsChinese:(NSString *)str
+{
+    NSInteger count = str.length;
+    NSInteger result = 0;
+    for(int i=0; i< [str length];i++)
+    {
+        int a = [str characterAtIndex:i];
+        if( a > 0x4e00 && a < 0x9fff)//判断输入的是否是中文
+        {
+            result++;
+        }
+    }
+    if (count == result) {//当字符长度和中文字符长度相等的时候
+        return YES;
+    }
+    return NO;
+}
+
 
 @end

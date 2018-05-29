@@ -57,7 +57,8 @@
                     @"TXShareController", @"TXWebSocketController",
                     @"TXGifViewController", @"TXAudioController",
                     @"TXLabelHeightController", @"TXFontViewController",
-                    @"TXAnimationController"];
+                    @"TXAnimationController", @"TXGifController",
+                    @"TXDrawDiscViewController"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -148,15 +148,29 @@
 		BE52CDF4204551B0006B01AC /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = BE52CDF3204551B0006B01AC /* Dog.m */; };
 		BE54BC0F209DB2C900FE5147 /* BTCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE54BC0E209DB2C900FE5147 /* BTCViewController.m */; };
 		BE54BC12209DB34300FE5147 /* TXTableViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE54BC11209DB34300FE5147 /* TXTableViewHelper.m */; };
+		BE67522D20B80A31006C7783 /* TXQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE67522B20B80A30006C7783 /* TXQRCodeManager.m */; };
+		BE67523120B80B53006C7783 /* TXGifHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE67523020B80B53006C7783 /* TXGifHelper.m */; };
+		BE67523320B80B7A006C7783 /* turntable.gif in Resources */ = {isa = PBXBuildFile; fileRef = BE67523220B80B7A006C7783 /* turntable.gif */; };
+		BE67523620B80BA0006C7783 /* TXGifController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE67523520B80BA0006C7783 /* TXGifController.m */; };
+		BE67523920B811C8006C7783 /* TXGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE67523820B811C8006C7783 /* TXGifView.m */; };
 		BE6E079C20A13A5F008FE29D /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BE6E079B20A13A5F008FE29D /* timg.jpeg */; };
-		BE6E082C20A19FE4008FE29D /* TXQRCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6E082920A19FE2008FE29D /* TXQRCodeManager.m */; };
 		BE6E082D20A19FE4008FE29D /* TXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6E082B20A19FE4008FE29D /* TXShareManager.m */; };
 		BE6E083420A1A180008FE29D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE6E083120A1A180008FE29D /* README.txt */; };
 		BE6E083520A1A180008FE29D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6E083320A1A180008FE29D /* libWeChatSDK.a */; };
 		BE7B488020ABD4CE00C2F94E /* TXNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7B487F20ABD4CE00C2F94E /* TXNetworkHelper.m */; };
+		BE901A8020BB8FB200E9591A /* TXStartPrizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE901A7F20BB8FB200E9591A /* TXStartPrizeView.m */; };
+		BE901A8320BB904400E9591A /* TXPrizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE901A8220BB904400E9591A /* TXPrizeView.m */; };
+		BE95AE9920B29FE100C40E7C /* TXSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE95AE9820B29FE100C40E7C /* TXSwitchView.m */; };
 		BE9F244120AD668E00F7EA80 /* TXFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F244020AD668E00F7EA80 /* TXFontViewController.m */; };
 		BE9F244A20AD857200F7EA80 /* TXAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9F244920AD857200F7EA80 /* TXAnimationController.m */; };
 		BEA496922049261800279F64 /* hello.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEA496912049261800279F64 /* hello.txt */; };
+		BEA5E18720B8F01D00F2BE45 /* TXDrawDiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA5E18620B8F01D00F2BE45 /* TXDrawDiscViewController.m */; };
+		BEA5E18B20B8F05500F2BE45 /* TXDiscView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA5E18A20B8F05500F2BE45 /* TXDiscView.m */; };
+		BEA5E18E20B8FC5500F2BE45 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA5E18D20B8FC5500F2BE45 /* CoreTextArcView.m */; };
+		BEA5E19020B903CD00F2BE45 /* TXDiscView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA5E18F20B903CD00F2BE45 /* TXDiscView.xib */; };
+		BEA5E19220B967CC00F2BE45 /* TXStartPrizeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA5E19120B967CC00F2BE45 /* TXStartPrizeView.xib */; };
+		BEA74BC920B545A300254919 /* TXInstallController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA74BC820B545A300254919 /* TXInstallController.m */; };
+		BEA74BCB20B545DB00254919 /* SupserGameInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEA74BCA20B545DB00254919 /* SupserGameInfo.plist */; };
 		BEB0416C20AE806B00E924A8 /* TXWtaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB0416B20AE806B00E924A8 /* TXWtaterView.m */; };
 		BEB0416F20AEAC5900E924A8 /* TXBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB0416E20AEAC5900E924A8 /* TXBallView.m */; };
 		BEB0417220AEBAFB00E924A8 /* TXSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB0417120AEBAFB00E924A8 /* TXSpringAnimation.m */; };
@@ -502,9 +516,16 @@
 		BE54BC0E209DB2C900FE5147 /* BTCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTCViewController.m; sourceTree = "<group>"; };
 		BE54BC10209DB34300FE5147 /* TXTableViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXTableViewHelper.h; sourceTree = "<group>"; };
 		BE54BC11209DB34300FE5147 /* TXTableViewHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXTableViewHelper.m; sourceTree = "<group>"; };
+		BE67522B20B80A30006C7783 /* TXQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXQRCodeManager.m; sourceTree = "<group>"; };
+		BE67522E20B80A77006C7783 /* TXQRCodeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXQRCodeManager.h; sourceTree = "<group>"; };
+		BE67522F20B80B53006C7783 /* TXGifHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGifHelper.h; sourceTree = "<group>"; };
+		BE67523020B80B53006C7783 /* TXGifHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXGifHelper.m; sourceTree = "<group>"; };
+		BE67523220B80B7A006C7783 /* turntable.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = turntable.gif; sourceTree = "<group>"; };
+		BE67523420B80BA0006C7783 /* TXGifController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGifController.h; sourceTree = "<group>"; };
+		BE67523520B80BA0006C7783 /* TXGifController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXGifController.m; sourceTree = "<group>"; };
+		BE67523720B811C8006C7783 /* TXGifView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGifView.h; sourceTree = "<group>"; };
+		BE67523820B811C8006C7783 /* TXGifView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXGifView.m; sourceTree = "<group>"; };
 		BE6E079B20A13A5F008FE29D /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
-		BE6E082820A19FE1008FE29D /* TXQRCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXQRCodeManager.h; sourceTree = "<group>"; };
-		BE6E082920A19FE2008FE29D /* TXQRCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXQRCodeManager.m; sourceTree = "<group>"; };
 		BE6E082A20A19FE3008FE29D /* TXShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXShareManager.h; sourceTree = "<group>"; };
 		BE6E082B20A19FE4008FE29D /* TXShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXShareManager.m; sourceTree = "<group>"; };
 		BE6E082F20A1A180008FE29D /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -514,11 +535,28 @@
 		BE6E083320A1A180008FE29D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		BE7B487E20ABD4CE00C2F94E /* TXNetworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXNetworkHelper.h; sourceTree = "<group>"; };
 		BE7B487F20ABD4CE00C2F94E /* TXNetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXNetworkHelper.m; sourceTree = "<group>"; };
+		BE901A7E20BB8FB200E9591A /* TXStartPrizeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXStartPrizeView.h; sourceTree = "<group>"; };
+		BE901A7F20BB8FB200E9591A /* TXStartPrizeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXStartPrizeView.m; sourceTree = "<group>"; };
+		BE901A8120BB904400E9591A /* TXPrizeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXPrizeView.h; sourceTree = "<group>"; };
+		BE901A8220BB904400E9591A /* TXPrizeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXPrizeView.m; sourceTree = "<group>"; };
+		BE95AE9720B29FE100C40E7C /* TXSwitchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXSwitchView.h; sourceTree = "<group>"; };
+		BE95AE9820B29FE100C40E7C /* TXSwitchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXSwitchView.m; sourceTree = "<group>"; };
 		BE9F243F20AD668E00F7EA80 /* TXFontViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXFontViewController.h; sourceTree = "<group>"; };
 		BE9F244020AD668E00F7EA80 /* TXFontViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXFontViewController.m; sourceTree = "<group>"; };
 		BE9F244820AD857200F7EA80 /* TXAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXAnimationController.h; sourceTree = "<group>"; };
 		BE9F244920AD857200F7EA80 /* TXAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXAnimationController.m; sourceTree = "<group>"; };
 		BEA496912049261800279F64 /* hello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
+		BEA5E18520B8F01D00F2BE45 /* TXDrawDiscViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXDrawDiscViewController.h; sourceTree = "<group>"; };
+		BEA5E18620B8F01D00F2BE45 /* TXDrawDiscViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXDrawDiscViewController.m; sourceTree = "<group>"; };
+		BEA5E18920B8F05500F2BE45 /* TXDiscView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXDiscView.h; sourceTree = "<group>"; };
+		BEA5E18A20B8F05500F2BE45 /* TXDiscView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXDiscView.m; sourceTree = "<group>"; };
+		BEA5E18C20B8FC5500F2BE45 /* CoreTextArcView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextArcView.h; sourceTree = "<group>"; };
+		BEA5E18D20B8FC5500F2BE45 /* CoreTextArcView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextArcView.m; sourceTree = "<group>"; };
+		BEA5E18F20B903CD00F2BE45 /* TXDiscView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TXDiscView.xib; sourceTree = "<group>"; };
+		BEA5E19120B967CC00F2BE45 /* TXStartPrizeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TXStartPrizeView.xib; sourceTree = "<group>"; };
+		BEA74BC720B545A300254919 /* TXInstallController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXInstallController.h; sourceTree = "<group>"; };
+		BEA74BC820B545A300254919 /* TXInstallController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXInstallController.m; sourceTree = "<group>"; };
+		BEA74BCA20B545DB00254919 /* SupserGameInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SupserGameInfo.plist; sourceTree = "<group>"; };
 		BEB0416A20AE806B00E924A8 /* TXWtaterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXWtaterView.h; sourceTree = "<group>"; };
 		BEB0416B20AE806B00E924A8 /* TXWtaterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXWtaterView.m; sourceTree = "<group>"; };
 		BEB0416D20AEAC5900E924A8 /* TXBallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXBallView.h; sourceTree = "<group>"; };
@@ -648,6 +686,7 @@
 		520B95EC2004640A00E6DD54 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				BE95AE8C20B2668A00C40E7C /* Common */,
 				520B95ED2004640A00E6DD54 /* General */,
 				520B95EF2004640A00E6DD54 /* Helpers */,
 				520B95F42004640A00E6DD54 /* Macro */,
@@ -738,6 +777,9 @@
 				52FD9CCB200619B30046193D /* CustomButtonController.h */,
 				52FD9CCC200619B30046193D /* CustomButtonController.m */,
 				52FD9CCD200619B30046193D /* CustomButtonController.xib */,
+				BEA74BC720B545A300254919 /* TXInstallController.h */,
+				BEA74BC820B545A300254919 /* TXInstallController.m */,
+				BEA74BCA20B545DB00254919 /* SupserGameInfo.plist */,
 				5211659820075B7200F00019 /* GCDViewController.h */,
 				5211659920075B7200F00019 /* GCDViewController.m */,
 				52EE563C200892A700C8F035 /* FMDBController.h */,
@@ -815,8 +857,11 @@
 				520B95E220045C7C00E6DD54 /* LXTNetworkManager.m */,
 				52EE5639200887B800C8F035 /* FMDBManager.h */,
 				52EE563A200887B800C8F035 /* FMDBManager.m */,
-				BE6E082820A19FE1008FE29D /* TXQRCodeManager.h */,
-				BE6E082920A19FE2008FE29D /* TXQRCodeManager.m */,
+				BE67522E20B80A77006C7783 /* TXQRCodeManager.h */,
+				BE67522B20B80A30006C7783 /* TXQRCodeManager.m */,
+				BE67522F20B80B53006C7783 /* TXGifHelper.h */,
+				BE67523020B80B53006C7783 /* TXGifHelper.m */,
+				BE67523220B80B7A006C7783 /* turntable.gif */,
 				BE6E082A20A19FE3008FE29D /* TXShareManager.h */,
 				BE6E082B20A19FE4008FE29D /* TXShareManager.m */,
 				BE4B64F220A290D8007B9015 /* TXWebSocketManager.h */,
@@ -1342,6 +1387,25 @@
 			path = WechatSDK;
 			sourceTree = "<group>";
 		};
+		BE95AE8C20B2668A00C40E7C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BE95AE8D20B266B100C40E7C /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BE95AE8D20B266B100C40E7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE95AE9720B29FE100C40E7C /* TXSwitchView.h */,
+				BE95AE9820B29FE100C40E7C /* TXSwitchView.m */,
+				BE67523720B811C8006C7783 /* TXGifView.h */,
+				BE67523820B811C8006C7783 /* TXGifView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BE9F244720AD855C00F7EA80 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1355,8 +1419,30 @@
 				BEB0416E20AEAC5900E924A8 /* TXBallView.m */,
 				BEB0417320AEBFF700E924A8 /* TXBezierLayer.h */,
 				BEB0417420AEBFF700E924A8 /* TXBezierLayer.m */,
+				BE67523420B80BA0006C7783 /* TXGifController.h */,
+				BE67523520B80BA0006C7783 /* TXGifController.m */,
+				BEA5E18520B8F01D00F2BE45 /* TXDrawDiscViewController.h */,
+				BEA5E18620B8F01D00F2BE45 /* TXDrawDiscViewController.m */,
+				BEA5E18F20B903CD00F2BE45 /* TXDiscView.xib */,
+				BEA5E18820B8F04300F2BE45 /* View */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		BEA5E18820B8F04300F2BE45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEA5E18920B8F05500F2BE45 /* TXDiscView.h */,
+				BEA5E18A20B8F05500F2BE45 /* TXDiscView.m */,
+				BE901A7E20BB8FB200E9591A /* TXStartPrizeView.h */,
+				BE901A7F20BB8FB200E9591A /* TXStartPrizeView.m */,
+				BEA5E19120B967CC00F2BE45 /* TXStartPrizeView.xib */,
+				BE901A8120BB904400E9591A /* TXPrizeView.h */,
+				BE901A8220BB904400E9591A /* TXPrizeView.m */,
+				BEA5E18C20B8FC5500F2BE45 /* CoreTextArcView.h */,
+				BEA5E18D20B8FC5500F2BE45 /* CoreTextArcView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BEF01375209D3C2300C09305 /* WebView */ = {
@@ -1522,6 +1608,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE67523320B80B7A006C7783 /* turntable.gif in Resources */,
 				DF345D2F2080888A00CC468D /* MVVMTableCell.xib in Resources */,
 				DF9036B0204FD64C00163AAD /* monidingwei.gpx in Resources */,
 				BE6E083420A1A180008FE29D /* README.txt in Resources */,
@@ -1544,7 +1631,10 @@
 				BEA496922049261800279F64 /* hello.txt in Resources */,
 				52E70A191FE7657F0061213C /* Assets.xcassets in Resources */,
 				BEF013BD209D8F6B00C09305 /* JSOC.html in Resources */,
+				BEA5E19020B903CD00F2BE45 /* TXDiscView.xib in Resources */,
+				BEA74BCB20B545DB00254919 /* SupserGameInfo.plist in Resources */,
 				52208579200C77BB000AE575 /* Info.plist in Resources */,
+				BEA5E19220B967CC00F2BE45 /* TXStartPrizeView.xib in Resources */,
 				DF69B185202855200027E591 /* README.txt in Resources */,
 				DF93322F20735AFA000AD255 /* meinv.jpg in Resources */,
 				52E70A171FE7657F0061213C /* Main.storyboard in Resources */,
@@ -1663,7 +1753,9 @@
 				52208585200C77BB000AE575 /* JTVerticalCalendarView.m in Sources */,
 				5213DE2F1FF4E2BA00D14432 /* MJRefreshBackFooter.m in Sources */,
 				52208581200C77BB000AE575 /* JTCalendarPageView.m in Sources */,
+				BE901A8020BB8FB200E9591A /* TXStartPrizeView.m in Sources */,
 				52593CB61FEB4BBA0033DA63 /* AppDelegate+BMKMAP.m in Sources */,
+				BEA5E18B20B8F05500F2BE45 /* TXDiscView.m in Sources */,
 				520ED5961FF5E1E0000D97A7 /* LTImageUtil.m in Sources */,
 				52D05F131FE79AFD001D7226 /* ViewController+MASAdditions.m in Sources */,
 				52E589E21FFDD1E7001F66F5 /* NSObject+Runtime.m in Sources */,
@@ -1679,6 +1771,7 @@
 				5204E0D62010372900500771 /* LxtCalendarViewModel.m in Sources */,
 				5211659A20075B7200F00019 /* GCDViewController.m in Sources */,
 				BE4B651420A2E679007B9015 /* TXNetworkManager.m in Sources */,
+				BE67523620B80BA0006C7783 /* TXGifController.m in Sources */,
 				DF345D24208087CB00CC468D /* MVVMController.m in Sources */,
 				DF3C116720592394000AE8EE /* TXGameScene.m in Sources */,
 				5220858B200C964B000AE575 /* LXTCalenderView.m in Sources */,
@@ -1686,11 +1779,13 @@
 				520B95E020045BE200E6DD54 /* VFNetAPIClient.m in Sources */,
 				52D05F0D1FE79AFD001D7226 /* MASLayoutConstraint.m in Sources */,
 				52E589F61FFE177E001F66F5 /* BaseViewController.m in Sources */,
+				BEA5E18E20B8FC5500F2BE45 /* CoreTextArcView.m in Sources */,
 				5249FB141FFF224B005978B6 /* SVIndefiniteAnimatedView.m in Sources */,
 				BE4B64FF20A298DC007B9015 /* EasyHelper.m in Sources */,
 				BE4B651720A2F500007B9015 /* TXBTCModel.m in Sources */,
 				52508C4A1FF0DAC600E0115B /* LTAVPlayerView.m in Sources */,
 				5213DE341FF4E2BA00D14432 /* MJRefreshAutoNormalFooter.m in Sources */,
+				BEA5E18720B8F01D00F2BE45 /* TXDrawDiscViewController.m in Sources */,
 				5213DE371FF4E2BA00D14432 /* MJRefreshBackNormalFooter.m in Sources */,
 				52EE56372008876000C8F035 /* FMResultSet.m in Sources */,
 				52A9FB441FEA188E00366036 /* KXMViewController.m in Sources */,
@@ -1710,6 +1805,7 @@
 				5249FB151FFF224B005978B6 /* SVProgressAnimatedView.m in Sources */,
 				BE4A211720AAC4E2006EC7DA /* TXLabelHeightController.m in Sources */,
 				520B95E320045C7C00E6DD54 /* LXTNetworkManager.m in Sources */,
+				BEA74BC920B545A300254919 /* TXInstallController.m in Sources */,
 				BEB0416C20AE806B00E924A8 /* TXWtaterView.m in Sources */,
 				BE4B650220A29B9E007B9015 /* NSString+AES.m in Sources */,
 				52EE563E200892A700C8F035 /* FMDBController.m in Sources */,
@@ -1722,7 +1818,6 @@
 				52E589E81FFDD659001F66F5 /* ObserverModel.m in Sources */,
 				BE21C21520A0488F0025015D /* TXPhotoController.m in Sources */,
 				BEB0417520AEBFF700E924A8 /* TXBezierLayer.m in Sources */,
-				BE6E082C20A19FE4008FE29D /* TXQRCodeManager.m in Sources */,
 				52D05F121FE79AFD001D7226 /* View+MASAdditions.m in Sources */,
 				5220858E200C9C2E000AE575 /* LXTWeekMenuView.m in Sources */,
 				BEF013C0209D8FD100C09305 /* TXHtmlLoader.m in Sources */,
@@ -1767,16 +1862,21 @@
 				BE54BC0F209DB2C900FE5147 /* BTCViewController.m in Sources */,
 				DF7EC5072029823A0055B907 /* TTDetailContainerViewController.m in Sources */,
 				5213DE351FF4E2BA00D14432 /* MJRefreshAutoStateFooter.m in Sources */,
+				BE67522D20B80A31006C7783 /* TXQRCodeManager.m in Sources */,
 				5220857D200C77BB000AE575 /* JTCalendarDelegateManager.m in Sources */,
+				BE67523920B811C8006C7783 /* TXGifView.m in Sources */,
 				BE4B64FE20A298DC007B9015 /* GTMBase64.m in Sources */,
 				52208584200C77BB000AE575 /* JTHorizontalCalendarView.m in Sources */,
 				5249FB181FFF224B005978B6 /* SVRadialGradientLayer.m in Sources */,
 				52D05F0A1FE79AFD001D7226 /* MASCompositeConstraint.m in Sources */,
 				DF5FBB002069EE400021B6C3 /* TXVipVideoController.m in Sources */,
+				BE901A8320BB904400E9591A /* TXPrizeView.m in Sources */,
 				5220857E200C77BB000AE575 /* JTCalendarScrollManager.m in Sources */,
 				BE4B64F420A290D8007B9015 /* TXWebSocketManager.m in Sources */,
 				5224BC6120031AEE00534BB0 /* NotificationViewController.m in Sources */,
+				BE67523120B80B53006C7783 /* TXGifHelper.m in Sources */,
 				52FD9CCA200619720046193D /* CustomButton.m in Sources */,
+				BE95AE9920B29FE100C40E7C /* TXSwitchView.m in Sources */,
 				5213DE401FF4E2BA00D14432 /* UIScrollView+MJRefresh.m in Sources */,
 				5213DE331FF4E2BA00D14432 /* MJRefreshAutoGifFooter.m in Sources */,
 				52D05F111FE79AFD001D7226 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
