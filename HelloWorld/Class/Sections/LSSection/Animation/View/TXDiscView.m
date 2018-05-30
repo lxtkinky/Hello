@@ -34,29 +34,61 @@
     return discView;
 }
 
+
 - (void)initSubview{
-    self.resultLabel.layer.cornerRadius = 12.0;
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.image = [UIImage imageNamed:@"turntable_l"];
+    imageView.bounds = CGRectMake(0, 0, 316, 316);
+    [self addSubview:imageView];
+    imageView.center = self.center;
+    self.iconArray = [NSMutableArray array];
+    CGFloat radius = 90;
+    for (int i = 0; i < 8; i++) {
+        CGFloat radian = M_PI_4 * 0.5 + M_PI_4 * i;
+        [self addPrizeIcon:radian radius:radius];
+    }
     
-//    CATextLayer *textLayer = [CATextLayer layer];
-//    textLayer.bounds = CGRectMake(0, 0, 14, 20);
-//    textLayer.anchorPoint = CGPointMake(0.5, 0.5);
-//    textLayer.string = @"谢";
-//    textLayer.foregroundColor = [UIColor blackColor].CGColor;
-//    textLayer.contentsScale = [UIScreen mainScreen].scale;
-//    UIFont *font = [UIFont fontWithName:PingFang_SC_Regular size:14.0];
-//    CFStringRef fontName = (__bridge CFStringRef)font.fontName;
-//    textLayer.font = fontName;
-//    textLayer.fontSize = font.pointSize;
-//
-//    CGFloat y = self.frame.size.width * 0.5 - 290 * 0.5 * sin(M_PI_4 * 0.5);
-//    CGFloat x = self.frame.size.width * 0.5 - 290 * 0.5 * cos(M_PI_4 * 0.5);
-//    textLayer.position = CGPointMake(x, y);
-//    textLayer.transform = CATransform3DMakeRotation(-M_PI_2 + M_PI_4 * 0.5, 0, 0, 1);
-//    [self.layer addSublayer:textLayer];
-    
-//    [self tx_addLayer:@"谢" radian:M_PI_4 * 0.5 radius:145];
-//    [self tx_addLayer:@"谢" radian:M_PI_4 * 3 radius:145];
     [self tx_addTextLayers];
+}
+
+- (void)addPrizeIcon:(CGFloat)radian radius:(CGFloat)radius{
+    CGFloat x = 0;
+    CGFloat y = 0;
+    CGFloat w_2 = self.frame.size.width * 0.5;
+    CGFloat h_2 = self.frame.size.width * 0.5;
+    CGFloat rotation = 0;
+    UIImageView *icon = [[UIImageView alloc] init];
+    [self.iconArray addObject:icon];
+    icon.image = PLACE_HOLDER_IMAGE;
+    icon.frame = CGRectMake(0, 0, 45, 45);
+    if (radian > 0 && radian < M_PI_2) {
+        x = w_2 + radius * cos(radian);
+        y = h_2 - radius * sin(radian);
+        rotation = M_PI_2 - radian;
+    }
+    else if (radian > M_PI_2 && radian < M_PI){
+        CGFloat tmpRadian = M_PI - radian;
+        x = w_2 - radius * cos(tmpRadian);
+        y = h_2 - radius * sin(tmpRadian);
+        rotation = -(M_PI_2 + radian - M_PI);
+    }
+    else if (radian > M_PI && radian < M_PI_2 * 3){
+        CGFloat tmpRadian = M_PI_2 * 3 - radian;
+        x = w_2 - sin(tmpRadian) * radius;
+        y = w_2 + cos(tmpRadian) * radius;
+        rotation = tmpRadian + M_PI;
+    }
+    else{
+        CGFloat tmpRadian = M_PI * 2 - radian;
+        x = w_2 + radius * cos(tmpRadian);
+        y = h_2 + radius * sin(tmpRadian);
+        rotation = -(M_PI_2 - tmpRadian + M_PI);
+    }
+    icon.center = CGPointMake(x, y);
+    icon.layer.transform = CATransform3DMakeRotation(rotation, 0, 0, 1);
+    [self addSubview:icon];
+    
+    
 }
 
 - (void)tx_addTextLayers{

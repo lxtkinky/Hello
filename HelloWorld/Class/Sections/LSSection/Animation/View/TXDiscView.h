@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) RACSubject *endSubject;
 
-@property (nonatomic, strong) NSArray *iconArray;
+@property (nonatomic, strong) NSMutableArray *iconArray;
 @property (nonatomic, strong) NSArray *titleArray;
 
 + (instancetype)discViewWithFrame:(CGRect)frame;
