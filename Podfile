@@ -9,6 +9,8 @@ pod 'BaiduMapKit'
 pod 'BAWKWebView'
 pod 'SocketRocket'
 
+pod 'BmobSDK', '~> 2.3.1'
+
 # pod 'UMCCommon'
 #pod 'UMCSecurityPlugins'
 #pod 'UMCAnalytics'

@@ -10,6 +10,7 @@
 #import <BaiduMapAPI_Base/BMKMapManager.h>
 #import <AlipaySDK/AlipaySDK.h>
 //#import <UMCommon/UMCommon.h>
+#import <BmobSDK/Bmob.h>
 
 //extern BMKMapManager *mapManager;
 //
@@ -76,6 +77,10 @@
 
 - (void)configThirdComments{
     [self configUShare];
+}
+
+- (void)configBmob{
+    [Bmob registerWithAppKey:@""];
 }
 
 @end

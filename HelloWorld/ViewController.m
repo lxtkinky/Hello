@@ -239,6 +239,12 @@
             _activityView.hidden = NO;
             [_activityView startAnimating];
         }];
+        
+        _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            NSLog(@"加载更多");
+            [_tableView.mj_footer endRefreshing];
+        }];
+        _tableView.mj_footer.tintColor = [UIColor redColor];
     }
     return _tableView;
 }

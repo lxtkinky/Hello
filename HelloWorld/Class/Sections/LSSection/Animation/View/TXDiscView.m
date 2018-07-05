@@ -59,7 +59,7 @@
     CGFloat rotation = 0;
     UIImageView *icon = [[UIImageView alloc] init];
     [self.iconArray addObject:icon];
-    icon.image = PLACE_HOLDER_IMAGE;
+//    icon.image = [UIImage imageNamed:@""];
     icon.frame = CGRectMake(0, 0, 45, 45);
     if (radian > 0 && radian < M_PI_2) {
         x = w_2 + radius * cos(radian);
