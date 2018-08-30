@@ -21,6 +21,7 @@
 #import "ProgressViewController.h"
 //#import "CustomButtonController.h"
 #import <CoreLocation/CoreLocation.h>
+#import "TXLotteryBetHelper.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -94,6 +95,8 @@
     
 //    [self alert];
     
+    TXLotteryBetHelper *helper = [[TXLotteryBetHelper alloc] init];
+    [helper test];
     
 }
 

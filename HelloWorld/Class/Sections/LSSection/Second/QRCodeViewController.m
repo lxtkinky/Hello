@@ -24,6 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    [self.view addSubview:scrollView];
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"识别二维码" forState:UIControlStateNormal];
     [button setBackgroundColor:[UIColor redColor]];
@@ -35,6 +38,18 @@
     
     [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         [self testQRCode];
+    }];
+    
+    
+    
+    
+    UITextField *textField = [[UITextField alloc] init];
+    textField.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:textField];
+    [textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.bottom.mas_equalTo(-40);
+        make.size.mas_equalTo(CGSizeMake(100, 40));
     }];
     
 }

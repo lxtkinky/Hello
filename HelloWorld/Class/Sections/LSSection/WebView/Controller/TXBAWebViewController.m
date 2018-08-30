@@ -43,7 +43,7 @@
  获取HTML元素的属性：document.getElementsByName('hello')[0].attributes['value'].value
  */
 - (void)jsSendToOC{
-    NSString *htmlStr =[TXHtmlLoader loadHtmlStrFromFile:@"JSOC.html"];
+    NSString *htmlStr =[TXHtmlLoader loadHtmlStrFromFile:@"Document.html"];
     
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     _userContentVC = [[WKUserContentController alloc] init];
@@ -58,15 +58,15 @@
 //    self.webView.dele
     //http://112.74.202.254/html/test1.html
     //http://lgqweb.1234x.com/#/
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://lgqweb.1234x.com/#/"]]];
+//    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://lgqweb.1234x.com/#/"]]];
     
-//    [webView loadHTMLString:htmlStr baseURL:nil];
+    [webView loadHTMLString:htmlStr baseURL:nil];
     [self.view addSubview:webView];
     [webView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.insets(UIEdgeInsetsMake(64, 0, 0, 0));
     }];
     
-    [self.webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:NULL];
+//    [self.webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:NULL];
     
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -112,11 +112,11 @@
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
-    NSString *inputValueJS = @"document.getElementsByName('hello')[0].attributes['value'].value";
-    //执行JS
-    [webView evaluateJavaScript:inputValueJS completionHandler:^(id _Nullable response, NSError * _Nullable error) {
-        NSLog(@"value: %@ error: %@", response, error);
-    }];
+//    NSString *inputValueJS = @"document.getElementsByName('hello')[0].attributes['value'].value";
+//    //执行JS
+//    [webView evaluateJavaScript:inputValueJS completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+//        NSLog(@"value: %@ error: %@", response, error);
+//    }];
 }
 
 
