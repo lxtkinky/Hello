@@ -37,7 +37,6 @@
 		5213DE3F1FF4E2BA00D14432 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213DE291FF4E2BA00D14432 /* UIScrollView+MJExtension.m */; };
 		5213DE401FF4E2BA00D14432 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213DE2B1FF4E2BA00D14432 /* UIScrollView+MJRefresh.m */; };
 		5213DE411FF4E2BA00D14432 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213DE2D1FF4E2BA00D14432 /* UIView+MJExtension.m */; };
-		52208579200C77BB000AE575 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52208555200C77BB000AE575 /* Info.plist */; };
 		5220857A200C77BB000AE575 /* JTCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52208559200C77BB000AE575 /* JTCalendarManager.m */; };
 		5220857B200C77BB000AE575 /* JTCalendarSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5220855B200C77BB000AE575 /* JTCalendarSettings.m */; };
 		5220857C200C77BB000AE575 /* JTDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5220855D200C77BB000AE575 /* JTDateHelper.m */; };
@@ -56,7 +55,6 @@
 		5224BC362003086700534BB0 /* AlipayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5224BC352003086700534BB0 /* AlipayViewController.m */; };
 		5224BC3A2003092900534BB0 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5224BC382003092900534BB0 /* AlipaySDK.bundle */; };
 		5224BC3B2003092900534BB0 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5224BC392003092900534BB0 /* AlipaySDK.framework */; };
-		5224BC3D2003093F00534BB0 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5224BC3C2003093F00534BB0 /* libstdc++.6.tbd */; };
 		5224BC3F2003095A00534BB0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5224BC3E2003095A00534BB0 /* libz.tbd */; };
 		5224BC412003096300534BB0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5224BC402003096300534BB0 /* SystemConfiguration.framework */; };
 		5224BC432003096A00534BB0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5224BC422003096A00534BB0 /* CoreTelephony.framework */; };
@@ -90,7 +88,6 @@
 		52A9FB461FEA39B000366036 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52A9FB451FEA39B000366036 /* 22.jpg */; };
 		52A9FB521FEA670B00366036 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A9FB511FEA670B00366036 /* MapViewController.m */; };
 		52D05EED1FE79A89001D7226 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D05EEC1FE79A89001D7226 /* UIKit.framework */; };
-		52D05F091FE79AFD001D7226 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52D05EEF1FE79AFD001D7226 /* Info.plist */; };
 		52D05F0A1FE79AFD001D7226 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D05EF11FE79AFD001D7226 /* MASCompositeConstraint.m */; };
 		52D05F0B1FE79AFD001D7226 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D05EF41FE79AFD001D7226 /* MASConstraint.m */; };
 		52D05F0C1FE79AFD001D7226 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D05EF61FE79AFD001D7226 /* MASConstraintMaker.m */; };
@@ -200,7 +197,6 @@
 		BEF013C0209D8FD100C09305 /* TXHtmlLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF013BF209D8FD100C09305 /* TXHtmlLoader.m */; };
 		BEF013C2209D91CA00C09305 /* OCJS.html in Resources */ = {isa = PBXBuildFile; fileRef = BEF013C1209D91CA00C09305 /* OCJS.html */; };
 		BEF013C4209D967600C09305 /* Document.html in Resources */ = {isa = PBXBuildFile; fileRef = BEF013C3209D967600C09305 /* Document.html */; };
-		DF089553206E1C890038F1D1 /* monidingwei.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DF089552206E1C880038F1D1 /* monidingwei.gpx */; };
 		DF345D24208087CB00CC468D /* MVVMController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF345D23208087CB00CC468D /* MVVMController.m */; };
 		DF345D27208087F500CC468D /* MVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF345D26208087F500CC468D /* MVVMViewModel.m */; };
 		DF345D2E2080888A00CC468D /* MVVMTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF345D2C2080888A00CC468D /* MVVMTableCell.m */; };
@@ -212,7 +208,6 @@
 		DF5FBB002069EE400021B6C3 /* TXVipVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5FBAFF2069EE400021B6C3 /* TXVipVideoController.m */; };
 		DF66FE16202BE2C400CDEA89 /* RunTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF66FE15202BE2C400CDEA89 /* RunTimeController.m */; };
 		DF69B184202855200027E591 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF69B182202855200027E591 /* GoogleMobileAds.framework */; };
-		DF69B185202855200027E591 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DF69B183202855200027E591 /* README.txt */; };
 		DF69B188202855750027E591 /* TXGoogleAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69B187202855750027E591 /* TXGoogleAdController.m */; };
 		DF69B18B202855B70027E591 /* TXGoogleAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69B18A202855B70027E591 /* TXGoogleAdManager.m */; };
 		DF7C6F43207F34CF004C72FF /* ArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C6F42207F34CF004C72FF /* ArrayViewController.m */; };
@@ -308,7 +303,6 @@
 		5213DE2B1FF4E2BA00D14432 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		5213DE2C1FF4E2BA00D14432 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		5213DE2D1FF4E2BA00D14432 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
-		52208555200C77BB000AE575 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52208556200C77BB000AE575 /* JTCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendar.h; sourceTree = "<group>"; };
 		52208557200C77BB000AE575 /* JTCalendarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarDelegate.h; sourceTree = "<group>"; };
 		52208558200C77BB000AE575 /* JTCalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarManager.h; sourceTree = "<group>"; };
@@ -408,7 +402,6 @@
 		52A9FB501FEA670B00366036 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		52A9FB511FEA670B00366036 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		52D05EEC1FE79A89001D7226 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		52D05EEF1FE79AFD001D7226 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52D05EF01FE79AFD001D7226 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		52D05EF11FE79AFD001D7226 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		52D05EF21FE79AFD001D7226 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -610,7 +603,6 @@
 		BEF013C1209D91CA00C09305 /* OCJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = OCJS.html; sourceTree = "<group>"; };
 		BEF013C3209D967600C09305 /* Document.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Document.html; sourceTree = "<group>"; };
 		DDCA444BC4CA6080EDB6315F /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
-		DF089552206E1C880038F1D1 /* monidingwei.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = monidingwei.gpx; sourceTree = "<group>"; };
 		DF345D22208087CB00CC468D /* MVVMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMController.h; sourceTree = "<group>"; };
 		DF345D23208087CB00CC468D /* MVVMController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMController.m; sourceTree = "<group>"; };
 		DF345D25208087F500CC468D /* MVVMViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewModel.h; sourceTree = "<group>"; };
@@ -630,7 +622,6 @@
 		DF66FE14202BE2C400CDEA89 /* RunTimeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunTimeController.h; sourceTree = "<group>"; };
 		DF66FE15202BE2C400CDEA89 /* RunTimeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTimeController.m; sourceTree = "<group>"; };
 		DF69B182202855200027E591 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		DF69B183202855200027E591 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		DF69B186202855750027E591 /* TXGoogleAdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGoogleAdController.h; sourceTree = "<group>"; };
 		DF69B187202855750027E591 /* TXGoogleAdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXGoogleAdController.m; sourceTree = "<group>"; };
 		DF69B189202855B70027E591 /* TXGoogleAdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXGoogleAdManager.h; sourceTree = "<group>"; };
@@ -662,7 +653,6 @@
 				5224BC432003096A00534BB0 /* CoreTelephony.framework in Frameworks */,
 				5224BC412003096300534BB0 /* SystemConfiguration.framework in Frameworks */,
 				5224BC3F2003095A00534BB0 /* libz.tbd in Frameworks */,
-				5224BC3D2003093F00534BB0 /* libstdc++.6.tbd in Frameworks */,
 				78F527FE8EB0D26578857BF2 /* Pods_HelloWorld.framework in Frameworks */,
 				DF69B184202855200027E591 /* GoogleMobileAds.framework in Frameworks */,
 				5224BC3B2003092900534BB0 /* AlipaySDK.framework in Frameworks */,
@@ -1028,7 +1018,6 @@
 		52208554200C77BB000AE575 /* JTCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				52208555200C77BB000AE575 /* Info.plist */,
 				52208556200C77BB000AE575 /* JTCalendar.h */,
 				52208557200C77BB000AE575 /* JTCalendarDelegate.h */,
 				52208558200C77BB000AE575 /* JTCalendarManager.h */,
@@ -1174,7 +1163,6 @@
 		52D05EEE1FE79AFD001D7226 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				52D05EEF1FE79AFD001D7226 /* Info.plist */,
 				52D05EF01FE79AFD001D7226 /* MASCompositeConstraint.h */,
 				52D05EF11FE79AFD001D7226 /* MASCompositeConstraint.m */,
 				52D05EF21FE79AFD001D7226 /* MASConstraint+Private.h */,
@@ -1284,7 +1272,6 @@
 				52E70A1A1FE7657F0061213C /* LaunchScreen.storyboard */,
 				52E70A1D1FE7657F0061213C /* Info.plist */,
 				52A9FB3E1FEA0FBF00366036 /* HelloWorld-prefix.pch */,
-				DF089552206E1C880038F1D1 /* monidingwei.gpx */,
 				52A9FB451FEA39B000366036 /* 22.jpg */,
 				BEA496912049261800279F64 /* hello.txt */,
 				DF93322E20735AFA000AD255 /* meinv.jpg */,
@@ -1548,7 +1535,6 @@
 			isa = PBXGroup;
 			children = (
 				DF69B182202855200027E591 /* GoogleMobileAds.framework */,
-				DF69B183202855200027E591 /* README.txt */,
 			);
 			path = GoogleMobileAdsSdk;
 			sourceTree = "<group>";
@@ -1683,11 +1669,9 @@
 				DF3C1169205924FB000AE8EE /* perRun.atlas in Resources */,
 				BE6E079C20A13A5F008FE29D /* timg.jpeg in Resources */,
 				BEF013C2209D91CA00C09305 /* OCJS.html in Resources */,
-				DF089553206E1C890038F1D1 /* monidingwei.gpx in Resources */,
 				BEDFA41120A4356400B77600 /* home_classic.gif in Resources */,
 				BE4FDA0320F87F1C00422DB3 /* mun_my@2x.png in Resources */,
 				BEDFA40A20A4209000B77600 /* 10085.mp3 in Resources */,
-				52D05F091FE79AFD001D7226 /* Info.plist in Resources */,
 				5213DE3C1FF4E2BA00D14432 /* MJRefresh.bundle in Resources */,
 				52E70A1C1FE7657F0061213C /* LaunchScreen.storyboard in Resources */,
 				BE4FDA0A20F87F1C00422DB3 /* mun_day@3x.png in Resources */,
@@ -1701,10 +1685,8 @@
 				BEA5E19020B903CD00F2BE45 /* TXDiscView.xib in Resources */,
 				BEA74BCB20B545DB00254919 /* SupserGameInfo.plist in Resources */,
 				BE4FDA0820F87F1C00422DB3 /* mun_mk@2x.png in Resources */,
-				52208579200C77BB000AE575 /* Info.plist in Resources */,
 				BEA5E19220B967CC00F2BE45 /* TXStartPrizeView.xib in Resources */,
 				BE4FDA0420F87F1C00422DB3 /* mun_em@3x.png in Resources */,
-				DF69B185202855200027E591 /* README.txt in Resources */,
 				DF93322F20735AFA000AD255 /* meinv.jpg in Resources */,
 				52E70A171FE7657F0061213C /* Main.storyboard in Resources */,
 			);
@@ -1762,7 +1744,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld-resources.sh",
-				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/mapapi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
