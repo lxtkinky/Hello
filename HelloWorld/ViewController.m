@@ -22,6 +22,8 @@
 //#import "CustomButtonController.h"
 #import <CoreLocation/CoreLocation.h>
 #import "TXLotteryBetHelper.h"
+//#import "ArchieveViewController.h"
+#import "TXStaticController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -98,6 +100,13 @@
     TXLotteryBetHelper *helper = [[TXLotteryBetHelper alloc] init];
     [helper test];
     
+    [self testStatic];
+}
+
+- (void)testStatic{
+    NSLog(@"userName = %@  %p", userName, &userName);
+    TXStaticController *staticVC = [[TXStaticController alloc] init];
+    [staticVC testStaticFunc];
 }
 
 - (void)alert{

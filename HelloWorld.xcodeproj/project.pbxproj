@@ -126,6 +126,9 @@
 		52FD9CCE200619B30046193D /* CustomButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FD9CCC200619B30046193D /* CustomButtonController.m */; };
 		52FD9CCF200619B30046193D /* CustomButtonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FD9CCD200619B30046193D /* CustomButtonController.xib */; };
 		78F527FE8EB0D26578857BF2 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */; };
+		BB06C615225213140010ED07 /* TXStaticController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB06C614225213140010ED07 /* TXStaticController.m */; };
+		BB06C618225216950010ED07 /* TXConstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB06C617225216950010ED07 /* TXConstManager.m */; };
+		BB75D965225494A0005A88C4 /* NSString+Secret.m in Sources */ = {isa = PBXBuildFile; fileRef = BB75D964225494A0005A88C4 /* NSString+Secret.m */; };
 		BE21C21220A038DA0025015D /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21C21120A038DA0025015D /* QRCodeViewController.m */; };
 		BE21C21520A0488F0025015D /* TXPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21C21420A0488F0025015D /* TXPhotoController.m */; };
 		BE3DB8D82047D47C00CB3859 /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3DB8D72047D47C00CB3859 /* KVCViewController.m */; };
@@ -482,6 +485,12 @@
 		52FD9CCC200619B30046193D /* CustomButtonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButtonController.m; sourceTree = "<group>"; };
 		52FD9CCD200619B30046193D /* CustomButtonController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonController.xib; sourceTree = "<group>"; };
 		70D1B6F8907DD619DABEEDBA /* Pods-HelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
+		BB06C613225213140010ED07 /* TXStaticController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXStaticController.h; sourceTree = "<group>"; };
+		BB06C614225213140010ED07 /* TXStaticController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXStaticController.m; sourceTree = "<group>"; };
+		BB06C616225216950010ED07 /* TXConstManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXConstManager.h; sourceTree = "<group>"; };
+		BB06C617225216950010ED07 /* TXConstManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXConstManager.m; sourceTree = "<group>"; };
+		BB75D963225494A0005A88C4 /* NSString+Secret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Secret.h"; sourceTree = "<group>"; };
+		BB75D964225494A0005A88C4 /* NSString+Secret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Secret.m"; sourceTree = "<group>"; };
 		BB80489A71F1478D5A0F9AAE /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE21C21020A038DA0025015D /* QRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		BE21C21120A038DA0025015D /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
@@ -852,6 +861,8 @@
 		520ED5931FF5E160000D97A7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BB75D963225494A0005A88C4 /* NSString+Secret.h */,
+				BB75D964225494A0005A88C4 /* NSString+Secret.m */,
 				BE4B64FD20A298DC007B9015 /* EasyHelper.h */,
 				BE4B64FC20A298DC007B9015 /* EasyHelper.m */,
 				BE4B650120A29B9D007B9015 /* NSString+AES.h */,
@@ -1235,6 +1246,10 @@
 				52593CB51FEB4BBA0033DA63 /* AppDelegate+BMKMAP.m */,
 				52E70A121FE7657F0061213C /* ViewController.h */,
 				52E70A131FE7657F0061213C /* ViewController.m */,
+				BB06C616225216950010ED07 /* TXConstManager.h */,
+				BB06C617225216950010ED07 /* TXConstManager.m */,
+				BB06C613225213140010ED07 /* TXStaticController.h */,
+				BB06C614225213140010ED07 /* TXStaticController.m */,
 				5224BC69200354D200534BB0 /* ArchieveViewController.h */,
 				5224BC6A200354D200534BB0 /* ArchieveViewController.m */,
 				5224BC342003086700534BB0 /* AlipayViewController.h */,
@@ -1783,6 +1798,7 @@
 				BE4B645A20A28721007B9015 /* TXShareController.m in Sources */,
 				DF345D2E2080888A00CC468D /* MVVMTableCell.m in Sources */,
 				BE52CDF4204551B0006B01AC /* Dog.m in Sources */,
+				BB75D965225494A0005A88C4 /* NSString+Secret.m in Sources */,
 				52D05F0C1FE79AFD001D7226 /* MASConstraintMaker.m in Sources */,
 				5224BC6B200354D200534BB0 /* ArchieveViewController.m in Sources */,
 				DF4D3489206CD94D0002B1AC /* NSString+Hash.m in Sources */,
@@ -1807,6 +1823,7 @@
 				5213DE2F1FF4E2BA00D14432 /* MJRefreshBackFooter.m in Sources */,
 				52208581200C77BB000AE575 /* JTCalendarPageView.m in Sources */,
 				BE901A8020BB8FB200E9591A /* TXStartPrizeView.m in Sources */,
+				BB06C615225213140010ED07 /* TXStaticController.m in Sources */,
 				52593CB61FEB4BBA0033DA63 /* AppDelegate+BMKMAP.m in Sources */,
 				BEA5E18B20B8F05500F2BE45 /* TXDiscView.m in Sources */,
 				520ED5961FF5E1E0000D97A7 /* LTImageUtil.m in Sources */,
@@ -1850,6 +1867,7 @@
 				52E589F21FFE0467001F66F5 /* UIViewController+Common.m in Sources */,
 				520B95FC2004640A00E6DD54 /* LSCoreToolCenter.m in Sources */,
 				BE3DB8D82047D47C00CB3859 /* KVCViewController.m in Sources */,
+				BB06C618225216950010ED07 /* TXConstManager.m in Sources */,
 				52D05F101FE79AFD001D7226 /* NSArray+MASAdditions.m in Sources */,
 				BE4B64F720A2939A007B9015 /* TXWebSocketController.m in Sources */,
 				52EE56352008876000C8F035 /* FMDatabasePool.m in Sources */,
