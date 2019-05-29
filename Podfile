@@ -12,6 +12,8 @@ pod 'SocketRocket'
 pod 'BmobSDK', '~> 2.3.1'
 pod 'IQKeyboardManager'
 
+pod 'JShare'
+
 # pod 'UMCCommon'
 #pod 'UMCSecurityPlugins'
 #pod 'UMCAnalytics'
